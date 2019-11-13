@@ -1,5 +1,35 @@
 footer
-
+    .row
+        .section
+            .foot-logo
+                .logo
+                    a(href='#')
+                        +img()
+                .slogan Официальный магазин #[br] детских колясок
+            .foot-slogan
+                span Прокат и сервис детских колясок в Москве и МО
+            .foot-contacts
+                .phone
+                    a(href='tel:84957898899').phone-button
+                        +img()
+                    .phone-numbers
+                        a(href='tel:84957898899').phone-call +7 (495) 789 - 88 - 99
+                        a(href='tel:89032422225').phone-call +7 (903) 24 - 222 - 25
+                        a(href='mailto:info@2babies.ru').phone-mail info@2babies.ru
+                .request
+                    .request-links
+                        a(href='mailto:info@2babies.ru').mob-foot-mail
+                            +img()
+                        a(href='#').request-soc
+                            +img()
+                        a(href='#').request-soc
+                            +img()
+                        a(href='#').request-soc
+                            +img()
+                    a(href='#').request-button.request-foot-button
+            .foot-copy
+                span @Copyright 2013 - 2019
+                a(href='#') Политика конфиденциальности
     - if(fancy || slick)
         +inc('js','js/jquery-3.3.1.min.js')
     - if(fancy)
