@@ -24,20 +24,59 @@ header
   background: linear-gradient(180deg, #718edd, #48c3eb)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
-.mob-nav
-  &-list
-    position: absolute
-    width: 100%
-    li
-      background-color: $light-pink
-      a, button
+.mob
+  &-must-know
+    display: none
+  &-about-company
+    display: none
+  &-menu
+    display: none
+  &-nav
+    &-list
+      position: absolute
+      width: 100%
+      li
+        background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
+        a
+          padding: 16px 14px
+          display: block
+        a, button
+          width: 100%
+          text-align: left
+          font-size: 18px
+          color: #6e6964
+    &-button
+      +wh(57px,44px)
+      padding: 7px 14px
+      display: block
+      background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
+    &-close
+      padding: 14px
+      display: flex
+      justify-content: flex-end
+      img
+        +wh(21px)
+  &-hidden
+    &-button
+      padding: 14px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      span
+        +wh(12px)
         display: block
-        width: 100%
-  &-button
-    +wh(57px,44px)
-    padding: 7px 14px
-    display: block
-    background-color: $light-pink
+        border-right: 1px solid #6e6964
+        border-top: 1px solid #6e6964
+        transform: rotate(45deg)
+    &-close
+      justify-content: space-between
+      align-items: center
+      &>span
+        display: flex
+        align-items: center
+        &>span
+          color: #4ac0ea
+          margin-left: 7px
 .phone
   &-button
     +wh(44px)
@@ -47,6 +86,7 @@ header
     display: none
 .request
   &-links
+    +wh(30px)
     display: none
   &-button
     +wh(145px,44px)
@@ -63,7 +103,7 @@ header
       text-transform: uppercase
       color: #fff
 .cart
-  background-color: $light-pink
+  background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
   position: relative
   &-button
     +wh(57px,44px)
@@ -83,3 +123,33 @@ header
     span
       font-size: 12px
       color: #fff
+
+
+footer
+  background-color: #fdefe1
+  padding-bottom: 29px
+.foot
+  &-slogan
+    display: none
+  &-request
+    &-links
+      display: block
+    &-button
+      display: none
+  &-copy
+    span, a
+      font-size: 12px
+      color: #6e6964
+      display: block
+      text-align: center
+      margin-top: 23px
+  &-contacts
+    display: none
+  &-mob-cont
+    display: flex
+    justify-content: space-around
+    align-items: center
+    a
+      +wh(44px)
+      padding: 7px
+      display: block

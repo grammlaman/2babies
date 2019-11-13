@@ -1,32 +1,43 @@
 footer
     .row
         .section
-            .foot-logo
+            .foot-logo.head-logo
                 .logo
                     a(href='#')
-                        +img()
+                        +img('logo.png')
                 .slogan Официальный магазин #[br] детских колясок
             .foot-slogan
                 span Прокат и сервис детских колясок в Москве и МО
             .foot-contacts
                 .phone
                     a(href='tel:84957898899').phone-button
-                        +img()
+                        +img('phone.svg')
                     .phone-numbers
                         a(href='tel:84957898899').phone-call +7 (495) 789 - 88 - 99
                         a(href='tel:89032422225').phone-call +7 (903) 24 - 222 - 25
                         a(href='mailto:info@2babies.ru').phone-mail info@2babies.ru
                 .request
-                    .request-links
-                        a(href='mailto:info@2babies.ru').mob-foot-mail
-                            +img()
+                    .foot-request-links.request-links
                         a(href='#').request-soc
-                            +img()
+                            +img('whatsapp.svg')
                         a(href='#').request-soc
-                            +img()
+                            +img('instagram.svg')
                         a(href='#').request-soc
-                            +img()
-                    a(href='#').request-button.request-foot-button
+                            +img('facebook.svg')
+                    a(href='#').request-button.foot-request-button
+                        +img('technical-support.svg')
+                        span Заказать #[br] звонок
+            .foot-mob-cont
+                a(href='tel:84957898899').phone-button
+                    +img('phone.svg')
+                a(href='mailto:info@2babies.ru').mob-foot-mail
+                    +img('congratulations.svg')
+                a(href='#').request-soc
+                    +img('whatsapp.svg')
+                a(href='#').request-soc
+                    +img('instagram.svg')
+                a(href='#').request-soc
+                    +img('facebook.svg')
             .foot-copy
                 span @Copyright 2013 - 2019
                 a(href='#') Политика конфиденциальности

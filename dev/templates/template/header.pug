@@ -9,9 +9,10 @@ header
             .mob-nav
                 button.mob-nav-button#mob-nav-go
                     +img('menu.svg')
-                ul.mob-nav-list#mob-nav
+                ul.mob-nav-list.mob-menu#mob-nav
                     li
                         button.mob-nav-close#mob-nav-close
+                            +img('cancel.svg')
                     li
                         a(href='#') Главная
                     li
@@ -19,31 +20,41 @@ header
                     li
                         a(href='#') Прокат
                     li
-                        button.mob-hidden-list#mob-must-know-go Полезно знать
-                        ul.mob-must-know#mob-must-know
-                            li
-                                button.mob-hidden-close#mob-must-know-back Назад
-                            li
-                                a(href='#') О тест-драйве
-                            li
-                                a(href='#') О прокате
+                        button.mob-hidden-button#mob-must-know-go Полезно знать
+                            span
                     li
-                        button.mob-hidden-list#mob-about-company-go О компании
-                        ul.mob-about-company#mob-about-company
-                            li
-                                button.mob-hidden-close#mob-about-company-back Назад
-                            li
-                                a(href='#') Доставка и оплата
-                            li
-                                a(href='#') Отзывы
-                            li
-                                a(href='#') Новости
-                            li
-                                a(href='#') Статьи
-                            li
-                                a(href='#') Вопрос - Ответ
+                        button.mob-hidden-button#mob-about-company-go О компании
+                            span
                     li
                         a(href='#') Контакты
+                ul.mob-must-know.mob-nav-list#mob-must-know
+                    li
+                        button.mob-hidden-close.mob-nav-close#mob-must-know-back
+                            span
+                                +img('left-arrow.svg')
+                                span Назад
+                            +img('cancel.svg')
+                    li
+                        a(href='#') О тест-драйве
+                    li
+                        a(href='#') О прокате
+                ul.mob-about-company.mob-nav-list#mob-about-company
+                    li
+                        button.mob-hidden-close.mob-nav-close#mob-about-company-back
+                            span
+                                +img('left-arrow.svg')
+                                span Назад
+                            +img('cancel.svg')
+                    li
+                        a(href='#') Доставка и оплата
+                    li
+                        a(href='#') Отзывы
+                    li
+                        a(href='#') Новости
+                    li
+                        a(href='#') Статьи
+                    li
+                        a(href='#') Вопрос - Ответ
             .phone
                 a(href='tel:84957898899').phone-button
                     +img('phone.svg')
