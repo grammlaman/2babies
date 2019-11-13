@@ -2,15 +2,21 @@ $unit : 'px'
 .section
   +w($mobile#{$unit})
   margin: 0 auto
+body
+  font-family: $f_reg
 
 header
-  padding: 11px 0 0 13px
+  background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
 .head
+  &-contacts
+    display: flex
+    justify-content: space-between
   &-nav
     display: none
   &-logo
     display: flex
     align-items: flex-end
+    padding: 11px 0 15px 13px
 .logo
   margin-right: 8px
 .slogan
@@ -18,3 +24,62 @@ header
   background: linear-gradient(180deg, #718edd, #48c3eb)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+.mob-nav
+  &-list
+    position: absolute
+    width: 100%
+    li
+      background-color: $light-pink
+      a, button
+        display: block
+        width: 100%
+  &-button
+    +wh(57px,44px)
+    padding: 7px 14px
+    display: block
+    background-color: $light-pink
+.phone
+  &-button
+    +wh(44px)
+    padding: 7px
+    display: block
+  &-numbers
+    display: none
+.request
+  &-links
+    display: none
+  &-button
+    +wh(145px,44px)
+    padding: 11px 13px 11px 13px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: linear-gradient(180deg, #718edd, #48c3eb)
+    img
+      +wh(21px)
+    span
+      +font(12px,$f_bold,#fff)
+      letter-spacing: 2px
+      text-transform: uppercase
+      color: #fff
+.cart
+  background-color: $light-pink
+  position: relative
+  &-button
+    +wh(57px,44px)
+    padding: 7px 14px
+    display: block
+  &-log
+    +wh(19px)
+    position: absolute
+    bottom: 3px
+    right: 6px
+    z-index: 10
+    border-radius: 50%
+    background-color: #5fa5e3
+    display: flex
+    align-items: center
+    justify-content: center
+    span
+      font-size: 12px
+      color: #fff
