@@ -5,6 +5,9 @@ $unit: 'px'
   margin-right: 30px
 .slogan
   font-size: 18px
+.cart
+  &-log
+    +wh(22px)
 .phone
   &-mail
     font-size: 18px
@@ -33,6 +36,8 @@ $unit: 'px'
       margin-right: 70px
   &-nav
     &-list
+      width: 95%
+      margin: auto
       li>a,button
         font-size: 18px
       &>li>button
@@ -41,6 +46,20 @@ $unit: 'px'
     &-links
       padding-right: 0
       justify-content: space-around
+
+.main
+  &-slider
+    margin-top: 15px
+  &-slide
+    +wh(1000px,500px)
+    &-text
+      text-align: left
+      span
+        font-size: 36px
+        line-height: 1.2em
+    &-button
+      margin: 35px 0 70px
+
 .foot
   &-slogan
     font-size: 18px
