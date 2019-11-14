@@ -3,7 +3,7 @@ header
         .head-logo
             .logo
                 a(href='#')
-                    +img('logo.png')
+                    +img('logo.svg')
             .slogan Официальный магазин #[br] детских колясок
         .head-contacts
             .mob-nav
@@ -79,32 +79,33 @@ header
                     span.cart-log
                         span 52
     .head-nav
-                    ul
+        .section
+            ul.head-nav-list
+                li
+                    a(href='#') Главная
+                li
+                    a(href='#') Каталог
+                li
+                    a(href='#') Прокат
+                li
+                    button.head-hidden-ul Полезно знать
+                    ul.head-must-know
                         li
-                            a(href='#') Главная
+                            a(href='#') О тест-драйве
                         li
-                            a(href='#') Каталог
+                            a(href='#') О прокате
+                li
+                    button.head-hidden-list О компании
+                    ul.head-about-company
                         li
-                            a(href='#') Прокат
+                            a(href='#') Доставка и оплата
                         li
-                            button.mob-hidden-list Полезно знать
-                            ul.mob-must-know
-                                li
-                                    a(href='#') О тест-драйве
-                                li
-                                    a(href='#') О прокате
+                            a(href='#') Отзывы
                         li
-                            button.mob-hidden-list О компании
-                            ul.mob-about-company
-                                li
-                                    a(href='#') Доставка и оплата
-                                li
-                                    a(href='#') Отзывы
-                                li
-                                    a(href='#') Новости
-                                li
-                                    a(href='#') Статьи
-                                li
-                                    a(href='#') Вопрос - Ответ
+                            a(href='#') Новости
                         li
-                            a(href='#') Контакты
+                            a(href='#') Статьи
+                        li
+                            a(href='#') Вопрос - Ответ
+                li
+                    a(href='#') Контакты

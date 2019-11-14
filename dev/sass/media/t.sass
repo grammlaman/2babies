@@ -1,2 +1,99 @@
 .section
   +w($tablet#{$unit})
+.mob-nav
+  display: none
+header
+  .section
+    display: flex
+    justify-content: space-between
+    align-items: center
+.phone
+  display: flex
+  &-numbers
+    display: block
+  &-call,&-mail
+    display: block
+    margin-bottom: 3px
+    color: $pink-gray
+  &-mail
+    color: $light-blue
+    margin-bottom: 0
+.head
+  &-contacts
+    flex: 57%
+    align-items: center
+  &-logo
+    align-items: center
+  &-must-know
+    display: none
+  &-about-company
+    display: none
+  &-nav
+    display: block
+    background: linear-gradient(to top, #fdefe1, #fdf9f5)
+    &-list
+      width: 100%
+      display: flex
+      justify-content: space-around
+      align-items: center
+      &>li>a,button
+        +font(14px,$f_reg,$pink-gray)
+        display: block
+        padding: 20px 25px 15px
+        background: linear-gradient(to top, #fdefe1, #fdf9f5)
+        &:hover
+          background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
+  &-hidden-list:hover~.head-about-company
+    display: block
+  &-hidden-ul:hover~.head-must-know
+    display: block
+  &-must-know,&-about-company
+    position: absolute
+  &-must-know li a,&-about-company li a
+    +font(14px,$f_reg,$pink-gray)
+    display: block
+    padding: 20px 25px 15px
+    background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
+
+
+footer
+  padding-top: 50px
+.foot
+  &-cont
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    .phone,.request
+      display: flex
+  &-logo
+    .slogan
+      display: none
+  &-slogan
+    display: block
+    color: $pink-gray
+  &-mob-cont
+    display: none
+  &-request
+    &-foot
+      display: flex
+      flex-direction: column
+    &-links
+      display: flex
+      justify-content: space-between
+      width: 100%
+      padding-right: 20px
+      a
+        +wh(30px)
+    &-button
+      display: flex
+      margin-top: 10px
+  &-phone
+    &-mail
+      margin-top: 29px
+  &-copy
+    display: flex
+    margin-top: 13px
+    a,span
+      margin-top: 0
+    span
+      margin-right: 80px
