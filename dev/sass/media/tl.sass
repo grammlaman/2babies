@@ -5,25 +5,52 @@
     width: 260px
 .slogan
   font-size: 15px
+.cart
+  &-button
+    +wh(97px,88px)
+    padding: 27px 30px
+  &-log
+    bottom: 15px
+    right: 15px
 .head
+  &-container
+    padding: 25px 25px 13px
   &-logo
     margin-right: 0
+    padding: 0
   &-contacts
     padding-right: 13px
-
-
+    flex: 0 0 53%
+    .phone
+      &-mail
+        margin-top: 15px
+      &-numbers
+        display: flex
+        flex-direction: column
+        align-items: center
+  &-nav
+    &-list
+      &>li
+        &>a,&>button
+          padding: 20px 45px 15px
+        &>button,.head-about-company,.head-must-know
+          width: 200px
+.request
+  &-links
+    display: flex
+  &-button
+    margin-top: 10px
+footer
+  .section
+    padding: 50px 25px 25px
 .foot
   &-logo
     margin-right: 31px
-    padding: 0
     .logo
       margin-right: 0
   &-cont
-    padding-left: 25px
     justify-content: flex-start
     .phone
       margin-right: 40px
   &-slogan
     margin-right: 90px
-  &-copy
-    margin-left: 25px

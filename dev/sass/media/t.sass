@@ -54,10 +54,18 @@ header
     display: block
     padding: 20px 25px 15px
     background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
+.request
+  &-links
+    justify-content: space-between
+    width: 100%
+    padding-right: 20px
+    a
+      +wh(30px)
 
 
 footer
-  padding-top: 50px
+  .section
+    padding-top: 50px
 .foot
   &-cont
     display: flex
@@ -74,16 +82,11 @@ footer
   &-mob-cont
     display: none
   &-request
+    &-links
+      display: flex
     &-foot
       display: flex
       flex-direction: column
-    &-links
-      display: flex
-      justify-content: space-between
-      width: 100%
-      padding-right: 20px
-      a
-        +wh(30px)
     &-button
       display: flex
       margin-top: 10px

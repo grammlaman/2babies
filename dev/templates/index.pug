@@ -4,5 +4,244 @@ append vars
     page_title= 'Главная страница'
 block content
     main
+        .main-slider
+            .section
+                .main-slide
+                    span.main-slide-text
+                        span Бесплатный тест-драйв колясок
+                        span Бесплатная доставка по Москве
+                        span Гарантия на все товары
+                        span Прокат колясок
+                        span Подбор колясок
+                    button.main-slide-button
+                        +img('baby-carriage.svg')
+                        span ПОДРОБНЕЕ
+        .section
+            form.main-form
+                input(type='text' placeholder='ВАШЕ ИМЯ').main-form-name
+                input(type='tel' placeholder='ВАШ ТЕЛЕФОН').main-form-tel
+                button.main-form-button.button
+                    +img('technical-support.svg')
+                    span УЗНАТЬ ПОДРОБНОСТИ
+        .popular
+            .section
+                input(type='radio' name='pop' style='display:none')#pop-sell.popular-input-sell
+                input(type='radio' name='pop' style='display:none')#pop-rent.popular-input-rent
+                .popular-select
+                    .popular-title
+                        h3 Популярное
+                    label(for='pop-sell').popular-label-sell
+                    label(for='pop-rent').popular-label-rent
+                    a(href='#')
+                        span ВСЕ ПОПУЛЯРНЫЕ
+                        +img('left-arrow.svg')
+                ul.popular-sell-cont.popular-cont
+                    li
+                        .popular-cont
+                            +img('popular1.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                span 53 000 ₽
+                                button.popular-sell-add
+                                    +img('shopping-cart(1).svg')
+                    li
+                        .popular-cont
+                            +img('popular2.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                span 53 000 ₽
+                                button.popular-sell-add
+                                    +img('shopping-cart(1).svg')
+                    li
+                        .popular-cont
+                            +img('popular3.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                span 53 000 ₽
+                                button.popular-sell-add
+                                    +img('shopping-cart(1).svg')
+                ul.popular-rent-cont.popular-cont
+                    li
+                        .popular-cont
+                            +img('popular1.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                .popular-rent-select
+                                    span СРОК АРЕНДЫ
+                                    ul.pupular-rent-list
+                                        li.popular-rent-active
+                                            span 1 неделя
+                                            div
+                                        li
+                                            span 2 недели
+                                            div
+                                        li
+                                            span 3 недели
+                                            div
+                                    span 53 000 ₽
+                                button.popular-rent-add
+                                    +img('shopping-cart.svg')
+                    li
+                        .popular-cont
+                            +img('popular2.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                .popular-rent-select
+                                    span СРОК АРЕНДЫ
+                                    ul.pupular-rent-list
+                                        li.popular-rent-active
+                                            span 1 неделя
+                                            div
+                                        li
+                                            span 2 недели
+                                            div
+                                        li
+                                            span 3 недели
+                                            div
+                                    span 53 000 ₽
+                                button.popular-rent-add
+                                    +img('shopping-cart.svg')
+                    li
+                        .popular-cont
+                            +img('popular3.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                .popular-rent-select
+                                    span СРОК АРЕНДЫ
+                                    ul.pupular-rent-list
+                                        li.popular-rent-active
+                                            span 1 неделя
+                                            div
+                                        li
+                                            span 2 недели
+                                            div
+                                        li
+                                            span 3 недели
+                                            div
+                                    span 53 000 ₽
+                                button.popular-rent-add
+                                    +img('shopping-cart.svg')
+        .stocks
+            .section
+                .stocks-title
+                    h3 Акции
+                .stocks-cont
+                    .stocks-block
+                        .stocks-pink-bgc
+                        .stocks-text
+                            .stocks-text-left Закажи коляску #[br] на полгода сегодня #[br] и получи месяц #[br] в подарок
+                            .stocks-text-right 6+1
+                    .stocks-block
+                        .stocks-pink-bgc
+                        .stocks-text
+                            .stocks-text-left Скидка #[br] на поллекцию #[br] BABY JOGGER
+                            .stocks-text-right 6+1
+        .popular.new-products
+            .section
+                input(type='radio' name='pop' style='display:none')#new-sell.popular-input-sell
+                input(type='radio' name='pop' style='display:none')#new-rent.popular-input-rent
+                .popular-select
+                    .popular-title
+                        h3 Новинки
+                    label(for='new-sell').popular-label-sell
+                    label(for='new-rent').popular-label-rent
+                    a(href='#')
+                        span ВСЕ ПОПУЛЯРНЫЕ
+                        +img('left-arrow.svg')
+                ul.popular-sell-cont.popular-cont
+                    li
+                        .popular-cont
+                            +img('popular1.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                span 53 000 ₽
+                                button.popular-sell-add
+                                    +img('shopping-cart(1).svg')
+                    li
+                        .popular-cont
+                            +img('popular2.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                span 53 000 ₽
+                                button.popular-sell-add
+                                    +img('shopping-cart(1).svg')
+                    li
+                        .popular-cont
+                            +img('popular3.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                span 53 000 ₽
+                                button.popular-sell-add
+                                    +img('shopping-cart(1).svg')
+                ul.popular-rent-cont.popular-cont
+                    li
+                        .popular-cont
+                            +img('popular1.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                .popular-rent-select
+                                    span СРОК АРЕНДЫ
+                                    ul.pupular-rent-list
+                                        li.popular-rent-active
+                                            span 1 неделя
+                                            div
+                                        li
+                                            span 2 недели
+                                            div
+                                        li
+                                            span 3 недели
+                                            div
+                                    span 53 000 ₽
+                                button.popular-rent-add
+                                    +img('shopping-cart.svg')
+                    li
+                        .popular-cont
+                            +img('popular2.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                .popular-rent-select
+                                    span СРОК АРЕНДЫ
+                                    ul.pupular-rent-list
+                                        li.popular-rent-active
+                                            span 1 неделя
+                                            div
+                                        li
+                                            span 2 недели
+                                            div
+                                        li
+                                            span 3 недели
+                                            div
+                                    span 53 000 ₽
+                                button.popular-rent-add
+                                    +img('shopping-cart.svg')
+                    li
+                        .popular-cont
+                            +img('popular3.png').popular-foto
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-sell-price
+                                .popular-rent-select
+                                    span СРОК АРЕНДЫ
+                                    ul.pupular-rent-list
+                                        li.popular-rent-active
+                                            span 1 неделя
+                                            div
+                                        li
+                                            span 2 недели
+                                            div
+                                        li
+                                            span 3 недели
+                                            div
+                                    span 53 000 ₽
+                                button.popular-rent-add
+                                    +img('shopping-cart.svg')
 
+        .questions
+            .section
+                form
+                    h3 Остались вопросы? #[br] Нужна консультация?
+                    input(type='text' placeholder='ВАШЕ ИМЯ').questions-name
+                    input(type='tel' placeholder='ВАШ ТЕЛЕФОН').questions-tel
+                    button.questions-button.button
+                        +img('technical-support.svg')
+                        span ОСТАВИТЬ ЗАЯВКУ
     include parts/slider

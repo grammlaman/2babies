@@ -216,7 +216,7 @@ gulp.task('watch', function() {
 
 });
 
-//gulp.task('minify',['min_main','min_css','min_js']);
+gulp.task('minify',gulp.parallel('min_main','min_css','min_js'));
 
 
 //gulp.task('default', ['watch','html','js', 'move_fonts','css' ,'css_libs','browserSync','move_images','media_query']);

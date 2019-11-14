@@ -1,3 +1,46 @@
 $unit: 'px'
 .section
   +w($desktop#{$unit})
+.logo
+  margin-right: 30px
+.slogan
+  font-size: 18px
+.phone
+  &-mail
+    font-size: 18px
+  &-button
+    margin-right: 8px
+    padding: 5px 0 0 18px
+  &-call
+    font-size: 18px
+.request
+  &-button
+    width: 200px
+    margin-top: 14px
+    span
+      font-family: $f_reg
+      width: 131px
+.head
+  &-container
+    padding: 25px 15px 13px
+  &-contacts
+    flex: 0 0 625px
+    padding-right: 0
+    justify-content: flex-start
+    .phone
+      margin-right: 30px
+    .request
+      margin-right: 70px
+  &-nav
+    &-list
+      li>a,button
+        font-size: 18px
+      &>li>button
+        padding: 20px 37px 15px
+  &-request
+    &-links
+      padding-right: 0
+      justify-content: space-around
+.foot
+  &-slogan
+    font-size: 18px

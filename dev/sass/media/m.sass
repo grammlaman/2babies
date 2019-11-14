@@ -88,11 +88,10 @@ header
     display: none
 .request
   &-links
-    +wh(30px)
     display: none
   &-button
     +wh(145px,44px)
-    padding: 11px 13px 11px 13px
+    padding: 11px 23px 11px 13px
     display: flex
     align-items: center
     justify-content: space-between
@@ -101,9 +100,9 @@ header
       +wh(21px)
     span
       +font(12px,$f_bold,#fff)
-      letter-spacing: 2px
+      letter-spacing: 1px
       text-transform: uppercase
-      color: #fff
+      width: 70px
 .cart
   background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
   position: relative
@@ -129,8 +128,9 @@ header
 
 footer
   background-color: #fdefe1
-  padding-top: 12px
-  padding-bottom: 29px
+  .section
+    padding-top: 12px
+    padding-bottom: 29px
 .foot
   &-slogan
     display: none
