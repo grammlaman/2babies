@@ -183,7 +183,39 @@ header
     display: none
   &-input-sell:checked~.popular-sell-cont,&-input-rent:checked~.popular-rent-cont
     display: block
+  &-cont
+    width: 300px
+    margin: 0 auto 10px
+    border: 1px solid #dfdad5
+    display: flex
+  &-photo
+    +wh(127px,137px)
+    flex: 0 0 127px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+  &-desc
+    +font(14px,$f_bold,$pink-gray)
+    text-transform: uppercase
+    padding-top: 16px
+  &-name
+    letter-spacing: 1px
+  &-price
+    font-family: $f_reg
+    margin-top: 30px
+    button
+      +wh(170px,40px)
+      margin-top: 10px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: #f6f0ea
+      img
+        +wh(30px)
 .block
+  &-image
+    display: none
   &-title
     display: flex
     align-items: center
