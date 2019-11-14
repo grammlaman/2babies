@@ -168,9 +168,37 @@ header
     &-button
       width: 290px
       margin: auto
-
-
-
+.popular
+  &-label
+    +font(8px,$f_bold,$pink-gray)
+    padding: 11px 8px
+    background: linear-gradient(to bottom, #fdefe1, #fdf9f5)
+  &-label-sell
+    margin-right: 9px
+    margin-left: 29px
+  &-input-sell:checked~.block-title .popular-label-sell,&-input-rent:checked~.block-title .popular-label-rent
+    background: linear-gradient(180deg, #718edd, #48c3eb)
+    color: #fff
+  &-rent-cont,&-sell-cont
+    display: none
+  &-input-sell:checked~.popular-sell-cont,&-input-rent:checked~.popular-rent-cont
+    display: block
+.block
+  &-title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 20px 10px
+    h3
+      +font(18px,$f_reg,$pink-gray)
+    a
+      +font(12px,$f_reg,#4ac0ea)
+      letter-spacing: 1px
+      img
+        +wh(12px,10px)
+        transform: rotate(180deg)
+        margin-left: 5px
 
 
 footer

@@ -38,15 +38,16 @@ $unit: 'px'
     &-list
       width: 95%
       margin: auto
-      li>a,button
+      &>li:nth-child(5),&>li:nth-child(4)
+        flex: 0 0 200px
+      a,div
         font-size: 18px
-      &>li>button
-        padding: 20px 37px 15px
   &-request
     &-links
       padding-right: 0
       justify-content: space-around
-
+  &-must-know,&-about-company
+    top: 59px
 .main
   &-slider
     margin-top: 15px
@@ -59,6 +60,12 @@ $unit: 'px'
         line-height: 1.2em
     &-button
       margin: 35px 0 70px
+  &-form
+    padding: 21px 48px
+    input
+      width: 360px
+    button
+      width: 260px
 
 .foot
   &-slogan

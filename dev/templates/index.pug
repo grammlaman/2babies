@@ -26,13 +26,12 @@ block content
                     span УЗНАТЬ ПОДРОБНОСТИ
         .popular
             .section
-                input(type='radio' name='pop' style='display:none')#pop-sell.popular-input-sell
+                input(type='radio' name='pop' style='display:none' checked)#pop-sell.popular-input-sell
                 input(type='radio' name='pop' style='display:none')#pop-rent.popular-input-rent
-                .popular-select
-                    .popular-title
-                        h3 Популярное
-                    label(for='pop-sell').popular-label-sell
-                    label(for='pop-rent').popular-label-rent
+                .block-title
+                    h3 Популярное
+                    label(for='pop-sell').popular-label-sell.popular-label ПРОДАЖА КОЛЯСОК
+                    label(for='pop-rent').popular-label-rent.popular-label АРЕНДА
                     a(href='#')
                         span ВСЕ ПОПУЛЯРНЫЕ
                         +img('left-arrow.svg')
