@@ -90,18 +90,7 @@ header
   &-links
     display: none
   &-button
-    +wh(145px,44px)
-    padding: 11px 23px 11px 13px
-    display: flex
-    align-items: center
-    justify-content: space-between
-    background: linear-gradient(180deg, #718edd, #48c3eb)
-    img
-      +wh(21px)
     span
-      +font(12px,$f_bold,#fff)
-      letter-spacing: 1px
-      text-transform: uppercase
       width: 70px
 .cart
   background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
@@ -125,6 +114,43 @@ header
       font-size: 12px
       color: #fff
 
+.button
+  +wh(145px,44px)
+  padding: 11px 23px 11px 13px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background: linear-gradient(180deg, #718edd, #48c3eb)
+  img
+    +wh(21px)
+  span
+    +font(12px,$f_bold,#fff)
+    letter-spacing: 1px
+    text-transform: uppercase
+.main
+  &-slider
+    background-image: url(../img/main.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  &-slide
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    height: 480px
+    background-color: rgba(0,0,0,0.5)
+    padding: 0 11px
+    &-text
+      +font(18px,$f_bold,#fff)
+      span
+        display: block
+    &-button
+      width: 100%
+      padding-left: 64px
+      padding-right: 101px
+      margin-top: 25px
+      margin-bottom: 70px
+      border: 1px solid #b1e2f8
 
 footer
   background-color: #fdefe1
