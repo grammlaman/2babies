@@ -116,7 +116,7 @@ header
 
 .button
   +wh(145px,44px)
-  padding: 11px 0
+  padding: 6px 0
   display: flex
   align-items: center
   justify-content: center
@@ -159,16 +159,22 @@ header
     border-bottom-left-radius: 20px
     border-bottom-right-radius: 20px
     background: linear-gradient(to top, #aee1f9, #f6f0ea)
-    input
+    &-input
       +wh(290px,44px)
       font-size: 12px
       padding-left: 15px
-      margin: 0 auto 20px
+      margin: 0 auto 15px
       display: block
     &-button
       width: 290px
       margin: auto
 .popular
+  .block-image
+    display: none
+  .block-title
+    justify-content: space-between
+    h3
+      margin-right: 0
   &-label
     +font(8px,$f_bold,$pink-gray)
     padding: 11px 8px
@@ -181,8 +187,9 @@ header
     color: #fff
   &-rent-cont,&-sell-cont
     display: none
+    flex-direction: column
   &-input-sell:checked~.popular-sell-cont,&-input-rent:checked~.popular-rent-cont
-    display: block
+    display: flex
   &-cont
     width: 300px
     margin: 0 auto 10px
@@ -215,15 +222,21 @@ header
         +wh(30px)
 .block
   &-image
-    display: none
+    display: flex
+    width: 200px
+    img
+      width: 50%
   &-title
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: flex-start
     flex-wrap: wrap
     padding: 20px 10px
+    margin: auto
+    overflow: hidden
     h3
       +font(18px,$f_reg,$pink-gray)
+      margin-right: 10px
     a
       +font(12px,$f_reg,#4ac0ea)
       letter-spacing: 1px
@@ -232,7 +245,50 @@ header
         transform: rotate(180deg)
         margin-left: 5px
 
-
+.stocks
+  &-cont
+  &-block
+    +wh(300px,200px)
+    margin: 0 auto 10px
+    overflow: hidden
+    position: relative
+  &-pink
+    &-bgc
+      +wh(400px,200px)
+      background-color: rgba(243,178,200,0.95)
+      transform: rotate(-4.6deg)
+      position: absolute
+      top: 115px
+      left: -50px
+      z-index: 10
+  &-text
+    +font(15px,$f_bold,#fff)
+    line-height: 0.8em
+    width: 290px
+    position: absolute
+    z-index: 20
+    display: flex
+    justify-content: space-between
+    align-items: center
+    left: 20px
+    bottom: -5px
+    &-right
+      font-size: 80px
+.questions
+  h3
+    +font(18px,$f_reg,#fff)
+    width: 200px
+    margin: auto
+    text-align: center
+  &-form
+    &-cont
+      background: linear-gradient(180deg, #718edd, #48c3eb)
+      padding-top: 10px
+      form
+        padding: 10px 0 20px
+        background: none
+        button
+          border: 1px solid #718edd
 footer
   background-color: #fdefe1
   .section

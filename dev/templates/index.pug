@@ -19,8 +19,8 @@ block content
                             span ПОДРОБНЕЕ
         .section
             form.main-form
-                input(type='text' placeholder='ВАШЕ ИМЯ').main-form-name
-                input(type='tel' placeholder='ВАШ ТЕЛЕФОН').main-form-tel
+                input(type='text' placeholder='ВАШЕ ИМЯ').main-form-name.main-form-input
+                input(type='tel' placeholder='ВАШ ТЕЛЕФОН').main-form-tel.main-form-input
                 button.main-form-button.button
                     +img('technical-support.svg')
                     span УЗНАТЬ ПОДРОБНОСТИ
@@ -132,15 +132,17 @@ block content
                         +img('title.png')
                 .stocks-cont
                     .stocks-block
+                        +img('stocks1.png')
                         .stocks-pink-bgc
                         .stocks-text
                             .stocks-text-left Закажи коляску #[br] на полгода сегодня #[br] и получи месяц #[br] в подарок
                             .stocks-text-right 6+1
                     .stocks-block
+                        +img('stocks2.png')
                         .stocks-pink-bgc
                         .stocks-text
                             .stocks-text-left Скидка #[br] на поллекцию #[br] BABY JOGGER
-                            .stocks-text-right 6+1
+                            .stocks-text-right 30%
         .popular.new-products
             .section
                 input(type='radio' name='new' style='display:none' checked)#new-sell.popular-input-sell
@@ -241,13 +243,14 @@ block content
                                     +img('shopping-cart(1).svg')
         .questions
             .section
-                form
-                    h3 Остались вопросы? #[br] Нужна консультация?
-                    input(type='text' placeholder='ВАШЕ ИМЯ').questions-name
-                    input(type='tel' placeholder='ВАШ ТЕЛЕФОН').questions-tel
-                    button.questions-button.button
-                        +img('technical-support.svg')
-                        span ОСТАВИТЬ ЗАЯВКУ
+                .questions-form-cont
+                    h3 Остались вопросы? Нужна консультация?
+                    form.main-form
+                        input(type='text' placeholder='ВАШЕ ИМЯ').main-form-name.main-form-input
+                        input(type='tel' placeholder='ВАШ ТЕЛЕФОН').main-form-tel.main-form-input
+                        button.main-form-button.button
+                            +img('technical-support.svg')
+                            span ОСТАВИТЬ ЗАЯВКУ
         .foto-slider
             .foto-div
             .foto-div

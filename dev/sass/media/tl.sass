@@ -36,22 +36,44 @@
 
 .main
   &-form
-    input,button
+    &-input,button
       width: 300px
 .popular
   &-label
     &-sell
       margin-left: 29px
-.block
-  &-image
-    display: block
+  &-sell,&-rent
+    &-cont
+      flex-direction: row
+      justify-content: space-around
+      li
+        margin: 0
+  .block-image
+    display: flex
     position: absolute
     z-index: -1
     left: 220px
+.block
+  &-image
+    width: 600px
+    img
+      width: 33%
   &-title
     position: relative
     a
       margin-left: 194px
+.stocks
+  &-block
+    +wh(450px,300px)
+  &-pink-bgc
+    +wh(600px,400px)
+    top: 175px
+  &-text
+    width: 440px
+    font-size: 22px
+    bottom: 0
+    &-right
+      font-size: 100px
 footer
   .section
     padding: 50px 25px 25px

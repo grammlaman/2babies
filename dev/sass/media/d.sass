@@ -1,6 +1,8 @@
 $unit: 'px'
 .section
   +w($desktop#{$unit})
+a:hover
+  text-decoration: underline
 .logo
   margin-right: 30px
 .slogan
@@ -62,11 +64,77 @@ $unit: 'px'
       margin: 35px 0 70px
   &-form
     padding: 21px 48px
-    input
+    &-input
       width: 360px
     button
       width: 260px
-
+.popular
+  &-label
+    font-size: 16px
+    &-sell
+      margin-left: 90px
+    &-rent
+      margin-left: 30px
+  &-cont
+    width: 370px
+    flex-direction: column
+  &-sell,&-rent
+    &-cont
+      justify-content: space-between
+  &-rent
+    &-select
+      font-size: 12px
+      &>span:last-child
+        font-size: 22px
+  &-photo
+    +wh(360px,340px)
+    flex: 0 0 360px
+  &-desc
+    font-size: 16px
+    padding-left: 20px
+  &-price
+    font-size: 22px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    button
+      +wh(97px,86px)
+      margin-top: 0
+      &:hover
+        background: none
+.block
+  &-image
+    left: 250px
+  &-title
+    justify-content: flex-start
+    padding: 40px 10px
+    a
+      font-size: 16px
+      display: flex
+      align-items: center
+      margin-left: auto
+      img
+        +wh(17px,20px)
+.stocks
+  &-block
+    +wh(556px,386px)
+  &-pink-bgc
+    +wh(800px,400px)
+    top: 215px
+  &-text
+    width: 550px
+    font-size: 30px
+    bottom: -10px
+    &-right
+      font-size: 150px
+.questions
+  h3
+    font-size: 36px
+    margin-bottom: 20px
+  &-form
+    &-cont
+      margin-top: 30px
+      padding: 10px 50px 0
 .foot
   &-slogan
     font-size: 18px
