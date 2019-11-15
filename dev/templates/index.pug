@@ -251,18 +251,18 @@ block content
                         button.main-form-button.button
                             +img('technical-support.svg')
                             span ОСТАВИТЬ ЗАЯВКУ
-        .foto-slider
-            .foto-div
-            .foto-div
-            .foto-slide
+        .photo-slider
+            .photo-div.photo-div-left
+            .photo-div.photo-div-right
+            .photo-slide
                 +img('foto1.png')
-            .foto-slide
+            .photo-slide
                 +img('foto2.png')
-            .foto-slide
+            .photo-slide
                 +img('foto3.png')
-            .foto-slide
+            .photo-slide
                 +img('foto4.png')
-            .foto-slide
+            .photo-slide
                 +img('foto5.png')
         .deliv
             .section
@@ -297,7 +297,7 @@ block content
                             span НАЛОЖЕННЫЙ ПЛАТЕЖ
         .reviews
             .section
-                .reviews-title
+                .block-title
                     h3 Отзывы
                     a(href='#')
                         span ВСЕ ОТЗЫВЫ
@@ -309,11 +309,11 @@ block content
                                 span Оксана
                                 span 12.10.2019
                             .reviews-name-right
-                                div.reviews-star.reviews-start-activ
-                                div.reviews-star.reviews-start-activ
-                                div.reviews-star.reviews-start-activ
-                                div.reviews-star
-                                div.reviews-star
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                                +img('star-gray.svg')
                         p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
                         .reviews-photo
                             div
@@ -326,13 +326,13 @@ block content
                                 span Оксана
                                 span 12.10.2019
                             .reviews-name-right
-                                div.reviews-star.reviews-start-activ
-                                div.reviews-star.reviews-start-activ
-                                div.reviews-star.reviews-start-activ
-                                div.reviews-star
-                                div.reviews-star
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
                         p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску! Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
-                    .review-gradient
+                    .reviews-gradient
         .news
             .section
                 .news-title

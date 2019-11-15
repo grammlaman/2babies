@@ -4,9 +4,8 @@ $unit : 'px'
   margin: 0 auto
 body
   font-family: $f_reg
-
-header
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
+
 .head
   &-contacts
     display: flex
@@ -289,6 +288,75 @@ header
         background: none
         button
           border: 1px solid #718edd
+.photo
+  &-slider
+    +wh(300px,230px)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    overflow: hidden
+    margin: 10px auto 0
+    position: relative
+  &-slide
+    flex: 0 0 300px
+    display: flex
+    align-items: center
+    justify-content: center
+  &-div
+    +wh(30px,230px)
+    position: absolute
+    z-index: 100
+    height: 230px
+  &-div-left
+    background: linear-gradient(to right, #fff 50%, transparent)
+    left: 0
+  &-div-right
+    background: linear-gradient(to left, #fff 50%, transparent)
+    right: 0
+.deliv
+  display: none
+.reviews
+  .block-title
+    justify-content: space-between
+  &-cont
+    +wh(300px,400px)
+    margin: auto
+    padding: 10px 20px
+    background-color: $light-pink
+    overflow: hidden
+    position: relative
+  &-name
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 10px
+    &-left
+      span
+        +font(12px,$f_bold,$pink-gray)
+        letter-spacing: 1px
+        display: block
+      span:first-child
+        text-transform: uppercase
+      span:last-child
+        font-family: $f_reg
+        font-size: 10px
+    &-right
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 120px
+      img
+        +wh(20px)
+  &-text
+    +font(14px,$f_reg,$pink-gray)
+  &-gradient
+    +wh(100%,80px)
+    background: linear-gradient(to top, #fff, transparent)
+    position: absolute
+    bottom: 0
+    left: 0
+.news
+  display: none
 footer
   background-color: #fdefe1
   .section
