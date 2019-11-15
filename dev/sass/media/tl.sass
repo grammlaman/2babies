@@ -42,6 +42,8 @@
   &-label
     &-sell
       margin-left: 29px
+    &-rent
+      margin-left: 20px
   &-sell,&-rent
     &-cont
       flex-direction: row
@@ -61,7 +63,13 @@
   &-title
     position: relative
     a
+      font-size: 16px
       margin-left: 194px
+      display: flex
+      align-items: center
+      margin-left: auto
+      img
+        +wh(17px,20px)
 .stocks
   &-block
     +wh(450px,300px)
@@ -74,6 +82,31 @@
     bottom: 0
     &-right
       font-size: 100px
+.photo
+  &-slider
+    width: 960px
+.reviews
+  &-cont
+    width: 100%
+  &-block
+    width: 47%
+    flex: 0 0 47%
+    padding: 20px
+  &-name
+    &-left
+      span
+        font-size: 16px
+        &:last-child
+          font-size: 12px
+  &-text
+    font-size: 20px
+  &-photo
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    div
+      flex: 0 0 48%
+      width: 48%
 footer
   .section
     padding: 50px 25px 25px

@@ -108,13 +108,6 @@ a:hover
   &-title
     justify-content: flex-start
     padding: 40px 10px
-    a
-      font-size: 16px
-      display: flex
-      align-items: center
-      margin-left: auto
-      img
-        +wh(17px,20px)
 .stocks
   &-block
     +wh(556px,386px)
@@ -135,6 +128,28 @@ a:hover
     &-cont
       margin-top: 30px
       padding: 10px 50px 0
+.photo
+  &-slider
+    width: 100%
+    height: 215px
+  &-slide
+    +wh(290px,215px)
+  &-div
+    width: 250px
+    &-left
+      background: linear-gradient(to right, #fff, transparent)
+    &-right
+      background: linear-gradient(to left, #fff, transparent)
+.reviews
+  &-cont
+    height: 500px
+  &-block
+    min-height: 500px
+  &-text
+    font-size: 24px
+  &-gradient
+    height: 200px
+    background: linear-gradient(to top, #fff 25%, transparent)
 .foot
   &-slogan
     font-size: 18px

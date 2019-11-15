@@ -67,7 +67,6 @@ header
     a
       +wh(30px)
 
-
 .main
   &-slide
     height: 480px
@@ -97,16 +96,62 @@ header
   &-title
     h3
       font-size: 36px
+  &-image
+    width: 300px
 .stocks
   &-cont
     display: flex
-    justify-content: space-around
+    justify-content: space-evenly
+  &-block
+    margin: 0 0 10px
 .questions
   h3
     width: 100%
   &-form
     &-cont
       padding: 10px 20px 0
+.photo
+  &-slider
+    width: 640px
+    margin: 20px auto 0
+  &-slide
+    margin: 0 10px
+.deliv
+  display: block
+  &-cont
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    flex-wrap: wrap
+    text-align: center
+  &-img
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background-color: $light-pink
+  &-block
+    width: 45%
+    flex: 0 0 45%
+    h6
+      +font(16px,$f_reg,$pink-gray)
+      margin-bottom: 10px
+    span
+      +font(18px,$f_reg,$pink-gray)
+    div
+      +wh(200px)
+      margin: 0 auto 10px
+      img
+        +wh(100px)
+.reviews
+  &-cont
+    display: flex
+    align-items: self-start
+    justify-content: space-evenly
+    width: 660px
+  &-block
+    width: 300px
+    flex: 0 0 300px
 footer
   .section
     padding-top: 50px
