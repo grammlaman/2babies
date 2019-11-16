@@ -143,6 +143,22 @@ header
       margin: 0 auto 10px
       img
         +wh(100px)
+  &-last
+    display: flex
+    align-items: center
+    justify-content: space-around
+    &>div
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-right: 10px
+      margin-top: 30px
+    span
+      +font(16px,$f_bold,$pink-gray)
+  &-img
+    +wh(70px)
+    padding: 15px
+    margin-right: 10px
 .reviews
   &-cont
     display: flex
@@ -152,6 +168,24 @@ header
   &-block
     width: 300px
     flex: 0 0 300px
+.news
+  .block-title
+    justify-content: space-between
+    .block-image
+      img:last-child
+        display: none
+  display: block
+  &-block
+    position: relative
+    padding: 0 20px
+    &>div
+      margin-bottom: 20px
+      &>span
+        +font(12px,$f_reg,$pink-gray)
+        display: block
+        margin-bottom: 30px
+  &-text
+    +font(18px,$f_reg,$pink-gray)
 footer
   .section
     padding-top: 50px

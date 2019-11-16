@@ -140,6 +140,16 @@ a:hover
       background: linear-gradient(to right, #fff, transparent)
     &-right
       background: linear-gradient(to left, #fff, transparent)
+.deliv
+  &-block
+    width: 360px
+    flex: 0 0 360px
+  &-last
+    display: block
+    &>div
+      margin: 0 0 2px 0
+    span
+      letter-spacing: 1px
 .reviews
   &-cont
     height: 500px
@@ -150,6 +160,16 @@ a:hover
   &-gradient
     height: 200px
     background: linear-gradient(to top, #fff 25%, transparent)
+.news
+  &-block
+    &>div
+      height: 300px
+  .block-title
+    .block-image
+      img:last-child
+        display: block
 .foot
   &-slogan
     font-size: 18px
+  &-copy span
+    font-size: 14px

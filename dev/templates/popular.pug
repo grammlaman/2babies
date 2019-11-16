@@ -1,0 +1,313 @@
+extends template/main
+append vars
+  -
+    page_title= 'Популярное'
+block content
+    .section
+        .bread-crumps
+            a(href='#') Главная
+            div
+            a(href='#') Каталог
+    .section
+        aside
+            .filter-name
+                h5.filter-h5 Фильтр
+                button.clear-button
+                    +img('cancel.svg')
+                    span Очистить
+            .filter-price
+                h6.filter-h6 Стоимость:
+                p.filter-price-slider
+                    label(for="amount")
+                    input(type="text" id="amount").filter-price-slider-range
+                    input(type="text" id="amount-1").filter-price-slider-range.filter-price-slider-range-second
+                div#slider-range.filter-price-slider
+                label #[input(type='checkbox')] Новинки
+                label Акции
+            .filter-category
+                h6.filter-h6 Категории:
+                label #[input(type='checkbox')] Прогулочные коляски #[span (33) показать]
+                label #[input(type='checkbox')] Коляски для новорожденных #[span (33) показать]
+                label #[input(type='checkbox')] Коляски для погодок и двойни #[span (33) показать]
+                label #[input(type='checkbox')] Детские коляски 2 в 1 #[span (33) показать]
+                label #[input(type='checkbox')] Детские коляски 3 в 1 #[span (33) показать]
+                label #[input(type='checkbox')] Коляски-трансформеры #[span (33) показать]
+                label #[input(type='checkbox')] Коляски для путешествий #[span (33) показать]
+            .filter-brand
+                h6.filter-h6 Бренды:
+                label #[input(type='checkbox')] Baby Jogger #[span (33) показать]
+                label #[input(type='checkbox')] Peg Perego #[span (33) показать]
+                label #[input(type='checkbox')] Carrello #[span (33) показать]
+            button.button
+                span ПОКАЗАТЬ
+            button.clear-button
+                +img('cancel.svg')
+                span Очистить
+        main
+            .block-title
+                h3 Популярное
+                .block-image
+                    +img('title.png')
+                    +img('title.png')
+                    +img('title.png')
+                .filter-title-button.filter-title-filter
+                    div
+                        div
+                            div
+                            div
+                            div
+                        div
+                            div
+                            div
+                            div
+                        div
+                            div
+                            div
+                            div
+                    span Фильтр
+                .filter-title-button.filter-title-sort
+                    div
+                        div
+                        div
+                        div
+
+
+            .popular-sort
+                div
+                    h5.filter-h5 Сортировка:
+                    ul.popular-select
+                        li По популярности
+                        li По возрастанию цены
+                        li По убыванию цены
+                ul.popular-sort-pagination
+                    li
+                        span <
+                    li
+                        span 1
+                    li
+                        span 2
+                    li.popular-sort-pagination-activ
+                        span 3
+                    li
+                        span 4
+                    li
+                        span 5
+                    li
+                        span >
+            ul
+                li.popular-cont
+                    .popular-photo
+                        +img('popular1.png')
+                    .popular-desc
+                        h6.popular-name Baby Jogger #[br] "City Select Lux"
+                        .popular-price
+                            span 53 000 ₽
+                            button
+                                +img('shopping-cart(1).svg')
+                    .popular-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            ul.popular-select
+                                li Пурпурный
+                                li Серый
+                                li Черный
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li.popular-cont
+                    .popular-photo
+                        +img('popular1.png')
+                    .popular-desc
+                        h6.popular-name Baby Jogger #[br] "City Select Lux"
+                        .popular-price
+                            span 53 000 ₽
+                            button
+                                +img('shopping-cart(1).svg')
+                    .popular-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            ul.popular-select
+                                li Пурпурный
+                                li Серый
+                                li Черный
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                    .popular-promotions-label.popular-promotions-blue
+                        span Новинки
+                li.popular-cont
+                    .popular-photo
+                        +img('popular1.png')
+                    .popular-desc
+                        h6.popular-name Baby Jogger #[br] "City Select Lux"
+                        .popular-price
+                            span 53 000 ₽
+                            button
+                                +img('shopping-cart(1).svg')
+                    .popular-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            ul.popular-select
+                                li Пурпурный
+                                li Серый
+                                li Черный
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                    .popular-promotions-label.popular-promotions-pink
+                        span Акции
+                li.popular-cont
+                    .popular-photo
+                        +img('popular1.png')
+                    .popular-desc
+                        h6.popular-name Baby Jogger #[br] "City Select Lux"
+                        .popular-price
+                            span 53 000 ₽
+                            button
+                                +img('shopping-cart(1).svg')
+                    .popular-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            ul.popular-select
+                                li Пурпурный
+                                li Серый
+                                li Черный
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li.popular-cont
+                    .popular-photo
+                        +img('popular1.png')
+                    .popular-desc
+                        h6.popular-name Baby Jogger #[br] "City Select Lux"
+                        .popular-price
+                            span 53 000 ₽
+                            button
+                                +img('shopping-cart(1).svg')
+                    .popular-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            ul.popular-select
+                                li Пурпурный
+                                li Серый
+                                li Черный
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                    .popular-promotions-label.popular-promotions-blue
+                        span Новинки
+                li.popular-cont
+                    .popular-photo
+                        +img('popular1.png')
+                    .popular-desc
+                        h6.popular-name Baby Jogger #[br] "City Select Lux"
+                        .popular-price
+                            span 53 000 ₽
+                            button
+                                +img('shopping-cart(1).svg')
+                    .popular-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            ul.popular-select
+                                li Пурпурный
+                                li Серый
+                                li Черный
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                    .popular-promotions-label.popular-promotions-pink
+                        span Акции
+            .popular-sort.popular-sort-end
+                ul.popular-sort-pagination
+                    li
+                        span <
+                    li
+                        span 1
+                    li
+                        span 2
+                    li.popular-sort-pagination-activ
+                        span 3
+                    li
+                        span 4
+                    li
+                        span 5
+                    li
+                        span >

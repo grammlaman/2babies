@@ -62,9 +62,8 @@
       width: 33%
   &-title
     position: relative
-    a
+    &-a
       font-size: 16px
-      margin-left: 194px
       display: flex
       align-items: center
       margin-left: auto
@@ -107,6 +106,29 @@
     div
       flex: 0 0 48%
       width: 48%
+.news
+  margin-bottom: 30px
+  &-cont
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+  &-block
+    width: 30%
+    flex: 0 0 30%
+    border: 1px solid $light-pink
+    padding: 20px
+    &>div
+      height: 250px
+      overflow: hidden
+      margin-bottom: 10px
+  &-gradient
+    +wh(100%,100px)
+    background: linear-gradient(to top, #fff 50%, transparent)
+    position: absolute
+    bottom: 0
+    left: 0
+  &-link
+    position: relative
 footer
   .section
     padding: 50px 25px 25px
