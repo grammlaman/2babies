@@ -168,8 +168,6 @@ body
       width: 290px
       margin: auto
 .popular
-  .block-image
-    display: none
   .block-title
     justify-content: space-between
     h3
@@ -219,6 +217,84 @@ body
       background-color: #f6f0ea
       img
         +wh(30px)
+  &-sort
+    display: none
+    width: 300px
+    margin: auto
+    &-select
+      position: relative
+      &-checkbox
+        +font(12px,$f_reg,$pink-gray)
+        +w(180px)
+        background-color: $light-pink
+        text-transform: uppercase
+        position: absolute
+        right: 0
+        top: -5px
+        border-top: 2px solid #dadada
+        border-right: 1px solid #dadada
+        border-left: 1px solid #dadada
+        label
+          display: none
+          padding: 10px
+          &:first-child
+            display: block
+            &:after
+              +wh(7px)
+              display: table
+              content: ''
+              border-right: 1px solid $pink-gray
+              border-top: 1px solid $pink-gray
+              transform: rotate(135deg)
+              position: absolute
+              right: 10px
+              top: 10px
+    &-pagination
+      +w(300px)
+      margin: 20px auto
+      display: flex
+      align-items: center
+      justify-content: space-between
+      li
+        +wh(30px)
+        +dfc
+        background-color: $light-pink
+      .pag-activ
+        background-color: inherit
+  &-prod
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+    li
+      display: flex
+      flex-direction: column
+      width: 300px
+      margin: 0 auto 20px
+      border: 1px solid #dfdad5
+      .popular-cont
+        border: none
+        margin: 0 0 2px 0
+  &-haract
+    background-color: $light-pink
+    padding: 10px 20px
+    &-select
+      top: 0
+      right: 20px
+      background-color: #fff
+      label
+        letter-spacing: 1px
+    &-color
+      position: relative
+      padding: 10px 0
+    &-desc
+      p
+        margin-top: 11px
+        span
+          +font(12px,$f_reg,$pink-gray)
+          display: inline-block
+          &:first-child
+            width: 55%
 .block
   &-image
     display: flex
@@ -236,6 +312,9 @@ body
     h3
       +font(18px,$f_reg,$pink-gray)
       margin-right: 10px
+    &-none
+      .block-image
+        display: none
 .block-title-a,.news-link
   +font(12px,$f_reg,#4ac0ea)
   letter-spacing: 1px
@@ -363,6 +442,185 @@ body
   display: none
 .display-block
   display: block
+.bread-crumps
+  display: none
+.filter
+  &-title
+    &-button
+      +dfc
+      +font(10px,$f_bold,#fff)
+      text-transform: uppercase
+      background: linear-gradient(180deg, #718edd, #48c3eb)
+      padding: 5px 20px
+    &-filter
+      margin-left: auto
+      &>div
+        display: flex
+        margin-right: 10px
+        &>div
+          display: flex
+          flex-direction: column
+          align-items: center
+          &>div
+            background-color: #fff
+      &>div>div>div:first-child
+        +wh(2px)
+      &>div>div>div:nth-child(2)
+        +wh(4px,5px)
+        border-radius: 50%
+        margin: 1px 0
+      &>div>div>div:last-child
+        +wh(2px,7px)
+      &>div>div:nth-child(2)
+        transform: rotate(180deg)
+        margin: 0 1px
+    &-sort
+      margin-left: 10px
+      &>div
+        display: flex
+        align-items: flex-end
+        &>div
+          background-color: #fff
+        &>div:first-child
+          +wh(4px,6px)
+        &>div:nth-child(2)
+          +wh(4px,11px)
+          margin: 0 2px
+        &>div:last-child
+          +wh(4px,16px)
+  &-h5
+    +font(18px,$f_reg,$pink-gray)
+  &-name
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    button
+      margin-left: 45px
+  &-price
+    &-slider
+      margin-top: 10px
+      &>div
+        display: flex
+        align-items: center
+        &>div
+          +wh(6px,1px)
+          background-color: #000
+          margin: 0 5px
+      &-range
+        +wh(100px,30px)
+        +font(12px,$f_reg,$pink-gray)
+        padding: 0 10px
+  &-h6
+    +font(12px,$f_bold,$pink-gray)
+    text-transform: uppercase
+  &-label
+    position: relative
+    label
+      display: flex
+      align-items: center
+      margin-top: 10px
+      span
+        +font(13px,$f_reg,$pink-gray)
+      span:first-child
+        +wh(25px)
+        display: block
+        padding: 3px
+        border-radius: 4px
+        background-color: #fff
+        margin-right: 10px
+        border-top: 2px solid #dadada
+        border-right: 1px solid #dadada
+        border-left: 1px solid #dadada
+        img
+          display: none
+    &>div:last-child
+      position: absolute
+      right: 28px
+      top: -10px
+      display: none
+      span
+        color: #fff
+        letter-spacing: 1px
+      span:last-child
+        display: none
+      &>div:first-child
+        +wh(20px)
+        display: table
+        content: ''
+        transform: rotate(45deg)
+        background: linear-gradient(135deg, #718edd, #48c3eb)
+        position: absolute
+        left: -10px
+        top: 13px
+      &>div:last-child
+        +wh(45px)
+        display: flex
+        align-items: center
+        justify-content: center
+        background: linear-gradient(180deg, #718edd, #48c3eb)
+        position: absolute
+        top: 0
+    input
+      display: none
+      &:checked~.fl001 img,&:checked~.fl002 img,&:checked~.fl003 img,&:checked~.fl004 img,&:checked~.fl005 img,&:checked~.fl006 img,&:checked~.fl007 img,&:checked~.fl008 img,&:checked~.fl009 img,&:checked~.fl010 img,&:checked~.fl011 img,&:checked~.fl012 img
+        display: block
+    &-cont
+      margin-top: 30px
+    &:hover>div:last-child
+      display: block
+  &-button
+    width: 100%
+.clear-button
+  +dfc
+  img
+    +wh(21px)
+    margin-right: 10px
+  span
+    +font(18px,$f_reg,$light-blue)
+    text-transform: uppercase
+aside
+  background-color: $light-pink
+  position: absolute
+  z-index: 100
+  width: 300px
+  margin: auto
+  right: 0
+  left: 0
+  top: 170px
+  padding: 15px 7px
+  display: none
+  &>button
+    text-align: center
+    margin: 10px auto 0
+    letter-spacing: 1px
+#aside-checkbox
+  &:checked~aside
+    display: block
+  &:checked~main .block-title .filter-title-filter
+    background: $light-pink
+    color: $pink-gray
+    div div div
+      background-color: $pink-gray
+#pag-checkbox
+  &:checked~main .popular-sort
+    display: block
+  &:checked~main .block-title .filter-title-sort
+    background: $light-pink
+    color: $light-pink
+    div div
+      background-color: $pink-gray
+#sort-checkbox
+  &:checked~.popular-sort-select-checkbox label
+    display: block
+    &:after
+      transform: rotate(-45deg)
+      top: 13px
+#pop-color01,#pop-color02,#pop-color03,#pop-color04,#pop-color05,#pop-color06
+  &:checked~.popular-sort-select-checkbox label
+    display: block
+    &:after
+      transform: rotate(-45deg)
+      top: 13px
 footer
   background-color: #fdefe1
   .section
