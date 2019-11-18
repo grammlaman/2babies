@@ -16,6 +16,7 @@ block content
                             span Подбор колясок
                         button.main-slide-button.button
                             +img('baby-carriage.svg')
+                            +img('baby-carriage-blue.svg')
                             span ПОДРОБНЕЕ
         .section
             form.main-form
@@ -23,6 +24,7 @@ block content
                 input(type='tel' placeholder='ВАШ ТЕЛЕФОН').main-form-tel.main-form-input
                 button.main-form-button.button
                     +img('technical-support.svg')
+                    +img('technical-support-blue.svg')
                     span УЗНАТЬ ПОДРОБНОСТИ
         .popular
             .section
@@ -76,12 +78,13 @@ block content
                             .popular-price
                                 .popular-rent-select
                                     span СРОК АРЕНДЫ
-                                    ul.popular-rent-list
-                                        li.popular-rent-active
+                                    input(type='checkbox' style='display:none')#pop-rent01
+                                    .popular-rent-list.select-arrow
+                                        label(for='pop-rent01').select-activ
                                             span 1 неделя
-                                        li
+                                        label(for='pop-rent01')
                                             span 2 недели
-                                        li
+                                        label(for='pop-rent01')
                                             span 3 недели
                                     span 53 000 ₽
                                 button
@@ -94,12 +97,13 @@ block content
                             .popular-price
                                 .popular-rent-select
                                     span СРОК АРЕНДЫ
-                                    ul.popular-rent-list
-                                        li.popular-rent-active
+                                    input(type='checkbox' style='display:none')#pop-rent02
+                                    .popular-rent-list.select-arrow
+                                        label(for='pop-rent02').select-activ
                                             span 1 неделя
-                                        li
+                                        label(for='pop-rent02')
                                             span 2 недели
-                                        li
+                                        label(for='pop-rent02')
                                             span 3 недели
                                     span 53 000 ₽
                                 button
@@ -112,12 +116,13 @@ block content
                             .popular-price
                                 .popular-rent-select
                                     span СРОК АРЕНДЫ
-                                    ul.popular-rent-list
-                                        li.popular-rent-active
+                                    input(type='checkbox' style='display:none')#pop-rent03
+                                    .popular-rent-list.select-arrow
+                                        label(for='pop-rent03').select-activ
                                             span 1 неделя
-                                        li
+                                        label(for='pop-rent03')
                                             span 2 недели
-                                        li
+                                        label(for='pop-rent03')
                                             span 3 недели
                                     span 53 000 ₽
                                 button
@@ -195,12 +200,13 @@ block content
                             .popular-price
                                 .popular-rent-select
                                     span СРОК АРЕНДЫ
-                                    ul.popular-rent-list
-                                        li.popular-rent-active
+                                    input(type='checkbox' style='display:none')#pop-rent04
+                                    .popular-rent-list.select-arrow
+                                        label(for='pop-rent04').select-activ
                                             span 1 неделя
-                                        li
+                                        label(for='pop-rent04')
                                             span 2 недели
-                                        li
+                                        label(for='pop-rent04')
                                             span 3 недели
                                     span 53 000 ₽
                                 button
@@ -213,12 +219,13 @@ block content
                             .popular-price
                                 .popular-rent-select
                                     span СРОК АРЕНДЫ
-                                    ul.popular-rent-list
-                                        li.popular-rent-active
+                                    input(type='checkbox' style='display:none')#pop-rent05
+                                    .popular-rent-list.select-arrow
+                                        label(for='pop-rent05').select-activ
                                             span 1 неделя
-                                        li
+                                        label(for='pop-rent05')
                                             span 2 недели
-                                        li
+                                        label(for='pop-rent05')
                                             span 3 недели
                                     span 53 000 ₽
                                 button
@@ -231,12 +238,13 @@ block content
                             .popular-price
                                 .popular-rent-select
                                     span СРОК АРЕНДЫ
-                                    ul.popular-rent-list
-                                        li.popular-rent-active
+                                    input(type='checkbox' style='display:none')#pop-rent06
+                                    .popular-rent-list.select-arrow
+                                        label(for='pop-rent06').select-activ
                                             span 1 неделя
-                                        li
+                                        label(for='pop-rent06')
                                             span 2 недели
-                                        li
+                                        label(for='pop-rent06')
                                             span 3 недели
                                     span 53 000 ₽
                                 button
@@ -250,6 +258,7 @@ block content
                         input(type='tel' placeholder='ВАШ ТЕЛЕФОН').main-form-tel.main-form-input
                         button.main-form-button.button
                             +img('technical-support.svg')
+                            +img('technical-support-blue.svg')
                             span ОСТАВИТЬ ЗАЯВКУ
         .photo-slider
             .photo-div.photo-div-left

@@ -123,6 +123,8 @@ body
   img
     +wh(21px)
     margin-right: 15px
+    &:nth-child(2)
+      display: none
   span
     +font(12px,$f_bold,#fff)
     letter-spacing: 1px
@@ -182,6 +184,22 @@ body
   &-input-sell:checked~.block-title .popular-label-sell,&-input-rent:checked~.block-title .popular-label-rent
     background: linear-gradient(180deg, #718edd, #48c3eb)
     color: #fff
+  &-rent
+    &-list
+      +w(150px)
+      border-top: 2px solid #dadada
+      border-right: 1px solid #dadada
+      border-left: 1px solid #dadada
+      margin: 5px 0 10px
+      position: relative
+      label
+        +wh(100%,33px)
+        +dfs
+        display: none
+        padding-left: 10px
+        background-color: $light-pink
+      .select-activ
+        display: flex
   &-rent-cont,&-sell-cont
     display: none
     flex-direction: column
@@ -192,6 +210,7 @@ body
     margin: 0 auto 10px
     border: 1px solid #dfdad5
     display: flex
+    align-items: center
   &-photo
     +wh(127px,137px)
     flex: 0 0 127px
@@ -238,18 +257,8 @@ body
         label
           display: none
           padding: 10px
-          &:first-child
-            display: block
-            &:after
-              +wh(10px)
-              display: table
-              content: ''
-              border-right: 1px solid $pink-gray
-              border-top: 1px solid $pink-gray
-              transform: rotate(135deg)
-              position: absolute
-              right: 15px
-              top: 7px
+        .select-activ
+          display: block
     &-pagination
       +w(300px)
       margin: 20px auto
@@ -257,9 +266,11 @@ body
       align-items: center
       justify-content: space-between
       li
-        +wh(30px)
-        +dfc
-        background-color: $light-pink
+        a
+          +font(12px,$f_reg,$pink-gray)
+          +wh(30px)
+          +dfc
+          background-color: $light-pink
       .pag-activ
         background-color: inherit
   &-prod
@@ -278,6 +289,9 @@ body
       .popular-cont
         border: none
         margin: 0 0 2px 0
+    .popular-price
+      img:last-child
+        display: none
   &-haract
     background-color: $light-pink
     padding: 10px 20px
@@ -410,7 +424,7 @@ body
   &-div-right
     background: linear-gradient(to left, #fff 50%, transparent)
     right: 0
-.deliv
+.deliv,.news,.bread-crumps
   display: none
 .reviews
   .block-title
@@ -456,12 +470,8 @@ body
     position: absolute
     bottom: 0
     left: 0
-.news
-  display: none
 .display-block
   display: block
-.bread-crumps
-  display: none
 .filter
   &-title
     &-button
@@ -596,6 +606,19 @@ body
   span
     +font(18px,$f_reg,$light-blue)
     text-transform: uppercase
+.select
+  &-activ
+    display: block
+  &-arrow:after
+    +wh(10px)
+    display: table
+    content: ''
+    border-right: 1px solid $pink-gray
+    border-top: 1px solid $pink-gray
+    transform: rotate(135deg)
+    position: absolute
+    right: 15px
+    top: 7px
 aside
   background-color: $light-pink
   position: absolute
@@ -628,14 +651,23 @@ aside
     div div
       background-color: $pink-gray
 #sort-checkbox
-  &:checked~.popular-sort-select-checkbox label
-    display: block
+  &:checked~.popular-sort-select-checkbox
+    label
+      display: block
     &:after
       transform: rotate(-45deg)
       top: 13px
 #pop-color01,#pop-color02,#pop-color03,#pop-color04,#pop-color05,#pop-color06
-  &:checked~.popular-sort-select-checkbox label
-    display: block
+  &:checked~.popular-sort-select-checkbox
+    label
+      display: block
+    &:after
+      transform: rotate(-45deg)
+      top: 13px
+#pop-rent01,#pop-rent02,#pop-rent03,#pop-rent04,#pop-rent05,#pop-rent06
+  &:checked~.popular-rent-list
+    label
+      display: flex
     &:after
       transform: rotate(-45deg)
       top: 13px

@@ -50,6 +50,17 @@ a:hover
       justify-content: space-around
   &-must-know,&-about-company
     top: 59px
+.button
+  &:hover
+    background: #fff
+    border: 1px solid $light-blue
+    span
+      color: $light-blue
+    img
+      &:first-child
+        display: none
+      &:nth-child(2)
+        display: block
 .main
   &-slider
     margin-top: 15px
@@ -78,12 +89,14 @@ a:hover
   &-cont
     width: 370px
     flex-direction: column
+    align-items: inherit
   &-sell,&-rent
     &-cont
       justify-content: space-between
   &-rent
     &-select
       font-size: 12px
+      margin-bottom: 10px
       &>span:last-child
         font-size: 22px
   &-photo
@@ -96,7 +109,9 @@ a:hover
     font-size: 22px
     display: flex
     justify-content: space-between
-    align-items: center
+    align-items: flex-end
+    &>span
+      margin-bottom: 30px
     button
       +wh(97px,86px)
       margin-top: 0
@@ -116,24 +131,54 @@ a:hover
     li
       width: 260px
       margin: 0 0 20px
+      &:hover
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5)
+        .popular-haract
+          display: block
+          box-shadow: 0 5px 10px rgba(0,0,0,0.5)
       .popular-cont
         width: 258px
       .popular-photo
         width: 258px
         flex: 0 0 258px
+    .popular-price button:hover
+      background-color: #f6f0ea
+      img:last-child
+       display: block
+      img:first-child
+        display: none
   &-haract
     display: none
+    position: absolute
+    z-index: 100
+    width: 260px
+    bottom: -215px
+    left: -1px
   &-container
     .block-title
       padding: 15px 0 20px 45px
   &-sort
     padding: 0 0 0 45px
+    &-pagination
+      li
+        a:hover
+          text-decoration: none
+          background-color: inherit
+    &-select
+      &-checkbox
+        label:hover
+          background-color: #fff
 .block
   &-image
     left: 250px
   &-title
     justify-content: flex-start
     padding: 40px 10px
+    .popular-label
+      &-rent,&-sell
+        &:hover
+          background: linear-gradient(180deg, #718edd, #48c3eb)
+          color: #fff
 .stocks
   &-block
     +wh(556px,386px)
@@ -194,6 +239,10 @@ a:hover
     .block-image
       img:last-child
         display: block
+.clear-button
+  &:hover
+    span
+      text-decoration: underline
 .foot
   &-slogan
     font-size: 18px
