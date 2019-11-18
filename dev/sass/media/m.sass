@@ -229,6 +229,7 @@ body
         background-color: $light-pink
         text-transform: uppercase
         position: absolute
+        z-index: 30
         right: 0
         top: -5px
         border-top: 2px solid #dadada
@@ -240,15 +241,15 @@ body
           &:first-child
             display: block
             &:after
-              +wh(7px)
+              +wh(10px)
               display: table
               content: ''
               border-right: 1px solid $pink-gray
               border-top: 1px solid $pink-gray
               transform: rotate(135deg)
               position: absolute
-              right: 10px
-              top: 10px
+              right: 15px
+              top: 7px
     &-pagination
       +w(300px)
       margin: 20px auto
@@ -266,12 +267,14 @@ body
     flex-wrap: wrap
     align-items: flex-start
     justify-content: space-between
+    position: relative
     li
       display: flex
       flex-direction: column
       width: 300px
       margin: 0 auto 20px
       border: 1px solid #dfdad5
+      position: relative
       .popular-cont
         border: none
         margin: 0 0 2px 0
@@ -295,6 +298,21 @@ body
           display: inline-block
           &:first-child
             width: 55%
+  &-best
+    +wh(20px)
+    +dfc
+    position: absolute
+    top: 0
+    right: 0
+    padding: 4px
+    span
+      +font(14px,$f_reg,#fff)
+    span:first-child
+      display: none
+    &-new
+      background: linear-gradient(180deg, #718edd, #48c3eb)
+    &-akcii
+      background-color: #ea9cb6
 .block
   &-image
     display: flex
@@ -543,7 +561,7 @@ body
         letter-spacing: 1px
       span:last-child
         display: none
-      &>div:first-child
+      &>div
         +wh(20px)
         display: table
         content: ''
@@ -552,7 +570,7 @@ body
         position: absolute
         left: -10px
         top: 13px
-      &>div:last-child
+      &>button
         +wh(45px)
         display: flex
         align-items: center

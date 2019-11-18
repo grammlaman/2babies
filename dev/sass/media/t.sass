@@ -88,10 +88,35 @@ header
       width: 250px
 
 .popular
+  &-container
+    position: relative
   &-label
     padding: 24px 37px 19px
     font-size: 12px
     letter-spacing: 2px
+  &-sort
+    margin-bottom: 20px
+    padding: 0 10px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    &-select
+      &-checkbox
+        right: -250px
+        top: -4px
+        letter-spacing: 1px
+        width: 230px
+    &-pagination
+      width: 320px
+      margin: 0
+    &-end
+      width: 320px
+      padding: 0
+      margin: 0 10px 20px auto
+  &-haract
+    &-select
+      right: -10px
+      top: 0
 .block
   &-title
     h3
@@ -186,6 +211,28 @@ header
         margin-bottom: 30px
   &-text
     +font(18px,$f_reg,$pink-gray)
+.bread-crumps
+  display: flex
+  align-items: center
+  padding: 0 10px
+  margin-top: 20px
+  a
+    +font(12px,$f_reg,$pink-gray)
+  div
+    +wh(10px)
+    border-right: 1px solid $pink-gray
+    border-top: 1px solid $pink-gray
+    transform: rotate(45deg)
+    margin: 0 13px 0 10px
+.filter
+  &-title
+    &-sort
+      display: none
+aside
+  top: 70px
+  left: inherit
+  right: 10px
+  border: 1px solid #dfdad5
 footer
   .section
     padding-top: 50px

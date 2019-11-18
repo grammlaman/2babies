@@ -8,7 +8,7 @@ block content
             a(href='#') Главная
             div
             a(href='#') Каталог
-    .section
+    .section.popular-container
         input(type='checkbox' style='display:none')#aside-checkbox
         input(type='checkbox' style='display:none')#pag-checkbox
         aside
@@ -34,7 +34,7 @@ block content
                         span Новинки
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
 
@@ -46,7 +46,7 @@ block content
                         span Акции
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
             .filter-category.filter-label-cont
@@ -59,7 +59,7 @@ block content
                         span Прогулочные коляски
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -70,7 +70,7 @@ block content
                         span Коляски для новорожденных
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -81,7 +81,7 @@ block content
                         span Коляски для погодок и двойни
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -92,7 +92,7 @@ block content
                         span Детские коляски 2 в 1
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -103,7 +103,7 @@ block content
                         span Детские коляски 3 в 1
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -114,7 +114,7 @@ block content
                         span Коляски-трансформеры
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -125,7 +125,7 @@ block content
                         span Коляски для путешествий
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
             .filter-brand.filter-label-cont
@@ -138,7 +138,7 @@ block content
                         span Baby Jogger
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -149,7 +149,7 @@ block content
                         span Peg Perego
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
                 div.filter-label
@@ -160,7 +160,7 @@ block content
                         span Carrello
                     div
                         div
-                        div
+                        button
                             span (33)
                             span показать
             button.button.filter-button
@@ -256,6 +256,9 @@ block content
                                 span Размер люльки (ДхШ)
                                 span 77х33 см
                 li
+                    div.popular-best.popular-best-new
+                        span Новинки
+                        +img('star-white.svg')
                     div.popular-cont
                         .popular-photo
                             +img('popular1.png')
@@ -290,6 +293,9 @@ block content
                                 span Размер люльки (ДхШ)
                                 span 77х33 см
                 li
+                    div.popular-best.popular-best-akcii
+                        span Акции
+                        span %
                     div.popular-cont
                         .popular-photo
                             +img('popular1.png')
