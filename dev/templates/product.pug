@@ -11,6 +11,10 @@ block content
                 a(href='#') Каталог
                 div
                 a(href='#') BABY JOGGER "CITY SELECT LUX"
+            .product-bread-crumps
+                a(href='#')
+                    span
+                    span Популярные
         .section
             .product
                 .product-title
@@ -22,39 +26,42 @@ block content
                                 - if(i == 1)
                                     .product-slider-main-slide-out.act
                                         .product-slider-main-slide
-                                            a(data-fancybox='gal' href='img/bed-lirio.png')
-                                                +img('bed-lirio.png')
+                                            a(data-fancybox='gal' href='img/popular1.png')
+                                                +img('black.jpg')
                                 - else
                                     .product-slider-main-slide-out
                                         .product-slider-main-slide
-                                            a(data-fancybox='gal' href='img/bed-lirio.png')
-                                                +img('bed-lirio.png')
+                                            a(data-fancybox='gal' href='img/popular2.png')
+                                                +img('black.jpg')
+
                         .product-slider-slave
                             - for(let i=1;i<6;i++)
                                 - if(i == 1)
                                     .product-slider-slave-slide-out.act
                                         .product-slider-slave-slide
-                                            +img('prod-small-' + i + '.png')
+                                            +img('slide' + i + '.jpg')
                                 - else
                                     .product-slider-slave-slide-out
                                         .product-slider-slave-slide
-                                            +img('prod-small-' + i + '.png')
+                                            +img('slide' + i + '.jpg')
                         .product-youtube
                             button
                                 +img('youtube-logo.svg')
                     .product-cont
                         .product-color
-                            span Цвет:
-                            span Черный
+                            span
+                                span Цвет:
+                                span Черный
                             .product-color-slider
-                                .product-color-slide
-                                    +img('')
-                                .product-color-slide
-                                    +img('')
-                                .product-color-slide
-                                    +img('')
-                                .product-color-slide
-                                    +img('')
+                                button.product-color-slide.product-color-slide-act
+                                    +img('black.jpg')
+                                button.product-color-slide
+                                    +img('black.jpg')
+                                button.product-color-slide
+                                    +img('black.jpg')
+                                button.product-color-slide
+                                    +img('black.jpg')
+                            .product-color-line
                         .product-delievery
                             div
                                 div Есть в наличии

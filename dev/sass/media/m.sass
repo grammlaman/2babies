@@ -619,6 +619,66 @@ body
     position: absolute
     right: 15px
     top: 7px
+.product
+  padding: 0 10px
+  &-bread-crumps
+    a
+      display: flex
+      align-items: center
+      padding: 0 10px
+      margin-top: 20px
+      +font(12px,$f_reg,$pink-gray)
+      span
+        &:first-child
+          +wh(7px)
+          display: block
+          border-right: 1px solid $pink-gray
+          border-top: 1px solid $pink-gray
+          transform: rotate(-135deg)
+          margin: 0 13px 0 10px
+  &-title
+    h1
+      +font(14px,$f_bold,$pink-gray)
+      +w(130px)
+      text-transform: uppercase
+      margin-top: 30px
+      margin-left: 30px
+  &-youtube
+    display: none
+  &-slider
+    &-main
+      +wh(250px)
+      margin: 15px auto
+      &-slide
+        &-out
+          display: none
+          &.act
+            display: block
+    &-slave
+      display: none
+  &-color
+    span
+      +font(12px,$f_reg,$pink-gray)
+      &:last-child
+        text-transform: uppercase
+        font-family: $f_bold
+        margin-left: 10px
+    &-slider
+      +w(220px)
+      margin: 20px auto
+      display: flex
+      overflow: hidden
+    &-slide
+      +wh(100px)
+      flex: 0 0 100px
+      margin: 0 5px
+      border: 1px solid #dadada
+      &-act
+        border: 3px solid #dadada
+    &-line
+      +wh(300px,1px)
+      margin: auto
+      background-color: #dadada
 aside
   background-color: $light-pink
   position: absolute
