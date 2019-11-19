@@ -10,6 +10,8 @@ a:hover
 .cart
   &-log
     +wh(22px)
+  &:hover
+    background: inherit
 .phone
   &-mail
     font-size: 18px
@@ -135,12 +137,10 @@ a:hover
         box-shadow: 0 5px 10px rgba(0,0,0,0.5)
         .popular-haract
           display: block
-          box-shadow: 0 5px 10px rgba(0,0,0,0.5)
-      .popular-cont
+          box-shadow: 0 10px 10px rgba(0,0,0,0.5)
+      .popular-cont,.popular-photo
         width: 258px
-      .popular-photo
-        width: 258px
-        flex: 0 0 258px
+        margin: 0
     .popular-price button:hover
       background-color: #f6f0ea
       img:last-child
@@ -151,9 +151,9 @@ a:hover
     display: none
     position: absolute
     z-index: 100
-    width: 260px
-    bottom: -215px
-    left: -1px
+    width: 258px
+    bottom: -200px
+    left: 0
   &-container
     .block-title
       padding: 15px 0 20px 45px

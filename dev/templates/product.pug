@@ -26,14 +26,13 @@ block content
                                 - if(i == 1)
                                     .product-slider-main-slide-out.act
                                         .product-slider-main-slide
-                                            a(data-fancybox='gal' href='img/popular1.png')
+                                            a(data-fancybox='gal' href='img/black.png')
                                                 +img('black.jpg')
                                 - else
                                     .product-slider-main-slide-out
                                         .product-slider-main-slide
-                                            a(data-fancybox='gal' href='img/popular2.png')
+                                            a(data-fancybox='gal' href='img/black.png')
                                                 +img('black.jpg')
-
                         .product-slider-slave
                             - for(let i=1;i<6;i++)
                                 - if(i == 1)
@@ -69,183 +68,205 @@ block content
                             div
                                 div
                                     +img('delivered.svg')
-                                p Доставка до 10 км от МКАД - бесплатно
-                                p Свыше 10 км от МКАД - #[a(href='#') по тарифам]
+                                p
+                                    span Доставка до 10 км от МКАД - #[strong бесплатно]
+                                    span Свыше 10 км от МКАД - #[a(href='#') по тарифам]
+                            .product-color-line
                         .product-request
                             .product-request-price
-                                span 53 000 ₽
-                            .product-request-submit
-                                .product-request-number
-                                    input(type='number')
-                                    button.product-request-more
-                                        span
-                                    button.product-request-more.product-request-less
-                                        span
-                                button.button
-                                    svg(src='img/shopping-cart(1).svg')
+                                span #[strong 53 000] ₽
+                            .product-request-number
+                                div
+                                    input(type='number' placeholder='1')
+                                    button #[span]
+                                    button #[span]
+                                button.product-request-button.button
+                                    +img('shopping-cart(2).svg')
+                                    +img('shopping-cart(1).svg')
                                     span ЗАКАЗАТЬ
                                 button.product-request-button.button
-                                    svg(src='phone.svg')
+                                    +img('phone.svg')
+                                    +img('phone-white.svg')
                                     span ЗАКАЗАТЬ ПО ТЕЛЕФОНУ
+                            .product-color-line
                         .product-rent
                             span Вы можете взять данную модель в аренду
-                            a(href='#')
+                            a(href='#').block-title-a
                                 span Узнать подробности
                                 +img('left-arrow.svg')
             .product-description
-                label.product-description-comp #[input(type='radio' name='product-description' style='display:none')] Комплектация
-                label.product-description-harac #[input(type='radio' name='product-description' style='display:none')] Характеристики
-                label.product-description-desc #[input(type='radio' name='product-description' style='display:none')] Описание
-                label.product-description-acses #[input(type='radio' name='product-description' style='display:none')] Аксессуары
-                .product-comp
-                    ul
-                        li
+                input(type='radio' name='product-description' style='display:none')#product-description-comp
+                input(type='radio' name='product-description' style='display:none')#product-description-harac
+                input(type='radio' name='product-description' style='display:none')#product-description-desc
+                input(type='radio' name='product-description' style='display:none')#product-description-acses
+                input(type='radio' name='product-description' style='display:none')#product-description-close
+                label(for='product-description-comp').product-description-label Комплектация
+                label(for='product-description-harac').product-description-label Характеристики
+                label(for='product-description-desc').product-description-label Описание
+                label(for='product-description-acses').product-description-label Аксессуары
+                .product-description-comp
+                    label(for='product-description-comp').product-description-label-mob Комплектация
+                    label(for='product-description-close').product-description-label-mob-close
+                    div
+                        p
                             span •
                             span Алюминиевая рама с 4-мя надувными колёсами и корзинкой для покупок.
-                        li
+                        p
                             span •
                             span Сиденье с капюшоном и бампером для ребенка.
-                        li
+                        p
                             span •
                             span Фирменный дождевик.
-                        li
+                        p
                             span •
                             span Фирменный подстаканник.
-                .product-harac
+                .product-description-harac
+                    label(for='product-description-harac').product-description-label-mob Характеристики
+                    label(for='product-description-close').product-description-label-mob-close
                     div
-                        h6 Размеры и вес коляски
-                        ul
-                            li
+                        div
+                            h6 Размеры и вес коляски
+                            p
                                 span Размеры в разложенном виде (ДхШхВ)
                                 span 90 х 60 х 107 см
-                            li
+                            p
                                 span Размеры в сложенном виде (ДхШхВ)
                                 span 82 х 60 х 33,5 см
-                            li
+                            p
                                 span Вес с сиденьем
                                 span 11,9 кг
-                    div
-                        h6 Сиденье
-                        ul
-                            li
+                        .product-color-line
+                        div
+                            h6 Сиденье
+                            p
                                 span Спинка
                                 span 4 положения наклона от 95° до 175°
-                            li
+                            p
                                 span Высота спинки
                                 span 48 см
-                            li
+                            p
                                 span Глубина сиденья
                                 span от 25 до 42 см
-                            li
+                            p
                                 span Ширина сиденья
                                 span 32 см
-                            li
+                            p
                                 span Длина сиденья
                                 span 90 см
-                            li
+                            p
                                 span Высота от пола до сиденья
                                 span 42 см
-                            li
+                            p
                                 span Подножка
                                 span есть, регулируемая
-                            li
+                            p
                                 span Капюшон
                                 span глубокий, с доп. секцией, со смотровым окном
-                            li
+                            p
                                 span Бампер
                                 span жёсткий, со съемной тканью, отстёгивается с двух сторон
-                            li
+                            p
                                 span Материал сиденья
                                 span износостойкая приятная ткань, снимается с стирается
-                            li
+                            p
                                 span Внутренние ремни
                                 span регулируются по высоте, с мягкими накладками
-                    div
-                        h6 Возраст и вес ребенка
-                        ul
-                            li
+                        .product-color-line
+                        div
+                            h6 Возраст и вес ребенка
+                            p
                                 span Минимальный возраст ребенка
                                 span 3 месяца
-                            li
+                            p
                                 span Максимальный вес ребенка
                                 span 15 кг
-                    div
-                        h6 Шасси коляски
-                        ul
-                            li
+                        .product-color-line
+                        div
+                            h6 Шасси коляски
+                            p
                                 span Шасси коляски
                                 span 17 см
-                            li
+                            p
                                 span Диаметр задних колес
                                 span 25 см
-                            li
+                            p
                                 span Ширина колесной базы
                                 span 59 см
-                            li
+                            p
                                 span Колеса
                                 span задние надувные, все резиновые,передние поворотные с возможностью фиксации
-                            li
+                            p
                                 span Ручка
                                 span телескопическая, с покрытием из экокожи
-                            li
+                            p
                                 span Высота от пола до ручки
                                 span от 98 до 108 см
-                            li
+                            p
                                 span Амортизация
                                 span отличная рессорная амортизация на всех колесах
-                            li
+                            p
                                 span Корзина для покупок
                                 span вместимая, с жестким дном, съемная
-                    div
-                        h6 Документация
-                        ul
-                            li
+                        .product-color-line
+                        div
+                            h6 Документация
+                            p
                                 span Инструкция по эксплуатации
-                                span скачать
-                            li
+                                a(href='#') скачать
+                            p
                                 span Сертификат официального дилера
-                                span скачать
-                .product-desc
-                    p #[strong Baby Jogger "City Select LUX"] позволяет родителям сочетать сидения, люльки и автокресла более чем в 20 различных вариантах, чтобы удовлетворить любые потребности семьи. Это на 25% больше комбинаций, чем у обычного City Select. Сиденья могут быть расположены по направлению к дороге, к маме и лицом к друг другу. Ещё более компактное сложенное состояние, на 30% меньше, чем у простого City Select. Легко сложите сиденье и поднимите стороны, чтобы сложить детскую коляску. Новый компактный размер и автоматический замок облегчают перенос, транспортировку и хранение. Сидение складывается внутрь, поэтому оно остается чистым. Ручной тормоз и стояночный тормоз, находятся в одном месте. Ручной тормоз замедляет все колеса. 12 дюймовые задние колеса, не требующие подкачки и 8 дюймовые легкие передние колеса с возможностью блокировки вращения, амортизация всех колес - всё это обеспечивает повышенный контроль и комфорт. Телескопическая ручка подстроится под родителей любого роста.
-                    p Запатентованная система быстрого сложения Quick-Fold, так что вы можете сложить коляску одним движением. Многопозиционная спинка сидения откидывается одним нажатием кнопки. 5-ти точечная система ремней безопасности. Регулируемая подножка. Ткань с защитой от солнца UPF 50+. Капор со смотровым окошком на магнитике. Большая корзина для вещей, вмещающая до 7 кг.
-                    p #[strong Baby Jogger City Select Lux] с легкостью превращается в систему для путешествий. Только выберите адаптер подходящий к Вашему автокреслу группы 0+. Прогулочный блок может использоваться с 6 месяцев.
-                .product-acses
+                                a(href='#') скачать
+                .product-description-desc
+                    label(for='product-description-desc').product-description-label-mob Описание
+                    label(for='product-description-close').product-description-label-mob-close
                     div
-                        .product-acses-photo
-                            +img('acses-photo.jpg')
-                        .product-acses-name
-                            span муфта-рукавички vikalex snow dreams
-                        .product-acses-price
-                            span 2 500 ₽
-                            button
-                                +img('shopping-cart(1).svg')
-                    div
-                        .product-acses-photo
-                            +img('acses-photo.jpg')
-                        .product-acses-name
-                            span муфта-рукавички vikalex snow dreams
-                        .product-acses-price
-                            span 2 500 ₽
-                            button
-                                +img('shopping-cart(1).svg')
-                    div
-                        .product-acses-photo
-                            +img('acses-photo.jpg')
-                        .product-acses-name
-                            span муфта-рукавички vikalex snow dreams
-                        .product-acses-price
-                            span 2 500 ₽
-                            button
-                                +img('shopping-cart(1).svg')
-                    div
-                        .product-acses-photo
-                            +img('acses-photo.jpg')
-                        .product-acses-name
-                            span муфта-рукавички vikalex snow dreams
-                        .product-acses-price
-                            span 2 500 ₽
-                            button
-                                +img('shopping-cart(1).svg')
+                        p #[strong Baby Jogger "City Select LUX"] позволяет родителям сочетать сидения, люльки и автокресла более чем в 20 различных вариантах, чтобы удовлетворить любые потребности семьи. Это на 25% больше комбинаций, чем у обычного City Select. Сиденья могут быть расположены по направлению к дороге, к маме и лицом к друг другу. Ещё более компактное сложенное состояние, на 30% меньше, чем у простого City Select. Легко сложите сиденье и поднимите стороны, чтобы сложить детскую коляску. Новый компактный размер и автоматический замок облегчают перенос, транспортировку и хранение. Сидение складывается внутрь, поэтому оно остается чистым. Ручной тормоз и стояночный тормоз, находятся в одном месте. Ручной тормоз замедляет все колеса. 12 дюймовые задние колеса, не требующие подкачки и 8 дюймовые легкие передние колеса с возможностью блокировки вращения, амортизация всех колес - всё это обеспечивает повышенный контроль и комфорт. Телескопическая ручка подстроится под родителей любого роста.
+                        p Запатентованная система быстрого сложения Quick-Fold, так что вы можете сложить коляску одним движением. Многопозиционная спинка сидения откидывается одним нажатием кнопки. 5-ти точечная система ремней безопасности. Регулируемая подножка. Ткань с защитой от солнца UPF 50+. Капор со смотровым окошком на магнитике. Большая корзина для вещей, вмещающая до 7 кг.
+                        p #[strong Baby Jogger City Select Lux] с легкостью превращается в систему для путешествий. Только выберите адаптер подходящий к Вашему автокреслу группы 0+. Прогулочный блок может использоваться с 6 месяцев.
+                .product-description-acses
+                    label(for='product-description-acses').product-description-label-mob Аксессуары
+                    label(for='product-description-close').product-description-label-mob-close
+                    div.product-description-acses-container
+                        div.product-description-acses-unit
+                            .product-description-acses-photo
+                                +img('logo.svg')
+                                +img('acses-photo.jpg')
+                            .product-description-acses-name
+                                span муфта-рукавички vikalex snow dreams
+                            .product-description-acses-price
+                                span 2 500 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                        div.product-description-acses-unit
+                            .product-description-acses-photo
+                                +img('logo.svg')
+                                +img('acses-photo.jpg')
+                            .product-description-acses-name
+                                span муфта-рукавички vikalex snow dreams
+                            .product-description-acses-price
+                                span 2 500 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                        div.product-description-acses-unit
+                            .product-description-acses-photo
+                                +img('logo.svg')
+                                +img('acses-photo.jpg')
+                            .product-description-acses-name
+                                span муфта-рукавички vikalex snow dreams
+                            .product-description-acses-price
+                                span 2 500 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                        div.product-description-acses-unit
+                            .product-description-acses-photo
+                                +img('logo.svg')
+                                +img('acses-photo.jpg')
+                            .product-description-acses-name
+                                span муфта-рукавички vikalex snow dreams
+                            .product-description-acses-price
+                                span 2 500 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
             .popular
                 .section
                     .block-title
@@ -304,7 +325,5 @@ block content
                     span Доставка заказов на более отдаленные расстояния, для которых не указаны расценки, осуществляетсяпо согласованию через транспортные компании
                 button.form-close#delievery-form-close
                     +img('cancel.svg')
-            .youtube
-                h5 Обзор коляски Mikado Duet
-                button.form-close#youtube-form-close
-                    +img('cancel.svg')
+            .youtube01#youtube01
+                <iframe src="https://www.youtube.com/embed/gK6yeYWkh84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

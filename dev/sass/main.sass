@@ -6,6 +6,7 @@ $font_body: 14px
 +font_inc($f_ptrd,'RUBDC.otf')
 +font_inc($f_reg,'Averta_Cyrillic_Regular.otf')
 +font_inc($f_bold,'Averta_Cyrillic_Bold.otf')
++font_inc($f_semi,'AvertaCyrillicSemiBold.otf')
 .set
 	+wh(100%)
 	overflow: hidden
@@ -14,8 +15,9 @@ html,body
 	overflow-x: hidden
 body
 	+wh(100%)
-	//+font($font_body,$f_reg,$gray)
-	//+bg(100%,url(../img/bb.png),left bottom,no-repeat)
+	+font(14px,$f_reg,$pink-gray)
+a
+	+font(14px,$f_reg,$pink-gray)
 $unit: 'px'
 @import "media/m"
 +mq($mobile-large#{$unit})

@@ -3,7 +3,6 @@ $unit : 'px'
   +w($mobile#{$unit})
   margin: 0 auto
 body
-  font-family: $f_reg
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
 
 .head
@@ -21,7 +20,7 @@ body
   img
     width: 145px
 .slogan
-  +font(13px, $f_reg)
+  +font(13px,$f_reg)
   background: linear-gradient(180deg, #718edd, #48c3eb)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
@@ -100,25 +99,21 @@ body
     display: block
   &-log
     +wh(19px)
+    +dfc
     position: absolute
     bottom: 3px
     right: 6px
     z-index: 10
     border-radius: 50%
     background-color: #5fa5e3
-    display: flex
-    align-items: center
-    justify-content: center
     span
       font-size: 12px
       color: #fff
 
 .button
   +wh(145px,44px)
+  +dfc
   padding: 6px 0
-  display: flex
-  align-items: center
-  justify-content: center
   background: linear-gradient(180deg, #718edd, #48c3eb)
   img
     +wh(21px)
@@ -175,7 +170,7 @@ body
     h3
       margin-right: 0
   &-label
-    +font(8px,$f_bold,$pink-gray)
+    +font(8px,$f_bold)
     padding: 11px 8px
     background: linear-gradient(to bottom, #fdefe1, #fdf9f5)
   &-label-sell
@@ -213,13 +208,11 @@ body
     align-items: center
   &-photo
     +wh(127px,137px)
+    +dfc
     flex: 0 0 127px
     overflow: hidden
-    display: flex
-    align-items: center
-    justify-content: center
   &-desc
-    +font(14px,$f_bold,$pink-gray)
+    +font(14px,$f_bold)
     text-transform: uppercase
     padding-top: 16px
   &-name
@@ -229,10 +222,8 @@ body
     margin-top: 30px
     button
       +wh(170px,40px)
+      +dfc
       margin-top: 10px
-      display: flex
-      align-items: center
-      justify-content: center
       background-color: #f6f0ea
       img
         +wh(30px)
@@ -243,7 +234,7 @@ body
     &-select
       position: relative
       &-checkbox
-        +font(12px,$f_reg,$pink-gray)
+        font-size: 12px
         +w(180px)
         background-color: $light-pink
         text-transform: uppercase
@@ -267,7 +258,7 @@ body
       justify-content: space-between
       li
         a
-          +font(12px,$f_reg,$pink-gray)
+          font-size: 12px
           +wh(30px)
           +dfc
           background-color: $light-pink
@@ -308,7 +299,7 @@ body
       p
         margin-top: 11px
         span
-          +font(12px,$f_reg,$pink-gray)
+          font-size: 12px
           display: inline-block
           &:first-child
             width: 55%
@@ -342,14 +333,15 @@ body
     margin: auto
     overflow: hidden
     h3
-      +font(18px,$f_reg,$pink-gray)
+      font-size: 18px
       margin-right: 10px
     &-none
       .block-image
         display: none
 .block-title-a,.news-link
-  +font(12px,$f_reg,#4ac0ea)
+  +font(12px,$f_reg,$light-blue)
   letter-spacing: 1px
+  text-transform: uppercase
   img
     +wh(12px,10px)
     transform: rotate(180deg)
@@ -424,7 +416,7 @@ body
   &-div-right
     background: linear-gradient(to left, #fff 50%, transparent)
     right: 0
-.deliv,.news,.bread-crumps
+.deliv,.news,.bread-crumps,.delievery-form
   display: none
 .reviews
   .block-title
@@ -441,7 +433,7 @@ body
     margin-bottom: 10px
     &-left
       span
-        +font(12px,$f_bold,$pink-gray)
+        +font(12px,$f_bold)
         letter-spacing: 1px
         display: block
       span:first-child
@@ -456,8 +448,6 @@ body
       width: 120px
       img
         +wh(20px)
-  &-text
-    +font(14px,$f_reg,$pink-gray)
   &-block
     padding: 10px 20px
     background-color: $light-pink
@@ -517,7 +507,7 @@ body
         &>div:last-child
           +wh(4px,16px)
   &-h5
-    +font(18px,$f_reg,$pink-gray)
+    font-size: 18px
   &-name
     display: flex
     justify-content: flex-start
@@ -536,10 +526,10 @@ body
           margin: 0 5px
       &-range
         +wh(100px,30px)
-        +font(12px,$f_reg,$pink-gray)
+        font-size: 12px
         padding: 0 10px
   &-h6
-    +font(12px,$f_bold,$pink-gray)
+    +font(12px,$f_bold)
     text-transform: uppercase
   &-label
     position: relative
@@ -548,7 +538,7 @@ body
       align-items: center
       margin-top: 10px
       span
-        +font(13px,$f_reg,$pink-gray)
+        font-size: 13px
       span:first-child
         +wh(25px)
         display: block
@@ -582,9 +572,7 @@ body
         top: 13px
       &>button
         +wh(45px)
-        display: flex
-        align-items: center
-        justify-content: center
+        +dfc
         background: linear-gradient(180deg, #718edd, #48c3eb)
         position: absolute
         top: 0
@@ -627,7 +615,7 @@ body
       align-items: center
       padding: 0 10px
       margin-top: 20px
-      +font(12px,$f_reg,$pink-gray)
+      font-size: 12px
       span
         &:first-child
           +wh(7px)
@@ -638,14 +626,18 @@ body
           margin: 0 13px 0 10px
   &-title
     h1
-      +font(14px,$f_bold,$pink-gray)
+      font-family: $f_bold
       +w(130px)
       text-transform: uppercase
       margin-top: 30px
       margin-left: 30px
   &-youtube
-    display: none
+    +wh(70px,50px)
+    position: absolute
+    top: 0
+    right: 0
   &-slider
+    position: relative
     &-main
       +wh(250px)
       margin: 15px auto
@@ -656,16 +648,18 @@ body
             display: block
     &-slave
       display: none
+  &-both
+    margin-bottom: 15px
   &-color
     span
-      +font(12px,$f_reg,$pink-gray)
+      font-size: 12px
       &:last-child
         text-transform: uppercase
         font-family: $f_bold
         margin-left: 10px
     &-slider
       +w(220px)
-      margin: 20px auto
+      margin: 15px auto
       display: flex
       overflow: hidden
     &-slide
@@ -677,8 +671,195 @@ body
         border: 3px solid #dadada
     &-line
       +wh(300px,1px)
-      margin: auto
+      margin: 0 auto 15px
       background-color: #dadada
+  &-delievery
+    &>div
+      display: flex
+      align-items: center
+      margin-bottom: 15px
+      div
+        +font(12px,$f_bold)
+        +w(120px)
+        +dfc
+        flex: 0 0 120px
+        padding: 10px 0
+        border: 1px solid #dadada
+        img
+          +wh(30px)
+      &:last-child div
+        padding: 7px 0
+      p
+        font-size: 12px
+        margin-left: 5px
+        strong,a
+          font-family: $f_bold
+        span
+          display: block
+        a
+          color: $light-blue
+  &-request
+    &-price
+      text-align: center
+      margin-bottom: 20px
+      span
+        font-size: 22px
+        letter-spacing: 2px
+        strong
+          font-family: $f_bold
+    &-number
+      +w(100%)
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      div
+        position: relative
+        input
+          +wh(100px,50px)
+          +font(15px,$f_bold)
+          flex: 0 0 100px
+          padding: 0 30px
+          background-color: $light-pink
+          border-top: 2px solid #dadada
+          border-left: 2px solid #dadada
+        button
+          +wh(25px)
+          +dfc
+          position: absolute
+          top: 0
+          right: 0
+          span
+            +wh(10px)
+            display: block
+            border-top: 1px solid $pink-gray
+            border-right: 1px solid $pink-gray
+            transform: rotate(-45deg)
+            margin-top: 5px
+          &:last-child
+            top: inherit
+            bottom: 0
+            span
+              transform: rotate(135deg)
+              margin-top: 0
+              margin-bottom: 5px
+      &>div,&>button
+        margin: 0 0 10px 0
+    &-button
+      +wh(170px,50px)
+      &:last-child
+        +w(100%)
+        flex: 0 0 100%
+        background: inherit
+        border: 1px solid $light-blue
+        span
+          color: $light-blue
+  &-rent
+    text-align: center
+    background-color: $light-pink
+    padding: 20px 0
+    &>span
+      font-family: $f_bold
+      +w(230px)
+      margin: 0 auto 10px
+      display: block
+  &-description
+    &>div
+      +w(300px)
+      margin: 2px auto
+      background-color: #fbefe4
+      position: relative
+      &>div
+        margin-top: 20px
+        padding: 0 20px
+        display: none
+        &>div,p
+          margin-top: 10px
+          font-size: 12px
+          strong
+            font-family: $f_bold
+        & .product-color-line
+          +wh(260px,1px)
+      &:last-child
+        div
+          margin-top: 0
+        &>div
+         padding: 0 10px
+    h6
+      font-family: $f_bold
+    a
+      display: block
+      color: $light-blue
+    &-label
+      display: none
+      &-mob
+        font-family: $f_semi
+        display: block
+        width: 300px
+        padding: 10px 20px
+        &:after
+          +wh(10px)
+          display: table
+          content: ''
+          border-top: 1px solid $pink-gray
+          border-right: 1px solid $pink-gray
+          transform: rotate(135deg)
+          position: absolute
+          right: 15px
+          top: 9px
+        &-close
+          +wh(300px,40px)
+          position: absolute
+          top: 0
+          z-index: 100
+          display: none
+    &-acses
+      &-container
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+      &-unit
+        width: 138px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        border: 1px solid #dadada
+        background-color: #fff
+        margin-bottom: 4px
+      &-photo
+        width: 128px
+        margin: auto
+        position: relative
+        img:first-child
+          +wh(40px,15px)
+          position: absolute
+          bottom: 0
+          right: 0
+      &-name
+        padding: 10px
+        span
+          font-family: $f_bold
+          text-transform: uppercase
+      &-price
+        +w(100%)
+        padding-left: 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        span
+          font-size: 12px
+          letter-spacing: 1px
+        button
+          +wh(44px,40px)
+          +dfc
+          background-color: $light-pink
+          img
+            +wh(16px)
+.youtube01
+  +dfc
+  display: none
+  iframe
+    +wh(280px,200px)
+    margin: auto
 aside
   background-color: $light-pink
   position: absolute
@@ -731,6 +912,18 @@ aside
     &:after
       transform: rotate(-45deg)
       top: 13px
+#product-description-comp:checked~.product-description-comp,#product-description-harac:checked~.product-description-harac,#product-description-desc:checked~.product-description-desc,#product-description-acses:checked~.product-description-acses
+  background-color: #f9f4ef
+  &>div
+    display: block
+    padding-bottom: 10px
+  .product-description-acses-container
+    display: flex
+  .product-description-label-mob-close
+    display: block
+  .product-description-label-mob:after
+    transform: rotate(-45deg)
+    top: 17px
 footer
   background-color: #fdefe1
   .section
