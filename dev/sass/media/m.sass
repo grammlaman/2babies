@@ -860,6 +860,32 @@ body
   iframe
     +wh(280px,200px)
     margin: auto
+.del-form
+  padding: 50px 20px 20px
+  display: none
+  p
+    font-size: 12px
+    line-height: 1.2em
+  .product-color-line
+    +w(280px)
+  &-title
+    font-family: $f_bold
+  .row
+    margin-bottom: 15px
+    p
+      width: 33%
+      flex: 0 0 33%
+      padding-right: 17px
+  .row,&-label
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+  &-label
+    padding: 10px
+    background-color: $light-pink
+    img
+      +wh(44px)
+      margin-right: 10px
 aside
   background-color: $light-pink
   position: absolute
