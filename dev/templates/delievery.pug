@@ -1,0 +1,102 @@
+extends template/main
+append vars
+  -
+    page_title= 'Главная страница'
+block content
+    main
+        .section
+            .bread-crumps
+                a(href='#') Главная
+                div
+                a(href='#') О компании
+                div
+                a(href='#') Доставка и Оплата
+        .section
+            .deliv.delievery
+                .section
+                    .block-title.block-title-none
+                        h3 Доставка и оплата
+                        div.block-image
+                            +img('title.png')
+                            +img('title.png')
+                            +img('title.png')
+                    .deliv-cont
+                        .deliv-block
+                            .deliv-img
+                                +img('gift.svg')
+                            h6 ДОСТАВКА КУРЬЕРОМ
+                            span Доставим курьером по Москве #[br] и Московской области
+                        .deliv-last
+                            div
+                                .deliv-img
+                                    +img('credit-card.svg')
+                                span ОПЛАТА КАРТОЙ
+                            div
+                                div.deliv-img
+                                    +img('credit-card(1).svg')
+                                span ОПЛАТА КУРЬЕРУ
+                    .product-color-line
+                    .deliv-cont
+                        .deliv-block
+                            .deliv-img
+                                +img('delivered.svg')
+                            h6 ТРАНСПОРТНАЯ КОМПАНИЯ
+                            span Доставка транс компаниями в регионы #[br] РФ. На ваш выбор любая из ТК России. #[br] Оперативная доставка до транспортной #[br] компании нашим транспортом. #[br] Точная отправка в срок.
+                        .deliv-last
+                            div
+                                .deliv-img
+                                    +img('credit-card.svg')
+                                span ОПЛАТА КАРТОЙ
+                            div
+                                div.deliv-img
+                                    +img('wallet.svg')
+                                span НАЛОЖЕННЫЙ ПЛАТЕЖ
+            .sertificates
+                .block-title.block-title-none
+                    h3 Сертификаты
+                    div.block-image
+                        +img('title.png')
+                        +img('title.png')
+                        +img('title.png')
+        .reviews
+            .section
+                .block-title.block-title-none
+                    h3 Отзывы
+                    div.block-image
+                        +img('title.png')
+                        +img('title.png')
+                        +img('title.png')
+                    a(href='#').block-title-a
+                        span ВСЕ ОТЗЫВЫ
+                        +img('left-arrow.svg')
+                .reviews-cont
+                    .reviews-block
+                        .reviews-name
+                            .reviews-name-left
+                                span Оксана
+                                span 12.10.2019
+                            .reviews-name-right
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                                +img('star-gray.svg')
+                        p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
+                        .reviews-photo
+                            div
+                                +img('rev1.png')
+                            div
+                                +img('rev2.png')
+                    .reviews-block
+                        .reviews-name
+                            .reviews-name-left
+                                span Оксана
+                                span 12.10.2019
+                            .reviews-name-right
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                        p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску! Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
+                    .reviews-gradient

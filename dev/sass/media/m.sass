@@ -25,17 +25,16 @@ body
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 .mob
-  &-must-know
-    display: none
-  &-about-company
-    display: none
   &-menu
+    display: none
+  &-must-know,&-about-company
     display: none
   &-nav
     &-list
       position: absolute
+      z-index: 100
       width: 100%
-      li
+      div
         background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
         a
           padding: 16px 14px
@@ -44,7 +43,6 @@ body
           width: 100%
           text-align: left
           font-size: 18px
-          color: #6e6964
     &-button
       +wh(57px,44px)
       padding: 7px 14px
@@ -287,7 +285,7 @@ body
     padding: 10px 20px
     &-select
       top: 0
-      right: 20px
+      right: 0
       background-color: #fff
       label
         letter-spacing: 1px
@@ -414,6 +412,47 @@ body
   &-div-right
     background: linear-gradient(to left, #fff 50%, transparent)
     right: 0
+.deliv
+  &-cont
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    &:last-child
+      margin-bottom: 15px
+  &-img
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background-color: $light-pink
+  &-block
+    h6
+      font-family: $f_bold
+      letter-spacing: 1px
+      margin-bottom: 5px
+    div
+      +wh(95px)
+      margin: 0 auto 10px
+      img
+        +wh(48px)
+  &-last
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    flex-direction: column
+    &>div
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-right: 10px
+      margin-top: 10px
+    span
+      font-family: $f_bold
+  &-img
+    +wh(35px)
+    padding: 5px
+    margin-right: 10px
 .reviews
   .block-title
     justify-content: space-between
@@ -858,26 +897,73 @@ body
     &-harac
       span
         display: block
+  &-rent-block
+    div
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      p
+        font-size: 12px
+        +w(50px)
+        &:first-child
+          +w(145px)
+      &:first-child,&:nth-child(6)
+        p
+          font-family: $f_bold
+      &:first-child
+        margin-bottom: 10px
+    button
+      +w(100%)
+      margin-top: 20px
+      margin-bottom: 15px
+.rent-select
+  position: relative
+  padding: 10px 0
+  margin-top: 10px
+  &>span
+    font-family: $f_bold
+    font-size: 12px
+  .popular-rent-list
+    position: absolute
+    right: 0
+    top: 0
+    margin: 0
+    label
+      background-color: #fff
+.about
+  &-desc
+    padding: 0 20px
+    p
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      strong
+        font-family: $f_bold
 .youtube01
   +dfc
+  padding: 40px 0 20px
   iframe
     +wh(280px,200px)
     margin: auto
 .del-form
-  padding: 50px 20px 20px
+  padding: 50px 30px 20px
+  width: 320px
+  margin: auto
   p
     font-size: 12px
     line-height: 1.2em
   .product-color-line
-    +w(280px)
+    +w(100%)
   &-title
     font-family: $f_bold
   .row
     margin-bottom: 15px
-    p
-      width: 33%
-      flex: 0 0 33%
-      padding-right: 17px
+    p:first-child
+      width: 100px
+      flex: 0 0 100px
+    p:nth-child(2)
+      +w(84px)
+      flex: 0 0 84px
   .row,&-label
     display: flex
     align-items: flex-start
@@ -903,8 +989,12 @@ aside
     text-align: center
     margin: 10px auto 0
     letter-spacing: 1px
-.deliv,.news,.bread-crumps,.youtube01,.del-form
+.news,.bread-crumps,.youtube01,.del-form,.deliv
   display: none
+.delievery
+  display: block
+  .product-color-line
+    margin-top: 15px
 #aside-checkbox
   &:checked~aside
     display: block
@@ -954,6 +1044,7 @@ aside
   .product-description-label-mob:after
     transform: rotate(-45deg)
     top: 17px
+#mob-nav-go
 footer
   background-color: #fdefe1
   .section

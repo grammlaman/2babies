@@ -1,0 +1,522 @@
+extends template/main
+append vars
+  -
+    page_title= 'Популярное'
+block content
+    .section
+        .bread-crumps
+            a(href='#') Главная
+            div
+            a(href='#') Каталог
+    .section.popular-container
+        input(type='checkbox' style='display:none')#aside-checkbox
+        input(type='checkbox' style='display:none')#pag-checkbox
+        aside
+            .filter-name
+                h5.filter-h5 Фильтр
+                button.clear-button
+                    +img('cancel.svg')
+                    span Очистить
+            .filter-price.filter-label-cont
+                h6.filter-h6 Стоимость:
+                .filter-price-slider
+                    div
+                        input(type="number" id="amount").filter-price-slider-range
+                        div
+                        input(type="number" id="amount-1").filter-price-slider-range.filter-price-slider-range-second
+                    label(for="amount")
+                div#slider-range.filter-price-slider
+                div.filter-label
+                    input(type='checkbox')#fl001
+                    label(for='fl001').fl001
+                        span
+                            +img('check.svg')
+                        span Новинки
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+
+                div.filter-label
+                    input(type='checkbox')#fl002
+                    label(for='fl002').fl002
+                        span
+                            +img('check.svg')
+                        span Акции
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+            .filter-category.filter-label-cont
+                h6.filter-h6 Категории:
+                div.filter-label
+                    input(type='checkbox')#fl003
+                    label(for='fl003').fl003
+                        span
+                            +img('check.svg')
+                        span Прогулочные коляски
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl004
+                    label(for='fl004').fl004
+                        span
+                            +img('check.svg')
+                        span Коляски для новорожденных
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl005
+                    label(for='fl005').fl005
+                        span
+                            +img('check.svg')
+                        span Коляски для погодок и двойни
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl006
+                    label(for='fl006').fl006
+                        span
+                            +img('check.svg')
+                        span Детские коляски 2 в 1
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl007
+                    label(for='fl007').fl007
+                        span
+                            +img('check.svg')
+                        span Детские коляски 3 в 1
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl008
+                    label(for='fl008').fl008
+                        span
+                            +img('check.svg')
+                        span Коляски-трансформеры
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl009
+                    label(for='fl009').fl009
+                        span
+                            +img('check.svg')
+                        span Коляски для путешествий
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+            .filter-brand.filter-label-cont
+                h6.filter-h6 Бренды:
+                div.filter-label
+                    input(type='checkbox')#fl010
+                    label(for='fl010').fl010
+                        span
+                            +img('check.svg')
+                        span Baby Jogger
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl011
+                    label(for='fl011').fl011
+                        span
+                            +img('check.svg')
+                        span Peg Perego
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+                div.filter-label
+                    input(type='checkbox')#fl012
+                    label(for='fl012').fl012
+                        span
+                            +img('check.svg')
+                        span Carrello
+                    div
+                        div
+                        button
+                            span (33)
+                            span показать
+            button.button.filter-button
+                span ПОКАЗАТЬ
+            button.clear-button
+                +img('cancel.svg')
+                span Очистить
+        main
+            .block-title.block-title-none
+                h3 Популярное
+                .block-image
+                    +img('title.png')
+                    +img('title.png')
+                    +img('title.png')
+                label(for='aside-checkbox').filter-title-button.filter-title-filter
+                    div
+                        div
+                            div
+                            div
+                            div
+                        div
+                            div
+                            div
+                            div
+                        div
+                            div
+                            div
+                            div
+                    span Фильтр
+                label(for='pag-checkbox').filter-title-button.filter-title-sort
+                    div
+                        div
+                        div
+                        div
+            .popular-sort
+                div.popular-sort-select
+                    h5.filter-h5 Сортировка:
+                    input(type='checkbox' style='display:none')#sort-checkbox
+                    div.popular-sort-select-checkbox.select-arrow
+                        label(for='sort-checkbox').select-activ По популярности
+                        label(for='sort-checkbox') По возрастанию цены
+                        label(for='sort-checkbox') По убыванию цены
+                ul.popular-sort-pagination
+                    li
+                        a(href='#')
+                            span <
+                    li
+                        a(href='#')
+                            span 1
+                    li
+                        a(href='#')
+                            span 2
+                    li.pag-activ
+                        a(href='#')
+                            span 3
+                    li
+                        a(href='#')
+                            span 4
+                    li
+                        a(href='#')
+                            span 5
+                    li
+                        a(href='#')
+                            span >
+            ul.popular-prod
+                li
+                    .popular-cont
+                        .popular-photo
+                            +img('popular1.png')
+                        .popular-desc
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-price
+                                span 53 000 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                                    +img('click.svg')
+                    .popular-haract.rent-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            input(type='checkbox' style='display:none')#pop-color01
+                            .popular-sort-select-checkbox.popular-haract-select.select-arrow
+                                label(for='pop-color01').select-activ Пурпурный
+                                label(for='pop-color01') Серый
+                                label(for='pop-color01') Черный
+                        .popular-rent-select.rent-select
+                            span СРОК #[strong АРЕНДЫ]:
+                            input(type='checkbox' style='display:none')#pop-rent01
+                            .popular-rent-list.select-arrow
+                                label(for='pop-rent01').select-activ
+                                    span 1 неделя
+                                label(for='pop-rent01')
+                                    span 2 недели
+                                label(for='pop-rent01')
+                                    span 3 недели
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li
+                    div.popular-cont
+                        .popular-photo
+                            +img('popular1.png')
+                        .popular-desc
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-price
+                                span 53 000 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                                    +img('click.svg')
+                    .popular-haract.rent-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            input(type='checkbox' style='display:none')#pop-color02
+                            .popular-sort-select-checkbox.popular-haract-select.select-arrow
+                                label(for='pop-color02').select-activ Пурпурный
+                                label(for='pop-color02') Серый
+                                label(for='pop-color02') Черный
+                        .popular-rent-select.rent-select
+                            span СРОК #[strong АРЕНДЫ]:
+                            input(type='checkbox' style='display:none')#pop-rent02
+                            .popular-rent-list.select-arrow
+                                label(for='pop-rent02').select-activ
+                                    span 1 неделя
+                                label(for='pop-rent02')
+                                    span 2 недели
+                                label(for='pop-rent02')
+                                    span 3 недели
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li
+                    div.popular-cont
+                        .popular-photo
+                            +img('popular1.png')
+                        .popular-desc
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-price
+                                span 53 000 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                                    +img('click.svg')
+                    .popular-haract.rent-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            input(type='checkbox' style='display:none')#pop-color03
+                            .popular-sort-select-checkbox.popular-haract-select.select-arrow
+                                label(for='pop-color03').select-activ Пурпурный
+                                label(for='pop-color03') Серый
+                                label(for='pop-color03') Черный
+                        .popular-rent-select.rent-select
+                            span СРОК #[strong АРЕНДЫ]:
+                            input(type='checkbox' style='display:none')#pop-rent03
+                            .popular-rent-list.select-arrow
+                                label(for='pop-rent03').select-activ
+                                    span 1 неделя
+                                label(for='pop-rent03')
+                                    span 2 недели
+                                label(for='pop-rent03')
+                                    span 3 недели
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li
+                    div.popular-cont
+                        .popular-photo
+                            +img('popular1.png')
+                        .popular-desc
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-price
+                                span 53 000 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                                    +img('click.svg')
+                    .popular-haract.rent-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            input(type='checkbox' style='display:none')#pop-color04
+                            .popular-sort-select-checkbox.popular-haract-select.select-arrow
+                                label(for='pop-color04').select-activ Пурпурный
+                                label(for='pop-color04') Серый
+                                label(for='pop-color04') Черный
+                        .popular-rent-select.rent-select
+                            span СРОК #[strong АРЕНДЫ]:
+                            input(type='checkbox' style='display:none')#pop-rent04
+                            .popular-rent-list.select-arrow
+                                label(for='pop-rent04').select-activ
+                                    span 1 неделя
+                                label(for='pop-rent04')
+                                    span 2 недели
+                                label(for='pop-rent04')
+                                    span 3 недели
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li
+                    div.popular-cont
+                        .popular-photo
+                            +img('popular1.png')
+                        .popular-desc
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-price
+                                span 53 000 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                                    +img('click.svg')
+                    .popular-haract.rent-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            input(type='checkbox' style='display:none')#pop-color05
+                            .popular-sort-select-checkbox.popular-haract-select.select-arrow
+                                label(for='pop-color05').select-activ Пурпурный
+                                label(for='pop-color05') Серый
+                                label(for='pop-color05') Черный
+                        .popular-rent-select.rent-select
+                            span СРОК #[strong АРЕНДЫ]:
+                            input(type='checkbox' style='display:none')#pop-rent05
+                            .popular-rent-list.select-arrow
+                                label(for='pop-rent05').select-activ
+                                    span 1 неделя
+                                label(for='pop-rent05')
+                                    span 2 недели
+                                label(for='pop-rent05')
+                                    span 3 недели
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+                li
+                    div.popular-cont
+                        .popular-photo
+                            +img('popular1.png')
+                        .popular-desc
+                            h6.popular-name Baby Jogger #[br] "City Select Lux"
+                            .popular-price
+                                span 53 000 ₽
+                                button
+                                    +img('shopping-cart(1).svg')
+                                    +img('click.svg')
+                    .popular-haract.rent-haract
+                        .popular-haract-color
+                            h6.filter-h6 Цвет:
+                            input(type='checkbox' style='display:none')#pop-color06
+                            .popular-sort-select-checkbox.popular-haract-select.select-arrow
+                                label(for='pop-color06').select-activ Пурпурный
+                                label(for='pop-color06') Серый
+                                label(for='pop-color06') Черный
+                        .popular-rent-select.rent-select
+                            span СРОК #[strong АРЕНДЫ]:
+                            input(type='checkbox' style='display:none')#pop-rent06
+                            .popular-rent-list.select-arrow
+                                label(for='pop-rent06').select-activ
+                                    span 1 неделя
+                                label(for='pop-rent06')
+                                    span 2 недели
+                                label(for='pop-rent06')
+                                    span 3 недели
+                        .popular-haract-desc
+                            p
+                                span Вес с сиденьем
+                                span 11,2 кг
+                            p
+                                span Спинка
+                                span наклон 110°-175°
+                            p
+                                span Возраст
+                                span 3 мес. - 4 года
+                            p
+                                span Макс. ширина
+                                span 60 см
+                            p
+                                span Размер люльки (ДхШ)
+                                span 77х33 см
+
+            .popular-sort.popular-sort-end
+                ul.popular-sort-pagination
+                    li
+                        a(href='#')
+                            span <
+                    li
+                        a(href='#')
+                            span 1
+                    li
+                        a(href='#')
+                            span 2
+                    li.pag-activ
+                        a(href='#')
+                            span 3
+                    li
+                        a(href='#')
+                            span 4
+                    li
+                        a(href='#')
+                            span 5
+                    li
+                        a(href='#')
+                            span >

@@ -117,8 +117,9 @@ header
       margin: 0 10px 20px auto
   &-haract
     &-select
-      right: -10px
       top: 0
+      right: 0
+      width: 210px
 .block
   &-title
     h3
@@ -146,46 +147,33 @@ header
 .deliv
   display: block
   &-cont
-    display: flex
+    flex-direction: row
     align-items: flex-start
     justify-content: space-around
     flex-wrap: wrap
-    text-align: center
-  &-img
-    display: flex
-    align-items: center
-    justify-content: center
-    border-radius: 50%
-    background-color: $light-pink
   &-block
-    width: 45%
-    flex: 0 0 45%
+    width: 46%
+    flex: 0 0 46%
     h6
-      +font(16px,$f_reg,$pink-gray)
+      +font(16px,$f_reg)
       margin-bottom: 10px
     span
-      +font(18px,$f_reg,$pink-gray)
+      font-size: 18px
     div
       +wh(200px)
       margin: 0 auto 10px
       img
         +wh(100px)
   &-last
-    display: flex
+    flex-direction: row
     align-items: center
-    justify-content: space-around
     &>div
-      display: flex
-      align-items: center
-      justify-content: flex-start
-      margin-right: 10px
       margin-top: 30px
     span
-      +font(16px,$f_bold,$pink-gray)
+      font-size: 16px
   &-img
     +wh(70px)
     padding: 15px
-    margin-right: 10px
 .reviews
   &-cont
     display: flex
@@ -238,10 +226,10 @@ header
     &-main
       +wh(475px,470px)
     &-slave
+      +w(450px)
       display: flex
       justify-content: space-between
       overflow: hidden
-      +w(450px)
       margin: auto
       &-slide
         img
@@ -319,10 +307,37 @@ header
           +wh(60px,52px)
           img
             +wh(30px)
+.product-rent-block
+  div
+    p
+      +w(15%)
+      font-size: 14px
+      &:first-child
+        +w(55%)
+  button
+    +w(213px)
+    margin: 20px auto 15px
 .filter
   &-title
     &-sort
       display: none
+.youtube01
+  iframe
+    +wh(700px,500px)
+.del-form
+  padding: 50px 30px 20px
+  width: 750px
+  margin: auto
+  p
+    font-size: 14px
+    line-height: 1.2em
+  .row
+    p:first-child
+      +w(33%)
+      flex: 0 0 33%
+    p:nth-child(2)
+      +w(33%)
+      flex: 0 0 33%
 aside
   top: 70px
   left: inherit
