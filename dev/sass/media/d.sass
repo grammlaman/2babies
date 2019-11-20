@@ -243,8 +243,110 @@ a:hover
   &:hover
     span
       text-decoration: underline
+.product
+  +w(1150px)
+  margin: 40px auto
+  border: 1px solid #dadada
+  &-both
+    display: flex
+  &-title
+    margin-top: 10px
+    margin-left: 10px
+  &-slider
+    &-slave
+      &-slide
+        &-out
+          &:hover
+            border: 3px solid #dadada
+  &-color
+    &-slide
+      &:hover
+        border: 3px solid #dadada
+  &-delievery
+    &>div div
+      +w(165px)
+      flex: 0 0 165px
+      font-size: 16px
+  &-request
+    &-button
+      span
+        font-size: 14px
+    &-button:last-child
+      span
+        +font(16px,$f_reg)
+      &:hover
+        background: linear-gradient(180deg, #718edd, #48c3eb)
+        span
+          color: #fff
+  &-description
+    +w(1150px)
+    &-label
+      +dfc
+      padding: 25px 70px 20px
+      background-color: #fbefe4
+      font-size: 18px
+      &:hover
+        background-color: $light-pink
+      &-cont
+        display: flex
+        justify-content: space-between
+      &-mob,&-mob-close
+        display: none
+    &-div
+      +w(100%)
+      margin: 0
+      &>div
+        .product-color-line
+          +w(1010px)
+          margin: 20px 0
+        p
+          margin-top: 15px
+      &>div, &>div p:first-child
+        margin-top: 0
+    &-comp
+      p
+        span:first-child
+          margin-right: 30px
+    &-harac
+      p
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        span:first-child
+          +w(360px)
+          flex: 0 0 360px
+    &-desc
+      p
+        line-height: 1.3em
+    &-acses
+      &-price
+        button
+          &:hover
+            background: linear-gradient(180deg, #718edd, #48c3eb)
+            img
+              &:first-child
+                display: none
+              &:last-child
+                display: block
+  &-youtube
+    top: 13px
+    &:hover
+      img
+        &:first-child
+          display: none
+        &:last-child
+          display: block
 .foot
   &-slogan
     font-size: 18px
   &-copy span
     font-size: 14px
+#product-description-comp:checked~.product-description-label-cont .product-description-label-01,#product-description-harac:checked~.product-description-label-cont .product-description-label-02,#product-description-desc:checked~.product-description-label-cont .product-description-label-03,#product-description-acses:checked~.product-description-label-cont .product-description-label-04
+  background-color: $light-pink
+#product-description-comp:checked~.product-description-comp,#product-description-harac:checked~.product-description-harac,#product-description-desc:checked~.product-description-desc
+  &>div
+    padding: 45px 70px
+  .product-description-label-mob-close
+    display: none
+#product-description-acses:checked~.product-description-acses>div
+  padding: 45px 30px

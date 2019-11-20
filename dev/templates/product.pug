@@ -46,6 +46,7 @@ block content
                         .product-youtube
                             button
                                 +img('youtube-logo.svg')
+                                +img('youtube-black.svg')
                     .product-cont
                         .product-color
                             span
@@ -95,16 +96,17 @@ block content
                                 span Узнать подробности
                                 +img('left-arrow.svg')
             .product-description
-                input(type='radio' name='product-description' style='display:none')#product-description-comp
+                input(type='radio' name='product-description' style='display:none' checked)#product-description-comp
                 input(type='radio' name='product-description' style='display:none')#product-description-harac
                 input(type='radio' name='product-description' style='display:none')#product-description-desc
                 input(type='radio' name='product-description' style='display:none')#product-description-acses
                 input(type='radio' name='product-description' style='display:none')#product-description-close
-                label(for='product-description-comp').product-description-label Комплектация
-                label(for='product-description-harac').product-description-label Характеристики
-                label(for='product-description-desc').product-description-label Описание
-                label(for='product-description-acses').product-description-label Аксессуары
-                .product-description-comp
+                .product-description-label-cont
+                    label(for='product-description-comp').product-description-label.product-description-label-01 Комплектация
+                    label(for='product-description-harac').product-description-label.product-description-label-02 Характеристики
+                    label(for='product-description-desc').product-description-label.product-description-label-03 Описание
+                    label(for='product-description-acses').product-description-label.product-description-label-04 Аксессуары
+                .product-description-comp.product-description-div
                     label(for='product-description-comp').product-description-label-mob Комплектация
                     label(for='product-description-close').product-description-label-mob-close
                     div
@@ -120,7 +122,7 @@ block content
                         p
                             span •
                             span Фирменный подстаканник.
-                .product-description-harac
+                .product-description-harac.product-description-div
                     label(for='product-description-harac').product-description-label-mob Характеристики
                     label(for='product-description-close').product-description-label-mob-close
                     div
@@ -216,14 +218,14 @@ block content
                             p
                                 span Сертификат официального дилера
                                 a(href='#') скачать
-                .product-description-desc
+                .product-description-desc.product-description-div
                     label(for='product-description-desc').product-description-label-mob Описание
                     label(for='product-description-close').product-description-label-mob-close
                     div
                         p #[strong Baby Jogger "City Select LUX"] позволяет родителям сочетать сидения, люльки и автокресла более чем в 20 различных вариантах, чтобы удовлетворить любые потребности семьи. Это на 25% больше комбинаций, чем у обычного City Select. Сиденья могут быть расположены по направлению к дороге, к маме и лицом к друг другу. Ещё более компактное сложенное состояние, на 30% меньше, чем у простого City Select. Легко сложите сиденье и поднимите стороны, чтобы сложить детскую коляску. Новый компактный размер и автоматический замок облегчают перенос, транспортировку и хранение. Сидение складывается внутрь, поэтому оно остается чистым. Ручной тормоз и стояночный тормоз, находятся в одном месте. Ручной тормоз замедляет все колеса. 12 дюймовые задние колеса, не требующие подкачки и 8 дюймовые легкие передние колеса с возможностью блокировки вращения, амортизация всех колес - всё это обеспечивает повышенный контроль и комфорт. Телескопическая ручка подстроится под родителей любого роста.
                         p Запатентованная система быстрого сложения Quick-Fold, так что вы можете сложить коляску одним движением. Многопозиционная спинка сидения откидывается одним нажатием кнопки. 5-ти точечная система ремней безопасности. Регулируемая подножка. Ткань с защитой от солнца UPF 50+. Капор со смотровым окошком на магнитике. Большая корзина для вещей, вмещающая до 7 кг.
                         p #[strong Baby Jogger City Select Lux] с легкостью превращается в систему для путешествий. Только выберите адаптер подходящий к Вашему автокреслу группы 0+. Прогулочный блок может использоваться с 6 месяцев.
-                .product-description-acses
+                .product-description-acses.product-description-div
                     label(for='product-description-acses').product-description-label-mob Аксессуары
                     label(for='product-description-close').product-description-label-mob-close
                     div.product-description-acses-container
@@ -237,6 +239,7 @@ block content
                                 span 2 500 ₽
                                 button
                                     +img('shopping-cart(1).svg')
+                                    +img('shopping-cart(2).svg')
                         div.product-description-acses-unit
                             .product-description-acses-photo
                                 +img('logo.svg')
@@ -247,6 +250,7 @@ block content
                                 span 2 500 ₽
                                 button
                                     +img('shopping-cart(1).svg')
+                                    +img('shopping-cart(2).svg')
                         div.product-description-acses-unit
                             .product-description-acses-photo
                                 +img('logo.svg')
@@ -257,6 +261,7 @@ block content
                                 span 2 500 ₽
                                 button
                                     +img('shopping-cart(1).svg')
+                                    +img('shopping-cart(2).svg')
                         div.product-description-acses-unit
                             .product-description-acses-photo
                                 +img('logo.svg')
@@ -267,11 +272,12 @@ block content
                                 span 2 500 ₽
                                 button
                                     +img('shopping-cart(1).svg')
+                                    +img('shopping-cart(2).svg')
             .popular
                 .section
                     .block-title
                         h3 Похожие товары
-                    ul.popular-sell-cont.display-block
+                    ul.popular-sell-cont.display-flex
                         li.popular-cont
                             .popular-photo
                                 +img('popular1.png')
@@ -299,32 +305,6 @@ block content
                                     span 53 000 ₽
                                     button
                                         +img('shopping-cart(1).svg')
-            .delievery-form
-                div
-                    span Расстояние
-                    span Заказы от 50 000 Р
-                    span Заказы от 100 000 Р
-                div
-                    span в пределах МКАД
-                    span 500 Р
-                    span 0 Р
-                div
-                    span до 5 км от МКАД
-                    span 1000 Р
-                    span 500 Р
-                div
-                    span от 5 до 10 км от МКАД
-                    span 1500 Р
-                    span 1000 Р
-                div
-                    span от 10 до 20 км от МКАД
-                    span 2000 Р
-                    span 1500 Р
-                div
-                    +img('delivered.svg')
-                    span Доставка заказов на более отдаленные расстояния, для которых не указаны расценки, осуществляетсяпо согласованию через транспортные компании
-                button.form-close#delievery-form-close
-                    +img('cancel.svg')
             .youtube01#youtube01
                 <iframe src="https://www.youtube.com/embed/gK6yeYWkh84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             .del-form

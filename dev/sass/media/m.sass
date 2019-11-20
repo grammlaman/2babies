@@ -109,7 +109,6 @@ body
     span
       font-size: 12px
       color: #fff
-
 .button
   +wh(145px,44px)
   +dfc
@@ -346,7 +345,6 @@ body
     +wh(12px,10px)
     transform: rotate(180deg)
     margin-left: 5px
-
 .stocks
   &-cont
   &-block
@@ -416,8 +414,6 @@ body
   &-div-right
     background: linear-gradient(to left, #fff 50%, transparent)
     right: 0
-.deliv,.news,.bread-crumps,.delievery-form
-  display: none
 .reviews
   .block-title
     justify-content: space-between
@@ -460,8 +456,8 @@ body
     position: absolute
     bottom: 0
     left: 0
-.display-block
-  display: block
+.display-flex
+  display: flex
 .filter
   &-title
     &-button
@@ -625,17 +621,19 @@ body
           transform: rotate(-135deg)
           margin: 0 13px 0 10px
   &-title
+    +w(130px)
+    margin-top: 30px
+    margin-left: 30px
     h1
       font-family: $f_bold
-      +w(130px)
       text-transform: uppercase
-      margin-top: 30px
-      margin-left: 30px
   &-youtube
     +wh(70px,50px)
     position: absolute
     top: 0
     right: 0
+    img:last-child
+      display: none
   &-slider
     position: relative
     &-main
@@ -717,8 +715,8 @@ body
         input
           +wh(100px,50px)
           +font(15px,$f_bold)
+          text-align: center
           flex: 0 0 100px
-          padding: 0 30px
           background-color: $light-pink
           border-top: 2px solid #dadada
           border-left: 2px solid #dadada
@@ -743,9 +741,9 @@ body
               margin-top: 0
               margin-bottom: 5px
       &>div,&>button
-        margin: 0 0 10px 0
+        margin: 0 0 15px 0
     &-button
-      +wh(170px,50px)
+      +wh(180px,50px)
       &:last-child
         +w(100%)
         flex: 0 0 100%
@@ -763,7 +761,7 @@ body
       margin: 0 auto 10px
       display: block
   &-description
-    &>div
+    &-div
       +w(300px)
       margin: 2px auto
       background-color: #fbefe4
@@ -792,9 +790,9 @@ body
     &-label
       display: none
       &-mob
+        +w(100%)
         font-family: $f_semi
         display: block
-        width: 300px
         padding: 10px 20px
         &:after
           +wh(10px)
@@ -807,7 +805,7 @@ body
           right: 15px
           top: 9px
         &-close
-          +wh(300px,40px)
+          +wh(100%,40px)
           position: absolute
           top: 0
           z-index: 100
@@ -839,6 +837,7 @@ body
         span
           font-family: $f_bold
           text-transform: uppercase
+          letter-spacing: 1px
       &-price
         +w(100%)
         padding-left: 10px
@@ -854,15 +853,18 @@ body
           background-color: $light-pink
           img
             +wh(16px)
+            &:last-child
+              display: none
+    &-harac
+      span
+        display: block
 .youtube01
   +dfc
-  display: none
   iframe
     +wh(280px,200px)
     margin: auto
 .del-form
   padding: 50px 20px 20px
-  display: none
   p
     font-size: 12px
     line-height: 1.2em
@@ -901,6 +903,8 @@ aside
     text-align: center
     margin: 10px auto 0
     letter-spacing: 1px
+.deliv,.news,.bread-crumps,.youtube01,.del-form
+  display: none
 #aside-checkbox
   &:checked~aside
     display: block
