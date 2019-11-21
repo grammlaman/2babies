@@ -488,13 +488,62 @@ body
     background-color: $light-pink
     min-height: 400px
   &-photo
-    margin-top: 10px
+    div
+      margin-top: 10px
   &-gradient
     +wh(100%,100px)
     background: linear-gradient(to top, #fff, transparent)
     position: absolute
     bottom: 0
     left: 0
+  &-page
+    .reviews-cont
+      height: inherit
+    .reviews-block
+      margin-bottom: 20px
+      min-height: 0
+  &-form
+    +w(300px)
+    background-color: #ededed
+    padding: 20px 10px
+    margin: auto
+    textarea
+      height: 150px
+    &-input
+      +w(100%)
+      +font(12px,$f_reg,$pink-gray)
+      padding: 15px 10px
+      display: block
+      margin: auto
+      font-size: 12px
+      border: none
+      border-top: 2px solid #dadada
+      border-left: 2px solid #dadada
+      letter-spacing: 1px
+    div:nth-child(4)
+      margin-top: 30px
+    &-button
+      width: 100%
+      margin-top: 10px
+  &-mark
+    display: flex
+    align-items: center
+    margin: 25px 0
+    span
+      font-size: 12px
+      text-transform: uppercase
+      margin-right: 20px
+    label
+      img
+        +wh(30px,28px)
+      img:last-child
+        display: none
+  &-button
+    display: block
+    padding: 12px 0
+    border: 1px solid $light-blue
+    color: $light-blue
+    text-transform: uppercase
 .display-flex
   display: flex
 .filter
@@ -1032,7 +1081,10 @@ aside
     &:after
       transform: rotate(-45deg)
       top: 13px
-#product-description-comp:checked~.product-description-comp,#product-description-harac:checked~.product-description-harac,#product-description-desc:checked~.product-description-desc,#product-description-acses:checked~.product-description-acses
+#product-description-comp:checked~.product-description-comp,
+#product-description-harac:checked~.product-description-harac,
+#product-description-desc:checked~.product-description-desc,
+#product-description-acses:checked~.product-description-acses
   background-color: #f9f4ef
   &>div
     display: block
@@ -1044,7 +1096,25 @@ aside
   .product-description-label-mob:after
     transform: rotate(-45deg)
     top: 17px
-#mob-nav-go
+#reviews-mark-4:checked~.reviews-mark-5,
+#reviews-mark-3:checked~.reviews-mark-4,#reviews-mark-3:checked~.reviews-mark-5,
+#reviews-mark-2:checked~.reviews-mark-3,#reviews-mark-2:checked~.reviews-mark-4,#reviews-mark-2:checked~.reviews-mark-5,
+#reviews-mark-1:checked~.reviews-mark-2,#reviews-mark-1:checked~.reviews-mark-3,#reviews-mark-1:checked~.reviews-mark-4,#reviews-mark-1:checked~.reviews-mark-5
+  img
+    &:first-child
+      display: block
+    &:last-child
+      display: none
+#reviews-mark-1:checked~.reviews-mark-1,
+#reviews-mark-2:checked~.reviews-mark-1,#reviews-mark-2:checked~.reviews-mark-2,
+#reviews-mark-3:checked~.reviews-mark-1,#reviews-mark-3:checked~.reviews-mark-2,#reviews-mark-3:checked~.reviews-mark-3,
+#reviews-mark-4:checked~.reviews-mark-1,#reviews-mark-4:checked~.reviews-mark-2,#reviews-mark-4:checked~.reviews-mark-3,#reviews-mark-4:checked~.reviews-mark-4,
+#reviews-mark-5:checked~.reviews-mark-1,#reviews-mark-5:checked~.reviews-mark-2,#reviews-mark-5:checked~.reviews-mark-3,#reviews-mark-5:checked~.reviews-mark-4,#reviews-mark-5:checked~.reviews-mark-5
+  img
+    &:first-child
+      display: none
+    &:last-child
+      display: block
 footer
   background-color: #fdefe1
   .section

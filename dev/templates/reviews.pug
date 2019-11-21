@@ -1,0 +1,140 @@
+extends template/main
+append vars
+  -
+    page_title= 'Главная страница'
+block content
+    main
+        .reviews.reviews-page
+            .section
+                .block-title.block-title-none
+                    h3 Отзывы
+                    div.block-image
+                        +img('title.png')
+                        +img('title.png')
+                        +img('title.png')
+                    a(href='#').block-title-a
+                        span ВСЕ ОТЗЫВЫ
+                        +img('left-arrow.svg')
+                .reviews-cont
+                    .reviews-block
+                        .reviews-name
+                            .reviews-name-left
+                                span Оксана
+                                span 12.10.2019
+                            .reviews-name-right
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                                +img('star-gray.svg')
+                        p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
+                        .reviews-photo
+                            div
+                                +img('rev1.png')
+                            div
+                                +img('rev2.png')
+                    .reviews-block
+                        .reviews-name
+                            .reviews-name-left
+                                span Оксана
+                                span 12.10.2019
+                            .reviews-name-right
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                        p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску! Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
+                    .reviews-block
+                        .reviews-name
+                            .reviews-name-left
+                                span Оксана
+                                span 12.10.2019
+                            .reviews-name-right
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                                +img('star-gray.svg')
+                        p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
+                        .reviews-photo
+                            div
+                                +img('rev1.png')
+                            div
+                                +img('rev2.png')
+                    .reviews-block
+                        .reviews-name
+                            .reviews-name-left
+                                span Оксана
+                                span 12.10.2019
+                            .reviews-name-right
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star.svg')
+                                +img('star-gray.svg')
+                        p.reviews-text Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску! Хочу выразить огромную благодарность вашему интернет-магазину! Очень внимательное отношение к покупателю! Оперативно ответили на все мои многочисленные вопросы! Быстро выслали товар в другую страну! Все супер!Спасибо за нашу новую коляску!
+                .popular-sort.popular-sort-end
+                    ul.popular-sort-pagination
+                        li
+                            a(href='#')
+                                span <
+                        li
+                            a(href='#')
+                                span 1
+                        li
+                            a(href='#')
+                                span 2
+                        li.pag-activ
+                            a(href='#')
+                                span 3
+                        li
+                            a(href='#')
+                                span 4
+                        li
+                            a(href='#')
+                                span 5
+                        li
+                            a(href='#')
+                                span >
+            .section
+                .block-title.block-title-none
+                    h3 Написать отзыв
+                    div.block-image
+                        +img('title.png')
+                        +img('title.png')
+                        +img('title.png')
+                .reviews-form
+                    form
+                        input(type='text' placeholder='ВАШЕ ИМЯ').reviews-form-input
+                        .reviews-mark
+                            span Оценка
+                            input(type='radio' style='display:none' name='reviews-mark')#reviews-mark-1
+                            input(type='radio' style='display:none' name='reviews-mark')#reviews-mark-2
+                            input(type='radio' style='display:none' name='reviews-mark')#reviews-mark-3
+                            input(type='radio' style='display:none' name='reviews-mark')#reviews-mark-4
+                            input(type='radio' style='display:none' name='reviews-mark')#reviews-mark-5
+                            label(for='reviews-mark-1').reviews-mark-1
+                                +img('star-gray.svg')
+                                +img('star.svg')
+                            label(for='reviews-mark-2').reviews-mark-2
+                                +img('star-gray.svg')
+                                +img('star.svg')
+                            label(for='reviews-mark-3').reviews-mark-3
+                                +img('star-gray.svg')
+                                +img('star.svg')
+                            label(for='reviews-mark-4').reviews-mark-4
+                                +img('star-gray.svg')
+                                +img('star.svg')
+                            label(for='reviews-mark-5').reviews-mark-5
+                                +img('star-gray.svg')
+                                +img('star.svg')
+                        textarea(placeholder='ОТЗЫВ').reviews-form-input
+                        div
+                            input(type='text' placeholder='ФОТО').reviews-form-input
+                            button.reviews-button.reviews-form-button
+                                span Добавить файл
+                        button.button.reviews-form-button
+                            +img('congratulations-white.svg')
+                            +img('congratulations.svg')
+                            span ОТПРАВИТЬ ОТЗЫВ

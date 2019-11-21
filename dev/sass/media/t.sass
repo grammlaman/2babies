@@ -183,6 +183,42 @@ header
   &-block
     width: 300px
     flex: 0 0 300px
+  &-page
+    .reviews-cont
+      +w(100%)
+      display: block
+      padding: 0 20px
+    .reviews-block
+      +w(inherit)
+      padding: 30px 25px
+    .reviews-photo
+      display: flex
+      div
+        margin-right: 20px
+    .popular-sort-end
+      margin-right: 20px
+  &-form
+    +w(100%)
+    &-input
+      +w(360px)
+      margin: 0
+    form
+      +w(555px)
+    textarea
+      +w(100%)
+    div:nth-child(4)
+      display: flex
+      margin-bottom: 30px
+      .reviews-form-input
+        flex: 0 0 360px
+        margin-right: 30px
+    &-button
+      margin: 0
+  .button
+    +wh(360px,48px)
+    margin-right: 0
+  &-button span
+    font-size: 16px
 .news
   .block-title
     justify-content: space-between

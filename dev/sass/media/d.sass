@@ -214,11 +214,14 @@ a:hover
     &-right
       background: linear-gradient(to left, #fff, transparent)
 .deliv
+  &-cont
+    flex-wrap: nowrap
   &-block
     width: 360px
     flex: 0 0 360px
   &-last
     display: block
+    width: auto
     &>div
       margin: 0 0 2px 0
     span
@@ -233,6 +236,10 @@ a:hover
   &-gradient
     height: 200px
     background: linear-gradient(to top, #fff 25%, transparent)
+  &-button
+    &:hover
+      background: linear-gradient(180deg, #718edd, #48c3eb)
+      color: #fff
 .news
   &-block
     &>div
