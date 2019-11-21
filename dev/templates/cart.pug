@@ -1,0 +1,131 @@
+extends template/main
+append vars
+  -
+    page_title= 'Корзина'
+block content
+    main
+        .cart-page
+            .section
+                .bread-crumps
+                    a(href='#') Главная
+                    div
+                    a(href='#') Корзина
+                .product-bread-crumps
+                    a(href='#')
+                        span
+                        span К покупкам
+            .section
+                .cart-container
+                    .cart-cont
+                        button.cart-delete-button
+                            +img('cancel.svg')
+                        .cart-photo
+                            +img('cart.jpg')
+                        .cart-block
+                            .cart-desc
+                                .cart-name
+                                    h4 Baby jogger "City Select Lux"
+                                .cart-color
+                                    span Цвет:
+                                    button Черный
+                            .cart-price 53 000 ₽
+                            .product-request-number
+                                div
+                                    input(type='text' placeholder='1')
+                                    button #[span]
+                                    button #[span]
+                            .cart-result 53 000 ₽
+                    .cart-cont
+                        button.cart-delete-button
+                            +img('cancel.svg')
+                        .cart-photo
+                            +img('cart.jpg')
+                        .cart-block
+                            .cart-desc
+                                .cart-name
+                                    h4 Baby jogger "City Select Lux"
+                                .cart-color
+                                    span Цвет:
+                                    button Черный
+                            .cart-price 53 000 ₽
+                            .product-request-number
+                                div
+                                    input(type='text' placeholder='1')
+                                    button #[span]
+                                    button #[span]
+                            .cart-result 53 000 ₽
+                    .cart-info
+                        form.cart-form
+                            h6 Покупатель
+                            input(type='text' placeholder='ВАШЕ ИМЯ')
+                            input(type='text' placeholder='E-MAIL')
+                            input(type='text' placeholder='+7')
+                            input(type='text' placeholder='ИНДЕКС')
+                            input(type='text' placeholder='ГОРОД')
+                            input(type='text' placeholder='УЛИЦА')
+                            div
+                                input(type='text' placeholder='ДОМ')
+                                input(type='text' placeholder='КВАРТИРА/ОФИС/СКЛАД')
+                            textarea(placeholder='КОММЕНТАРИЙ К ЗАКАЗУ')
+                        .cart-delpay
+                            h6 Способ доставки
+                            input(type='radio' name='del' style='display:none' checked)#delcur
+                            input(type='radio' name='del' style='display:none')#deltr
+                            .cart-delpay-button-cont
+                                label(for='delcur').cart-delpay-button.cart-delpay-delcur
+                                    +img('gift-white.svg')
+                                    +img('gift-broun.svg')
+                                span Доставка курьером по Москве (+500Р)
+                            .cart-delpay-button-cont
+                                label(for='deltr').cart-delpay-button.cart-delpay-deltr
+                                    +img('delivered-white.svg')
+                                    +img('delivered-broun.svg')
+                                span Транспортная компания
+                            p Доставка курьером по Москве до 3-х дней
+                            p Доставка курьером возможна только по Москве.
+                            br
+                            p Стоимость:
+                            p 500 Р
+                            br
+                            p Срок доставки:
+                            p до 3-х дней
+                        .cart-delpay
+                            h6 Способ оплаты
+                            input(type='radio' name='pay' style='display:none' checked)#paycard
+                            input(type='radio' name='pay' style='display:none')#paycur
+                            input(type='radio' name='pay' style='display:none')#paynal
+                            .cart-delpay-button-cont
+                                label(for='paycard').cart-delpay-button.cart-delpay-paycard
+                                    +img('credit-card-white.svg')
+                                    +img('credit-card-broun.svg')
+                                span Оплата картой
+                            .cart-delpay-button-cont
+                                label(for='paycur').cart-delpay-button.cart-delpay-paycur
+                                    +img('credit-card(2).svg')
+                                    +img('credit-card(3).svg')
+                                span Оплата курьеру
+                            .cart-delpay-button-cont
+                                label(for='paynal').cart-delpay-button.cart-delpay-paynal
+                                    +img('wallet-white.svg')
+                                    +img('wallet-broun.svg')
+                                span Наложенный платеж
+                            p
+                                span Товаров на:
+                                span 106 000 Р
+                            br
+                            p
+                                span Доставка:
+                                span 500 Р
+                            br
+                            p.cart-strong
+                                span Итого:
+                                span 106 500 Р
+                        .cart-agree
+                            input(type='checkbox' style='display:none')#cart-agree
+                            div
+                                +img('check.svg')
+                            span Я ознакомлен(а) с настоящим #[a(href='#') соглашением] и согласен(на) со всеми его пунктами.
+                        .button.cart-agree-button
+                            +img('shopping-cart(2).svg')
+                            +img('shopping-cart(3).svg')
+                            span Оформить заказ

@@ -4,7 +4,7 @@
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 	<style>
         path{
-        fill: #5fa5e3
+        	fill: #7e7974
         }
     </style>
 		<path d="M492.005,365.974c11.043,0,19.995-8.952,19.995-19.995v-65.095c0-36.323-29.551-65.874-65.874-65.874h-30.225v-37.322

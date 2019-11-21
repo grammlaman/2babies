@@ -833,8 +833,10 @@ body
         input
           +wh(100px,50px)
           +font(15px,$f_bold)
-          text-align: center
+          text-align: right
+          padding-right: 35px
           flex: 0 0 100px
+          color: $pink-gray
           background-color: $light-pink
           border-top: 2px solid #dadada
           border-left: 2px solid #dadada
@@ -852,8 +854,7 @@ body
             transform: rotate(-45deg)
             margin-top: 5px
           &:last-child
-            top: inherit
-            bottom: 0
+            top: 25px
             span
               transform: rotate(135deg)
               margin-top: 0
@@ -1040,12 +1041,124 @@ body
   h5
     font-family: $f_bold
     margin-bottom: 15px
+  p
+    margin-bottom: 15px
+    &:last-child
+      margin-bottom: 0
   &-cont
     padding: 0 10px
   &-block
     border: 1px solid $light-pink
     padding: 18px 13px
     margin-bottom: 12px
+    &:last-child
+      margin-bottom: 20px
+.cart
+  &-container
+    padding: 20px 5px
+  &-delete-button
+    +wh(25px)
+  &-cont
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    border: 1px solid #dadada
+    padding: 10px
+    margin-bottom: 15px
+    &:nth-child(2)
+      margin-bottom: 0
+  &-photo
+    +wh(140px)
+  &-block
+    flex: 0 0 37%
+  &-name
+    h4
+      font-family: $f_bold
+      letter-spacing: 1px
+  &-color
+    button
+      font-family: $f_bold
+      font-size: 11px
+      text-transform: uppercase
+  &-result
+    font-family: $f_bold
+  &-name,&-color,&-price,&-page .product-request-number,&-result
+    margin-top: 10px
+  &-page
+    .product-request-number>div
+      margin: 0
+  &-form
+    background-color: $light-pink
+    input,textarea
+      +font(12px,$f_reg,$pink-gray)
+      width: 100%
+      padding: 13px
+      margin-top: 25px
+      text-transform: uppercase
+      border: none
+      border-top: 2px solid #dadada
+      border-left: 2px solid #dadada
+    textarea
+      height: 150px
+  &-form
+    padding: 30px 10px
+    h6
+      font-size: 18px
+  &-delpay
+    padding: 20px 10px 10px
+    h6
+      font-size: 18px
+      margin-bottom: 30px
+    &-button
+      +wh(120px,52px)
+      flex: 0 0 120px
+      +dfc
+      background: linear-gradient(180deg, #718edd, #48c3eb)
+      margin-right: 10px
+      img
+        +wh(40px)
+        &:nth-child(2)
+          display: none
+      &-cont
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        span
+          font-family: $f_bold
+          text-transform: uppercase
+    p
+      display: flex
+      align-items: center
+      span:first-child
+        flex: 0 0 130px
+  &-strong
+     font-family: $f_bold
+     span:last-child
+       font-size: 18px
+  &-agree
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    span,a
+      font-size: 12px
+      a
+        color: $light-blue
+    div
+      +wh(28px)
+      flex: 0 0 28px
+      border-radius: 5px
+      border-top: 3px solid #dadada
+      border-left: 3px solid #dadada
+      border-right: 1px solid #dadada
+      border-bottom: 1px solid #dadada
+      padding: 2px
+      margin-right: 10px
+      img
+        display: none
+    &-button
+      +wh(100%,60px)
+      img
+        +wh(25px)
 .youtube01
   +dfc
   padding: 40px 0 20px
@@ -1204,3 +1317,15 @@ footer
       display: none
     &:last-child
       display: block
+#delcur:checked~.cart-delpay-button-cont .cart-delpay-delcur,
+#deltr:checked~.cart-delpay-button-cont .cart-delpay-deltr,
+#paycard:checked~.cart-delpay-button-cont .cart-delpay-paycard,
+#paycur:checked~.cart-delpay-button-cont .cart-delpay-paycur,
+#paynal:checked~.cart-delpay-button-cont .cart-delpay-paynal
+  background: $light-pink
+  img
+    &:first-child
+      display: none
+    &:nth-child(2)
+      display: block
+
