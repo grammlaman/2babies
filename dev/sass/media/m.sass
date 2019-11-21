@@ -628,8 +628,7 @@ body
     align-items: center
     button
       margin-left: 45px
-  &-price
-    &-slider
+  &-price-slider
       margin-top: 10px
       &>div
         display: flex
@@ -1010,8 +1009,7 @@ body
     margin: 0
     label
       background-color: #fff
-.about
-  &-desc
+.about-desc
     padding: 0 20px
     p
       margin-bottom: 10px
@@ -1068,7 +1066,7 @@ body
     &:nth-child(2)
       margin-bottom: 0
   &-photo
-    +wh(140px)
+    +w(140px)
   &-block
     flex: 0 0 37%
   &-name
@@ -1131,20 +1129,24 @@ body
       align-items: center
       span:first-child
         flex: 0 0 130px
+      &:last-child
+        margin-bottom: 20px
   &-strong
      font-family: $f_bold
      span:last-child
        font-size: 18px
   &-agree
-    display: flex
-    align-items: center
-    margin-bottom: 20px
-    span,a
-      font-size: 12px
-      a
-        color: $light-blue
-    div
+    label
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      span,a
+        font-size: 12px
+        a
+          color: $light-blue
+    &-checked
       +wh(28px)
+      display: block
       flex: 0 0 28px
       border-radius: 5px
       border-top: 3px solid #dadada
@@ -1329,3 +1331,5 @@ footer
     &:nth-child(2)
       display: block
 
+#cart-agree:checked~label .cart-agree-checked img
+  display: block
