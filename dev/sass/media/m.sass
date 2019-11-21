@@ -5,7 +5,7 @@ $unit : 'px'
 body
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
 
-.news,.bread-crumps,.youtube01,.del-form,.deliv
+.news,.bread-crumps,.youtube01,.del-form
   display: none
 .head
   &-container
@@ -316,7 +316,7 @@ body
     justify-content: space-between
     position: relative
     li
-      display: flex
+      display: none
       flex-direction: column
       width: 300px
       margin: 0 auto 20px
@@ -325,6 +325,8 @@ body
       .popular-cont
         border: none
         margin: 0 0 2px 0
+      &:first-child,&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6)
+        display: flex
     .popular-price
       img:last-child
         display: none
@@ -349,20 +351,23 @@ body
           &:first-child
             width: 55%
   &-best
-    +wh(20px)
-    +dfc
     position: absolute
     top: 0
     right: 0
-    padding: 4px
+    display: flex
+    align-items: center
+    img
+      +wh(12px)
     span
       +font(14px,$f_reg,#fff)
     span:first-child
       display: none
     &-new
       background: linear-gradient(180deg, #718edd, #48c3eb)
+      padding: 4px 5px 3px
     &-akcii
       background-color: #ea9cb6
+      padding: 2px 4px
 .block
   &-image
     display: flex
