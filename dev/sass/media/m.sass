@@ -5,6 +5,8 @@ $unit : 'px'
 body
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
 
+.news,.bread-crumps,.youtube01,.del-form,.deliv
+  display: none
 .head
   &-contacts
     display: flex
@@ -161,6 +163,35 @@ body
     &-button
       width: 290px
       margin: auto
+.news
+  &-cont
+    padding: 0 10px
+  &-block
+    margin: 0 auto 20px
+    position: relative
+    padding: 20px 10px
+    border: 1px solid #dadada
+    &>div
+      margin-bottom: 20px
+      &>span
+        font-size: 12px
+        display: block
+        margin-bottom: 30px
+    a
+      position: relative
+      z-index: 50
+  &-text
+    font-size: 12px
+    line-height: 1.5em
+  &-page
+    display: block
+  &-gradient
+    +wh(100%,100px)
+    background: linear-gradient(to top, #fff 50%, transparent)
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 0
 .popular
   .block-title
     justify-content: space-between
@@ -335,6 +366,7 @@ body
     &-none
       .block-image
         display: none
+      justify-content: space-between
 .block-title-a,.news-link
   +font(12px,$f_reg,$light-blue)
   letter-spacing: 1px
@@ -454,8 +486,6 @@ body
     padding: 5px
     margin-right: 10px
 .reviews
-  .block-title
-    justify-content: space-between
   &-cont
     +wh(300px,400px)
     margin: auto
@@ -988,6 +1018,34 @@ body
         margin-bottom: 0
       strong
         font-family: $f_bold
+.article
+  padding: 20px 10px
+  h1
+    font-size: 18px
+  span
+    font-size: 12px
+    display: block
+    margin: 20px 10px
+  &-desc
+    padding: 0 10px
+    margin-bottom: 50px
+    p
+      margin-bottom: 20px
+    img
+      display: block
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 20px
+.ask
+  h5
+    font-family: $f_bold
+    margin-bottom: 15px
+  &-cont
+    padding: 0 10px
+  &-block
+    border: 1px solid $light-pink
+    padding: 18px 13px
+    margin-bottom: 12px
 .youtube01
   +dfc
   padding: 40px 0 20px
@@ -1038,12 +1096,43 @@ aside
     text-align: center
     margin: 10px auto 0
     letter-spacing: 1px
-.news,.bread-crumps,.youtube01,.del-form,.deliv
-  display: none
 .delievery
   display: block
   .product-color-line
     margin-top: 15px
+footer
+  background-color: #fdefe1
+  .section
+    padding-top: 12px
+    padding-bottom: 29px
+.foot
+  &-slogan
+    display: none
+  &-request
+    &-links
+      display: none
+    &-button
+      display: none
+  &-copy
+    span, a
+      font-size: 12px
+      color: $pink-gray
+      display: block
+      text-align: center
+      margin-top: 23px
+    a
+      text-decoration: underline
+  &-cont
+    .phone,.request
+      display: none
+  &-mob-cont
+    display: flex
+    justify-content: space-around
+    align-items: center
+    a
+      +wh(44px)
+      padding: 7px
+      display: block
 #aside-checkbox
   &:checked~aside
     display: block
@@ -1114,37 +1203,4 @@ aside
     &:first-child
       display: none
     &:last-child
-      display: block
-footer
-  background-color: #fdefe1
-  .section
-    padding-top: 12px
-    padding-bottom: 29px
-.foot
-  &-slogan
-    display: none
-  &-request
-    &-links
-      display: none
-    &-button
-      display: none
-  &-copy
-    span, a
-      font-size: 12px
-      color: $pink-gray
-      display: block
-      text-align: center
-      margin-top: 23px
-    a
-      text-decoration: underline
-  &-cont
-    .phone,.request
-      display: none
-  &-mob-cont
-    display: flex
-    justify-content: space-around
-    align-items: center
-    a
-      +wh(44px)
-      padding: 7px
       display: block

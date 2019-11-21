@@ -71,7 +71,7 @@ header
 
 .main
   &-slide
-    height: 480px
+    +wh(500px,480px)
     &-text
       text-align: center
       span
@@ -220,23 +220,16 @@ header
   &-button span
     font-size: 16px
 .news
-  .block-title
-    justify-content: space-between
-    .block-image
-      img:last-child
-        display: none
   display: block
-  &-block
-    position: relative
+  &-cont
     padding: 0 20px
-    &>div
-      margin-bottom: 20px
-      &>span
-        +font(12px,$f_reg,$pink-gray)
-        display: block
-        margin-bottom: 30px
+  &-block
+    padding: 30px 20px
   &-text
-    +font(18px,$f_reg,$pink-gray)
+    font-size: 18px
+    line-height: 1.15em
+  .popular-sort-end
+    margin-right: 20px
 .bread-crumps
   display: flex
   align-items: center
@@ -353,6 +346,25 @@ header
   button
     +w(213px)
     margin: 20px auto 15px
+.article
+  h1
+    font-size: 36px
+  p
+    font-size: 18px
+  &-img
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    img
+      +w(48%)
+      flex: 0 0 48%
+.ask
+  h5
+    font-size: 18px
+    margin-bottom: 15px
+  &-block
+    padding: 25px 20px
 .filter
   &-title
     &-sort

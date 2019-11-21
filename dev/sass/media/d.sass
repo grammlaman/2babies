@@ -242,12 +242,13 @@ a:hover
       color: #fff
 .news
   &-block
+    height: 300px
+    overflow: hidden
+    a
+      position: absolute
+      bottom: 20px
     &>div
       height: 300px
-  .block-title
-    .block-image
-      img:last-child
-        display: block
 .clear-button
   &:hover
     span
@@ -372,6 +373,27 @@ a:hover
       margin-bottom: 20px
       &:last-child
         margin-top: 50px
+.article
+  padding: 50px 10px
+  span
+    margin: 30px 20px
+  &-desc
+    padding: 0 20px
+    &>div
+      margin-top: 40px
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      div
+        width: 530px
+        flex: 0 0 530px
+        img
+          width: 100%
+          flex: 0 0 100%
+  &-img
+    flex-direction: column
+    img,img:last-child
+      margin-bottom: 50px
 .youtube01
   iframe
     +wh(840px,600px)

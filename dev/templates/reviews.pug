@@ -1,9 +1,20 @@
 extends template/main
 append vars
   -
-    page_title= 'Главная страница'
+    page_title= 'Отзывы'
 block content
     main
+        .section
+            .bread-crumps
+                a(href='#') Главная
+                div
+                a(href='#') Каталог
+                div
+                a(href='#') BABY JOGGER "CITY SELECT LUX"
+            .product-bread-crumps
+                a(href='#')
+                    span
+                    span Популярные
         .reviews.reviews-page
             .section
                 .block-title.block-title-none

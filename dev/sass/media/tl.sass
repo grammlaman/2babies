@@ -75,25 +75,6 @@
   &-container
     display: flex
     align-items: flex-start
-.block
-  &-image
-    width: 600px
-    img
-      width: 33%
-  &-title
-    position: relative
-    &-a
-      font-size: 16px
-      display: flex
-      align-items: center
-      margin-left: auto
-      img
-        +wh(17px,20px)
-    &-none
-      .block-image
-        display: block
-        width: 500px
-        margin-top: 13px
 .stocks
   &-block
     +wh(450px,300px)
@@ -127,16 +108,15 @@
   &-photo
     display: flex
     align-items: flex-start
-    justify-content: space-between
     div
-      flex: 0 0 48%
-      width: 48%
+      margin-right: 20px
 .news
   margin-bottom: 30px
   &-cont
     display: flex
     align-items: flex-start
     justify-content: space-around
+    flex-wrap: wrap
   &-block
     width: 30%
     flex: 0 0 30%
@@ -146,12 +126,6 @@
       height: 250px
       overflow: hidden
       margin-bottom: 10px
-  &-gradient
-    +wh(100%,100px)
-    background: linear-gradient(to top, #fff 50%, transparent)
-    position: absolute
-    bottom: 0
-    left: 0
   &-link
     position: relative
 .filter
@@ -168,6 +142,26 @@
             margin-left: 3px
         button
           width: 160px
+.block
+  &-image
+    width: 600px
+    img
+      width: 33%
+  &-title
+    position: relative
+    &-a
+      font-size: 16px
+      display: flex
+      align-items: center
+      margin-left: auto
+      img
+        +wh(17px,20px)
+    &-none
+      justify-content: flex-start
+      .block-image
+        display: block
+        width: 500px
+        margin-top: 13px
 aside
   display: block
   position: inherit
