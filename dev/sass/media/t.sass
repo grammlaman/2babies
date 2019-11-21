@@ -2,11 +2,6 @@
   +w($tablet#{$unit})
 .mob-nav
   display: none
-header
-  .section
-    display: flex
-    justify-content: space-between
-    align-items: center
 .phone
   display: flex
   &-numbers
@@ -19,7 +14,13 @@ header
     color: $light-blue
     margin-bottom: 0
 .head
+  &-container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
   &-contacts
+    width: 57%
     flex: 57%
     align-items: center
   &-logo
@@ -34,6 +35,7 @@ header
       display: flex
       justify-content: space-around
       align-items: center
+      background: linear-gradient(to top, #fdefe1, #fdf9f5)
       &>li
         flex: 0 0 16.66%
         text-align: center
@@ -49,6 +51,16 @@ header
           background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
       div
         position: relative
+  &-scroll
+    display: none
+  &-scrolled
+    position: fixed
+    background-color: #fff
+    z-index: 100
+    margin: auto
+    top: 0
+    left: 0
+    right: 0
   &-hidden-list:hover .head-about-company,&-hidden-ul:hover .head-must-know
     display: block
   &-must-know,&-about-company

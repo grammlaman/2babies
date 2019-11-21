@@ -1,85 +1,92 @@
 header
-    .section.head-container
-        .head-logo
-            .logo
-                a(href='#')
-                    +img('logo.svg')
-            .slogan Официальный магазин #[br] детских колясок
-        .head-contacts
-            .mob-nav
-                .mob-nav-button#mob-nav-button
-                    +img('menu.svg')
-                .mob-nav-list.mob-menu
-                    div
-                        button.mob-nav-close#mob-nav-close
-                            +img('cancel.svg')
-                    div
-                        a(href='#') Главная
-                    div
-                        a(href='#') Каталог
-                    div
-                        a(href='#') Прокат
-                    div
-                        button.mob-hidden-button#mob-must-know-go Полезно знать
-                            span
-                    div
-                        button.mob-hidden-button#mob-about-company-go О компании
-                            span
-                    div
-                        a(href='#') Контакты
-                .mob-must-know.mob-nav-list#mob-must-know
-                    div
-                        button.mob-hidden-close.mob-nav-close#mob-must-know-back
-                            span
-                                +img('left-arrow.svg')
-                                span Назад
-                            +img('cancel.svg')
-                    div
-                        a(href='#') О тест-драйве
-                    div
-                        a(href='#') О прокате
-                .mob-about-company.mob-nav-list#mob-about-company
-                    div
-                        button.mob-hidden-close.mob-nav-close#mob-about-company-back
-                            span
-                                +img('left-arrow.svg')
-                                span Назад
-                            +img('cancel.svg')
-                    div
-                        a(href='#') Доставка и оплата
-                    div
-                        a(href='#') Отзывы
-                    div
-                        a(href='#') Новости
-                    div
-                        a(href='#') Статьи
-                    div
-                        a(href='#') Вопрос - Ответ
-            .phone
-                a(href='tel:84957898899').phone-button
-                    +img('phone.svg')
-                .phone-numbers
-                    a(href='tel:84957898899').phone-call +7 (495) 789 - 88 - 99
-                    a(href='tel:89032422225').phone-call +7 (903) 24 - 222 - 25
-                    a(href='mailto:info@2babies.ru').phone-mail info@2babies.ru
-            .request
-                .request-links.head-request-links
-                    a(href='#').request-soc
-                        +img('whatsapp.svg')
-                    a(href='#').request-soc
-                        +img('instagram.svg')
-                    a(href='#').request-soc
-                        +img('facebook.svg')
-                button.request-button.button
-                    +img('technical-support.svg')
-                    +img('technical-support-blue.svg')
-                    span Заказать звонок
-            .cart
-                a(href='#').cart-button
-                    +img('shopping-cart.svg')
-                    span.cart-log
-                        span 52
-    .head-nav
+    .section#head
+        .head-container
+            .head-logo
+                .logo
+                    a(href='#')
+                        +img('logo.svg')
+                .slogan Официальный магазин #[br] детских колясок
+            .head-contacts
+                .mob-nav
+                    input(type='radio' name='mob-nav' style='display:none')#mob-nav-menu
+                    input(type='radio' name='mob-nav' style='display:none')#mob-nav-about
+                    input(type='radio' name='mob-nav' style='display:none')#mob-nav-must
+                    input(type='radio' name='mob-nav' style='display:none')#mob-nav-close
+                    label(for='mob-nav-menu').mob-nav-button
+                        +img('menu.svg')
+                    label(for='mob-nav-close').mob-nav-button.mob-nav-button-close
+                        +img('menu.svg')
+                    .mob-nav-list.mob-menu
+                        div
+                            label(for='mob-nav-close').mob-nav-close
+                                +img('cancel.svg')
+                        div
+                            a(href='#') Главная
+                        div
+                            a(href='#') Каталог
+                        div
+                            a(href='#') Прокат
+                        div
+                            label(for='mob-nav-must').mob-hidden-button Полезно знать
+                                span
+                        div
+                            label(for='mob-nav-about').mob-hidden-button О компании
+                                span
+                        div
+                            a(href='#') Контакты
+                    .mob-must-know.mob-nav-list
+                        div
+                            label(for='mob-nav-menu').mob-hidden-close.mob-nav-close
+                                span
+                                    +img('left-arrow.svg')
+                                    span Назад
+                                +img('cancel.svg')
+                        div
+                            a(href='#') О тест-драйве
+                        div
+                            a(href='#') О прокате
+                    .mob-about-company.mob-nav-list
+                        div
+                            label(for='mob-nav-menu').mob-hidden-close.mob-nav-close
+                                span
+                                    +img('left-arrow.svg')
+                                    span Назад
+                                +img('cancel.svg')
+                        div
+                            a(href='#') Доставка и оплата
+                        div
+                            a(href='#') Отзывы
+                        div
+                            a(href='#') Новости
+                        div
+                            a(href='#') Статьи
+                        div
+                            a(href='#') Вопрос - Ответ
+                .phone
+                    a(href='tel:84957898899').phone-button
+                        +img('phone.svg')
+                    .phone-numbers
+                        a(href='tel:84957898899').phone-call +7 (495) 789 - 88 - 99
+                        a(href='tel:89032422225').phone-call +7 (903) 24 - 222 - 25
+                        a(href='mailto:info@2babies.ru').phone-mail info@2babies.ru
+                .request
+                    .request-links.head-request-links
+                        a(href='#').request-soc
+                            +img('whatsapp.svg')
+                        a(href='#').request-soc
+                            +img('instagram.svg')
+                        a(href='#').request-soc
+                            +img('facebook.svg')
+                    button.request-button.button
+                        +img('technical-support.svg')
+                        +img('technical-support-blue.svg')
+                        span Заказать звонок
+                .cart
+                    a(href='#').cart-button
+                        +img('shopping-cart.svg')
+                        span.cart-log
+                            span 52
+    .head-nav#header
         .section
             ul.head-nav-list
                 li

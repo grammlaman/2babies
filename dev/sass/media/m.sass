@@ -8,15 +8,30 @@ body
 .news,.bread-crumps,.youtube01,.del-form,.deliv
   display: none
 .head
+  &-container
+    width: 320px
+    margin: auto
   &-contacts
+    +w(320px)
+    margin: auto
     display: flex
     justify-content: space-between
   &-nav
     display: none
   &-logo
     display: flex
-    align-items: flex-end
+    align-items: center
     padding: 11px 0 15px 13px
+  &-scroll
+    .head-logo
+      display: none
+    position: fixed
+    background-color: #fff
+    z-index: 100
+    margin: auto
+    top: 0
+    left: 0
+    right: 0
 .logo
   margin-right: 8px
   img
@@ -41,7 +56,7 @@ body
         a
           padding: 16px 14px
           display: block
-        a, button
+        a, label
           width: 100%
           text-align: left
           font-size: 18px
@@ -50,6 +65,8 @@ body
       padding: 7px 14px
       display: block
       background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
+      &-close
+        display: none
     &-close
       padding: 14px
       display: flex
@@ -1248,6 +1265,20 @@ footer
       +wh(44px)
       padding: 7px
       display: block
+#mob-nav-menu,#mob-nav-must,#mob-nav-about
+  &:checked~.mob-nav-button
+    display: none
+  &:checked~.mob-nav-button-close
+    display: block
+#mob-nav-menu
+  &:checked~.mob-menu
+    display: block
+#mob-nav-must
+  &:checked~.mob-must-know
+    display: block
+#mob-nav-about
+  &:checked~.mob-about-company
+    display: block
 #aside-checkbox
   &:checked~aside
     display: block
