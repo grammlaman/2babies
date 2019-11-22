@@ -2,6 +2,7 @@ extends template/main
 append vars
   -
     page_title= 'Baby Jogger "City Select Lux"'
+    slick = true
 block content
     main
         input(type='checkbox' style='display:none')#youtube01
@@ -53,14 +54,19 @@ block content
                                 span Цвет:
                                 span Черный
                             .product-color-slider
-                                button.product-color-slide.product-color-slide-act
-                                    +img('black.jpg')
-                                button.product-color-slide
-                                    +img('black.jpg')
-                                button.product-color-slide
-                                    +img('black.jpg')
-                                button.product-color-slide
-                                    +img('black.jpg')
+                                .product-color-s
+                                    .product-color-slide.product-color-slide-act
+                                        +img('black.jpg')
+                                    .product-color-slide
+                                        +img('black.jpg')
+                                    .product-color-slide
+                                        +img('black.jpg')
+                                    .product-color-slide
+                                        +img('black.jpg')
+                                    .product-color-slide
+                                        +img('black.jpg')
+                                    .product-color-slide
+                                        +img('black.jpg')
                             .product-color-line
                         .product-delievery
                             div

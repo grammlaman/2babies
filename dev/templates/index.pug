@@ -2,22 +2,25 @@ extends template/main
 append vars
   -
     page_title= 'Главная страница'
+    slick = true
 block content
     main
         .main-slider
             .main-slider-cont
                 .section
-                    .main-slide
-                        span.main-slide-text
-                            span Бесплатный тест-драйв колясок
-                            span Бесплатная доставка по Москве
-                            span Гарантия на все товары
-                            span Прокат колясок
-                            span Подбор колясок
-                        button.main-slide-button.button
-                            +img('baby-carriage.svg')
-                            +img('baby-carriage-blue.svg')
-                            span ПОДРОБНЕЕ
+                    .main-s
+                        -for(let i=0;i<3;i++)
+                            .main-slide
+                                span.main-slide-text
+                                    span Бесплатный тест-драйв колясок
+                                    span Бесплатная доставка по Москве
+                                    span Гарантия на все товары
+                                    span Прокат колясок
+                                    span Подбор колясок
+                                button.main-slide-button.button
+                                    +img('baby-carriage.svg')
+                                    +img('baby-carriage-blue.svg')
+                                    span ПОДРОБНЕЕ
         .section
             form.main-form
                 input(type='text' placeholder='ВАШЕ ИМЯ').main-form-name.main-form-input
@@ -263,16 +266,17 @@ block content
         .photo-slider
             .photo-div.photo-div-left
             .photo-div.photo-div-right
-            .photo-slide
-                +img('foto1.png')
-            .photo-slide
-                +img('foto2.png')
-            .photo-slide
-                +img('foto3.png')
-            .photo-slide
-                +img('foto4.png')
-            .photo-slide
-                +img('foto5.png')
+            .photo-s
+                .photo-slide
+                    +img('foto1.png')
+                .photo-slide
+                    +img('foto2.png')
+                .photo-slide
+                    +img('foto3.png')
+                .photo-slide
+                    +img('foto4.png')
+                .photo-slide
+                    +img('foto5.png')
         .deliv
             .section
                 .block-title.block-title-none

@@ -64,11 +64,22 @@ a:hover
       &:nth-child(2)
         display: block
 .main
+  &-s
+    +w(970px)
+    .slick
+      &-arrow
+        +wh(30px)
+        border-top: 3px solid #dadada
+        border-right: 3px solid #dadada
+      &-next
+        right: -70px
+      &-prev
+        left: -70px
   &-slider
     margin-top: 15px
   &-slide
-    +wh(1000px,500px)
     &-text
+      padding: 150px 0 0
       text-align: left
       span
         font-size: 36px
@@ -204,8 +215,11 @@ a:hover
       margin-top: 30px
       padding: 10px 50px 0
 .photo
+  &-s
+    .slick-arrow
+      +wh(30px)
   &-slider
-    width: 100%
+    width: 1300px
     height: 215px
   &-slide
     +wh(290px,215px)

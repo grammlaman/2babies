@@ -22,4 +22,74 @@ $(function(){
             $('#header').removeClass('head-scrolled');
         }
     })
+    $('.main-s').slick({
+        mobileFirst: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+    $('.photo-s').slick({
+        mobileFirst: true,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1165,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 760,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.product-color-s').slick({
+        mobileFirst: true,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 });
