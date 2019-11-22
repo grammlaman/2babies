@@ -4,9 +4,23 @@ $unit : 'px'
   margin: 0 auto
 body
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
-
-.news,.bread-crumps,.youtube01,.del-form
+main
+  min-height: 100vh
+.news
   display: none
+  &-page
+    display: flex
+  &-block
+    +w(300px)
+    margin: 0 auto 20px
+    padding: 20px 10px
+    border: 1px solid $light-pink
+  &-gradient
+    background: linear-gradient(to top, #fff 36%, transparent)
+    height: 50px
+    width: 100%
+    position: relative
+    margin-top: -50px
 .head
   &-container
     width: 320px
@@ -23,15 +37,15 @@ body
     align-items: center
     padding: 11px 0 15px 13px
   &-scroll
-    .head-logo
-      display: none
     position: fixed
     background-color: #fff
-    z-index: 100
+    z-index: 90
     margin: auto
     top: 0
     left: 0
     right: 0
+    .head-logo
+      display: none
 .logo
   margin-right: 8px
   img
@@ -180,35 +194,26 @@ body
     &-button
       width: 290px
       margin: auto
-.news
-  &-cont
-    padding: 0 10px
-  &-block
-    margin: 0 auto 20px
-    position: relative
-    padding: 20px 10px
-    border: 1px solid #dadada
-    &>div
-      margin-bottom: 20px
-      &>span
-        font-size: 12px
-        display: block
-        margin-bottom: 30px
-    a
-      position: relative
-      z-index: 50
-  &-text
+.bread-crumps
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-top: 20px
+  padding: 0 0 0 10px
+  a
     font-size: 12px
-    line-height: 1.5em
-  &-page
-    display: block
-  &-gradient
-    +wh(100%,100px)
-    background: linear-gradient(to top, #fff 50%, transparent)
-    position: absolute
-    bottom: 0
-    left: 0
-    z-index: 0
+    padding: 5px 0
+  &>div
+    display: flex
+    align-items: center
+    margin-left: 13px
+    div
+      +wh(7px)
+      display: block
+      border-right: 1px solid $pink-gray
+      border-top: 1px solid $pink-gray
+      transform: rotate(-135deg)
+      margin: 0 13px 0 0
 .popular
   .block-title
     justify-content: space-between
@@ -481,6 +486,7 @@ body
     border-radius: 50%
     background-color: $light-pink
   &-block
+    margin-top: 10px
     h6
       font-family: $f_bold
       letter-spacing: 1px
@@ -544,7 +550,7 @@ body
       margin-top: 10px
   &-gradient
     +wh(100%,100px)
-    background: linear-gradient(to top, #fff, transparent)
+    background: linear-gradient(to top, #fff 38%, transparent)
     position: absolute
     bottom: 0
     left: 0
@@ -744,21 +750,6 @@ body
     top: 7px
 .product
   padding: 0 10px
-  &-bread-crumps
-    a
-      display: flex
-      align-items: center
-      padding: 0 10px
-      margin-top: 20px
-      font-size: 12px
-      span
-        &:first-child
-          +wh(7px)
-          display: block
-          border-right: 1px solid $pink-gray
-          border-top: 1px solid $pink-gray
-          transform: rotate(-135deg)
-          margin: 0 13px 0 10px
   &-title
     +w(130px)
     margin-top: 30px
@@ -829,11 +820,11 @@ body
       p
         font-size: 12px
         margin-left: 5px
-        strong,a
+        strong,label
           font-family: $f_bold
         span
           display: block
-        a
+        label
           color: $light-blue
   &-request
     &-price
@@ -1184,15 +1175,54 @@ body
       img
         +wh(25px)
 .youtube01
-  +dfc
-  padding: 40px 0 20px
+  +wh(100%,100vh)
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 99
+  &>div
+    +dfc
+    height: 100vh
+    position: relative
+    div
+      +w(100%)
+      padding: 60px 20px
+      background-color: #fff
+      position: relative
+      z-index: 100
+  &-close
+    +wh(100%,100vh)
+    background-color: #fff
+    opacity: 80%
+    position: absolute
+    &-button
+      position: absolute
+      top: 20px
+      right: 20px
+      img
+        +wh(20px)
   iframe
-    +wh(280px,200px)
+    +w(100%)
     margin: auto
 .del-form
-  padding: 50px 30px 20px
-  width: 320px
-  margin: auto
+  +wh(100%,100vh)
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 99
+  &>div
+    +dfc
+    position: relative
+    height: 100vh
+  &-cont
+    padding: 50px 30px 20px
+    width: 320px
+    background-color: #fff
+    margin: auto
+    position: relative
+    z-index: 100
   p
     font-size: 12px
     line-height: 1.2em
@@ -1221,12 +1251,12 @@ body
 aside
   background-color: $light-pink
   position: absolute
-  z-index: 100
+  z-index: 50
   width: 300px
   margin: auto
   right: 0
   left: 0
-  top: 170px
+  top: 220px
   padding: 15px 7px
   display: none
   &>button
@@ -1270,6 +1300,12 @@ footer
       +wh(44px)
       padding: 7px
       display: block
+.youtube01,.del-form
+  display: none
+#del-form:checked~.del-form
+  display: block
+#youtube01:checked~.youtube01
+  display: block
 #mob-nav-menu,#mob-nav-must,#mob-nav-about
   &:checked~.mob-nav-button
     display: none

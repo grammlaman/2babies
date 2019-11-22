@@ -4,17 +4,17 @@ append vars
     page_title= 'Baby Jogger "City Select Lux"'
 block content
     main
+        input(type='checkbox' style='display:none')#youtube01
+        input(type='checkbox' style='display:none')#del-form
         .section
             .bread-crumps
                 a(href='#') Главная
                 div
-                a(href='#') Каталог
+                    div
+                    a(href='#') Каталог
                 div
-                a(href='#') BABY JOGGER "CITY SELECT LUX"
-            .product-bread-crumps
-                a(href='#')
-                    span
-                    span Популярные
+                    div
+                    a(href='#') BABY JOGGER "CITY SELECT LUX"
         .section
             .product
                 .product-title
@@ -44,7 +44,7 @@ block content
                                         .product-slider-slave-slide
                                             +img('slide' + i + '.jpg')
                         .product-youtube
-                            button
+                            label(for='youtube01')
                                 +img('youtube-logo.svg')
                                 +img('youtube-black.svg')
                     .product-cont
@@ -71,7 +71,7 @@ block content
                                     +img('delivered.svg')
                                 p
                                     span Доставка до 10 км от МКАД - #[strong бесплатно]
-                                    span Свыше 10 км от МКАД - #[a(href='#') по тарифам]
+                                    span Свыше 10 км от МКАД - #[label(for='del-form') по тарифам]
                             .product-color-line
                         .product-request
                             .product-request-price
@@ -305,34 +305,45 @@ block content
                                     span 53 000 ₽
                                     button
                                         +img('shopping-cart(1).svg')
-        .youtube01#youtube01
-            <iframe src="https://www.youtube.com/embed/gK6yeYWkh84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        .youtube01
+            div
+                label(for='youtube01').youtube01-close
+                div
+                    label(for='youtube01').youtube01-close-button
+                        +img('cancel.svg')
+                    <iframe src="https://www.youtube.com/embed/gK6yeYWkh84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         .del-form
-            .row.del-form-title
-                p Расстояние
-                p Заказы от 50 000 Р
-                p Заказы от 100 000 Р
-            .product-color-line
-            .row
-                p в пределах МКАД
-                p 500 Р
-                p 0 Р
-            .product-color-line
-            .row
-                p до 5 км от МКАД
-                p 1000 Р
-                p 500 Р
-            .product-color-line
-            .row
-                p от 5 до 10 км от МКАД
-                p 1500 Р
-                p 1000 Р
-            .product-color-line
-            .row
-                p от 10 д 20 км от МКАД
-                p 2000 Р
-                p 1500 Р
-            .product-color-line
-            .del-form-label
-                +img('delivered.svg')
-                p Доставка заказов на более отдаленные расстояния, для которых не указаны расценки, осуществляетсяпо согласованию через транспортные компании
+            div
+                label(for='del-form').youtube01-close
+                div
+                    .del-form-cont
+                        label(for='del-form').youtube01-close-button
+                            +img('cancel.svg')
+                        .row.del-form-title
+                            p Расстояние
+                            p Заказы от 50 000 Р
+                            p Заказы от 100 000 Р
+                        .product-color-line
+                        .row
+                            p в пределах МКАД
+                            p 500 Р
+                            p 0 Р
+                        .product-color-line
+                        .row
+                            p до 5 км от МКАД
+                            p 1000 Р
+                            p 500 Р
+                        .product-color-line
+                        .row
+                            p от 5 до 10 км от МКАД
+                            p 1500 Р
+                            p 1000 Р
+                        .product-color-line
+                        .row
+                            p от 10 д 20 км от МКАД
+                            p 2000 Р
+                            p 1500 Р
+                        .product-color-line
+                        .del-form-label
+                            +img('delivered.svg')
+                            p Доставка заказов на более отдаленные расстояния, для которых не указаны расценки, осуществляетсяпо согласованию через транспортные компании

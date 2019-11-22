@@ -56,7 +56,7 @@
   &-scrolled
     position: fixed
     background-color: #fff
-    z-index: 100
+    z-index: 90
     margin: auto
     top: 0
     left: 0
@@ -231,8 +231,9 @@
 .news
   display: block
   &-cont
-    padding: 0 20px
+    padding: 0 10px
   &-block
+    +w(748px)
     padding: 30px 20px
   &-text
     font-size: 18px
@@ -240,18 +241,7 @@
   .popular-sort-end
     margin-right: 20px
 .bread-crumps
-  display: flex
-  align-items: center
-  padding: 0 10px
-  margin-top: 20px
-  a
-    +font(12px,$f_reg,$pink-gray)
-  div
-    +wh(7px)
-    border-right: 1px solid $pink-gray
-    border-top: 1px solid $pink-gray
-    transform: rotate(45deg)
-    margin: 0 13px 0 10px
+  padding: 0 0 0 15px
 .product
   &-bread-crumps
     display: none
@@ -377,7 +367,7 @@
   h5
     font-size: 18px
     margin-bottom: 15px
-  p
+  p,a
     font-size: 18px
   &-block
     padding: 25px 20px
@@ -439,12 +429,17 @@
     &-sort
       display: none
 .youtube01
+  &-close-button
+    img
+      +wh(30px)
   iframe
-    +wh(700px,500px)
+    height: 70vh
+    margin: auto
 .del-form
-  padding: 50px 30px 20px
-  width: 750px
-  margin: auto
+  &-cont
+    padding: 50px 30px 20px
+    width: 750px
+    margin: auto
   p
     font-size: 14px
     line-height: 1.2em

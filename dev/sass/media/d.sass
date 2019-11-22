@@ -247,10 +247,11 @@ a:hover
     height: 300px
     overflow: hidden
     a
-      position: absolute
-      bottom: 20px
+      bottom: 60px
     &>div
       height: 300px
+  &-gradient
+    margin-top: -115px
 .clear-button
   &:hover
     span
@@ -452,11 +453,13 @@ a:hover
       +w(460px)
       margin-bottom: 50px
 .youtube01
-  iframe
-    +wh(840px,600px)
+  div div
+    width: 1170px
+    padding: 50px 100px
 .del-form
-  +w(1100px)
-  padding: 50px 175px 20px
+  &-cont
+    +w(1100px)
+    padding: 50px 175px 20px
   .row
     p:first-child,p:nth-child(2)
       +w(290px)
