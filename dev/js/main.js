@@ -139,4 +139,23 @@ $(function(){
     });
     $("#amount").val( $( "#slider-range" ).slider("values", 0));
     $("#amount-1").val( $( "#slider-range" ).slider("values", 1));
+    $('.product-slider-main').slick({
+        infinite: true,
+        mobileFirst: true,
+        arrows: false,
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.product-slider-slave'
+    });
+    $('.product-slider-slave').slick({
+        infinite: true,
+        mobileFirst: true,
+        arrows: true,
+        dots: false,
+        focusOnSelect: true,
+        asNavFor: '.product-slider-main',
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
 });
