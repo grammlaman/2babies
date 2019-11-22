@@ -6,7 +6,7 @@ body
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
 main
   min-height: 100vh
-.photo-s,.main-s,.product-color-s
+.photo-s,.main-s,.product-color-s,.serf-s
   .slick-arrow
     border-right: 2px solid $pink-gray
     border-top: 2px solid $pink-gray
@@ -60,6 +60,8 @@ main
     right: 0
     .head-logo
       display: none
+header
+  height: 119px
 .logo
   margin-right: 8px
   img
@@ -678,18 +680,27 @@ main
     button
       margin-left: 45px
   &-price-slider
+      +w(230px)
       margin-top: 10px
-      &>div
-        display: flex
-        align-items: center
-        &>div
-          +wh(6px,1px)
-          background-color: #000
-          margin: 0 5px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      label
+        display: none
+      input
+        +font(12px,$f_reg,$pink-gray)
+      &>span
+        +wh(6px,1px)
+        background-color: #000
+        margin: 0 5px
       &-range
         +wh(100px,30px)
         font-size: 12px
         padding: 0 10px
+      &-row
+        margin-top: 20px
+        display: flex!important
+        align-items: center
   &-h6
     +font(12px,$f_bold)
     text-transform: uppercase
@@ -748,6 +759,17 @@ main
       display: block
   &-button
     width: 100%
+.ui-slider .ui-slider-range
+  display: none!important
+.ui-slider-horizontal
+  height: 1px!important
+  border: 1px solid #6e6964!important
+  width: 220px!important
+.ui-slider-horizontal .ui-slider-handle
+  top: -8px!important
+  border-radius: 50%!important
+  border: none!important
+  background-color: #6e6964!important
 .clear-button
   +dfc
   img
@@ -1196,6 +1218,11 @@ main
       +wh(100%,60px)
       img
         +wh(25px)
+.serf
+  &-slide
+    display: flex!important
+    align-items: center
+    justify-content: center
 .youtube01
   +wh(100%,100vh)
   position: fixed

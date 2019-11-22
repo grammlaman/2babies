@@ -2,6 +2,8 @@ extends template/main
 append vars
   -
     page_title= 'Популярное'
+    slick = true
+    fancy = true
 block content
     .section
         .bread-crumps
@@ -20,13 +22,12 @@ block content
                     span Очистить
             .filter-price.filter-label-cont
                 h6.filter-h6 Стоимость:
-                .filter-price-slider
-                    div
-                        input(type="number" id="amount").filter-price-slider-range
-                        div
-                        input(type="number" id="amount-1").filter-price-slider-range.filter-price-slider-range-second
+                p.filter-price-slider
                     label(for="amount")
-                div#slider-range.filter-price-slider
+                    input(type="text")#amount.filter-price-slider-range
+                    span
+                    input(type="text")#amount-1.filter-price-slider-range.filter-price-slider-range-second
+                div#slider-range.filter-price-slider-row
                 div.filter-label
                     input(type='checkbox')#fl001
                     label(for='fl001').fl001
