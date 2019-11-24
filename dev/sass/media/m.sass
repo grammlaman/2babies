@@ -6,7 +6,7 @@ body
   background: linear-gradient(to right, $light-pink, #fff 5%, #fff 95%, $light-pink)
 main
   min-height: 100vh
-.photo-s,.main-s,.product-color-s,.serf-s,.product-slider-slave
+.photo-s,.main-s,.product-color-s,.serf-s,.product-slider-slave,.product-slider-main
   .slick-arrow
     border-right: 2px solid $pink-gray
     border-top: 2px solid $pink-gray
@@ -51,9 +51,10 @@ main
     align-items: center
     padding: 11px 0 15px 13px
   &-scroll
+    +w(100%)
     position: fixed
     background-color: #fff
-    z-index: 90
+    z-index: 99
     margin: auto
     top: 0
     left: 0
@@ -79,7 +80,8 @@ header
   &-nav
     &-list
       position: absolute
-      z-index: 100
+      z-index: 99
+      left: 0
       width: 100%
       div
         background: linear-gradient(to top, $light-pink 60%, #fdf9f5)
@@ -821,6 +823,10 @@ header
     &-main
       +wh(250px)
       margin: 15px auto
+      .slick-next
+        right: -15px
+      .slick-prev
+        left: -15px
       &-slide
         &-out
           display: none

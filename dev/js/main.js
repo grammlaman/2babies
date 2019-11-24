@@ -142,11 +142,24 @@ $(function(){
     $('.product-slider-main').slick({
         infinite: true,
         mobileFirst: true,
-        arrows: false,
         dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '.product-slider-slave'
+        asNavFor: '.product-slider-slave',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    arrows: true,
+                }
+            },
+        ]
     });
     $('.product-slider-slave').slick({
         infinite: true,
