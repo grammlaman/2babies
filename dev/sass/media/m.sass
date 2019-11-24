@@ -639,40 +639,46 @@ header
       padding: 5px 20px
     &-filter
       margin-left: auto
-      &>div
+      &>span
         display: flex
         margin-right: 10px
-        &>div
+        &>span
           display: flex
           flex-direction: column
           align-items: center
-          &>div
+          &>span
             background-color: #fff
-      &>div>div>div:first-child
+      &>span>span>span:first-child
         +wh(2px)
-      &>div>div>div:nth-child(2)
+        display: block
+      &>span>span>span:nth-child(2)
         +wh(4px,5px)
+        display: block
         border-radius: 50%
         margin: 1px 0
-      &>div>div>div:last-child
+      &>span>span>span:last-child
         +wh(2px,7px)
-      &>div>div:nth-child(2)
+        display: block
+      &>span>span:nth-child(2)
         transform: rotate(180deg)
         margin: 0 1px
     &-sort
       margin-left: 10px
-      &>div
+      &>span
         display: flex
         align-items: flex-end
-        &>div
+        &>span
           background-color: #fff
-        &>div:first-child
+        &>span:first-child
           +wh(4px,6px)
-        &>div:nth-child(2)
+          display: block
+        &>span:nth-child(2)
           +wh(4px,11px)
+          display: block
           margin: 0 2px
-        &>div:last-child
+        &>span:last-child
           +wh(4px,16px)
+          display: block
   &-h5
     font-size: 18px
   &-name
@@ -1391,7 +1397,7 @@ footer
   &:checked~main .block-title .filter-title-filter
     background: $light-pink
     color: $pink-gray
-    div div div
+    span span span
       background-color: $pink-gray
 #pag-checkbox
   &:checked~main .popular-sort
@@ -1399,7 +1405,7 @@ footer
   &:checked~main .block-title .filter-title-sort
     background: $light-pink
     color: $light-pink
-    div div
+    span span
       background-color: $pink-gray
 #sort-checkbox
   &:checked~.popular-sort-select-checkbox
