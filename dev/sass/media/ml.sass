@@ -2,8 +2,6 @@
   +w($mobile-large#{$unit})
 .head-logo
   justify-content: space-around
-.main-slide
-  height: 300px
 .popular
   &-label
     margin: 0
@@ -26,8 +24,11 @@
     &-div
       +w(440px)
 .photo
-  &-slider
-    +w(320px)
+  &-s
+    .slick-next
+      right: -15px
+    .slick-prev
+      left: -15px
 .cart
   &-block
     flex: 0 0 55%

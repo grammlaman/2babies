@@ -195,9 +195,7 @@ header
       bottom: 25px
       top: inherit
   &-slide
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
+    display: none
     &-text
       display: block
       padding: 100px 0 0
@@ -480,22 +478,23 @@ header
           border: 1px solid #718edd
 .photo
   &-slider
+    +w(300px)
     margin: 10px auto 0
     position: relative
   &-slide
+    display: none
     img
-      height: 230px
+      +wh(300px!important,220px!important)
   &-div
-    +wh(30px,230px)
+    +wh(50px,100%)
     position: absolute
     z-index: 90
-    height: 230px
   &-div-left
-    background: linear-gradient(to right, #fff 50%, transparent)
     left: 0
+    background: linear-gradient(to right, #fff 20%, transparent)
   &-div-right
-    background: linear-gradient(to left, #fff 50%, transparent)
     right: 0
+    background: linear-gradient(to left, #fff 20%, transparent)
 .deliv
   &-cont
     display: flex
@@ -840,6 +839,8 @@ header
             display: block
     &-slave
       display: none!important
+      &-slide-out
+        display: none
   &-both
     margin-bottom: 15px
   &-color
@@ -859,6 +860,7 @@ header
         left: -35px
     &-slide
       +w(100px!important)
+      display: none
       border: 1px solid #dadada
       margin: 0 5px
       &-act

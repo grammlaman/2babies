@@ -222,15 +222,13 @@ header
       +wh(30px)
   &-slider
     width: 1300px
-    height: 215px
-  &-slide
-    +wh(290px,215px)
   &-div
-    width: 250px
-    &-left
-      background: linear-gradient(to right, #fff, transparent)
-    &-right
-      background: linear-gradient(to left, #fff, transparent)
+    width: 200px
+  &-s
+    .slick-next
+      right: 0
+    .slick-prev
+      left: 0
 .deliv
   &-cont
     flex-wrap: nowrap
@@ -286,10 +284,12 @@ header
       &-slide
         &-out
           border: 3px solid #fff
+          cursor: pointer
           &:hover
             border: 3px solid #dadada
   &-color
     &-slide
+      cursor: pointer
       &:hover
         border: 2px solid #dadada
   &-delievery
@@ -297,6 +297,10 @@ header
       +w(165px)
       flex: 0 0 165px
       font-size: 16px
+    label
+      cursor: pointer
+      &:hover
+        text-decoration: underline
   &-request
     &-button
       span
@@ -360,6 +364,8 @@ header
                 display: block
   &-youtube
     top: 13px
+    label
+      cursor: pointer
     &:hover
       img
         &:first-child
