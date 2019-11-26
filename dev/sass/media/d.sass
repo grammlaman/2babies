@@ -3,6 +3,8 @@ $unit: 'px'
   +w($desktop#{$unit})
 a:hover
   text-decoration: underline
+label
+  cursor: pointer
 header
   height: 190px
 .logo
@@ -112,12 +114,21 @@ header
     &-select
       font-size: 12px
       margin-bottom: 10px
+      .popular-rent-list
+        label
+          border: 1px solid transparent
+          &:hover
+            border-color: #dadada
       &>span:last-child
         font-size: 22px
+    &-cont
+      .popular-rent-select
+        height: 92px
   &-photo
     +wh(360px,340px)
     flex: 0 0 360px
   &-desc
+    +w(100%)
     font-size: 16px
     padding-left: 20px
   &-price
@@ -171,6 +182,10 @@ header
     left: 0
     &-select
       width: 170px
+      label
+        border: 1px solid transparent
+        &:hover
+          border-color: #dadada
   &-container
     .block-title
       padding: 15px 0 20px 45px

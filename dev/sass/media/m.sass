@@ -269,12 +269,24 @@ header
       position: relative
       label
         +wh(100%,33px)
-        +dfs
+        align-items: center
         display: none
         padding-left: 10px
         background-color: $light-pink
       .select-activ
         display: flex
+    &-cont
+      .popular-rent-list
+        position: absolute
+        z-index: 90
+      .popular-rent-select
+        height: 82px
+        position: relative
+        &>span:last-child
+          +w(170px)
+          position: absolute
+          left: 0
+          bottom: 0
   &-rent-cont,&-sell-cont
     display: none
     flex-direction: column
