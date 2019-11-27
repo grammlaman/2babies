@@ -127,7 +127,7 @@ $(function(){
             }
         ]
     });
-    $("#slider-range" ).slider({
+    let slider = $("#slider-range" ).slider({
          range: true,
          min: 0,
          max: 1250000,
@@ -137,8 +137,21 @@ $(function(){
              $("#amount-1" ).val(ui.values[ 1 ]);
          }
     });
+
+    $( "#amount" ).on( "change", function() {
+       let arr = slider.slider( "option", "values" );
+        let pos = parseInt($(this).val());
+        slider.slider( "values", [pos,arr[1]] );
+    });
+    $( "#amount-1" ).on( "change", function() {
+        let arr = slider.slider( "option", "values" );
+        let pos = parseInt($(this).val());
+        slider.slider( "values", [arr[0],pos] );
+    });
+
     $("#amount").val( $( "#slider-range" ).slider("values", 0));
     $("#amount-1").val( $( "#slider-range" ).slider("values", 1));
+
     $('.product-slider-main').slick({
         infinite: true,
         mobileFirst: true,
