@@ -138,7 +138,7 @@ header
     align-items: flex-end
     &>span
       margin-bottom: 30px
-    button
+    &-label
       +wh(97px,86px)
       margin-top: 0
       &:hover
@@ -490,6 +490,9 @@ header
     &-button
       +w(460px)
       margin-bottom: 50px
+  &-delete-button:hover
+    transform: rotate(360deg)
+    transition: .35s ease
 .serf-s
   +w(1000px)
   margin: auto
@@ -501,7 +504,14 @@ header
   div div
     width: 1170px
     padding: 50px 100px
+  &-close-button
+    &:hover
+      img
+        transform: rotate(360deg)
+        transition: .35s ease
 .del-form
+  h2
+    font-size: 24px
   &-cont
     +w(1100px)
     padding: 50px 175px 20px

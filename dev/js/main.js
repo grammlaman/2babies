@@ -172,3 +172,26 @@ $(function(){
         slidesToScroll: 1
     });
 });
+
+ let prodInput = document.querySelectorAll('.product-input-js');
+ prodInput.forEach(function(el) {
+     let prodInput = el.querySelector('input'),
+         prodMore = el.querySelector('.product-more'),
+         prodLess = el.querySelector('.product-less'),
+         cnt = parseInt(prodInput.value);
+     prodInput.onchange= function(){
+         cnt = parseInt(this.value);
+     }
+     prodMore.onclick= function(){
+         cnt+=1;
+         if((cnt <= 0)||isNaN(cnt)) cnt = 1;
+         prodInput.value = cnt;
+     }
+     prodLess.onclick= function(){
+         cnt-=1;
+         if((cnt <= 0)||isNaN(cnt)) cnt = 1;
+         prodInput.value = cnt;
+     }
+
+
+ });

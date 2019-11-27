@@ -81,10 +81,12 @@ block content
                             .product-request-price
                                 span #[strong 53 000] ₽
                             .product-request-number
-                                div
-                                    input(type='text' placeholder='1')
-                                    button #[span]
-                                    button #[span]
+                                div.product-input-js
+                                    input(type='text' value='1')
+                                    button.product-more
+                                        span
+                                    button.product-less
+                                        span
                                 button.product-request-button.button
                                     +img('shopping-cart(2).svg')
                                     +img('shopping-cart(1).svg')
@@ -289,7 +291,7 @@ block content
                                 h6.popular-name Baby Jogger #[br] "City Select Lux"
                                 .popular-price
                                     span 53 000 ₽
-                                    button
+                                    label(for='add-cart').popular-price-label
                                         +img('shopping-cart(1).svg')
                         li.popular-cont
                             .popular-photo
@@ -298,7 +300,7 @@ block content
                                 h6.popular-name Baby Jogger #[br] "City Select Lux"
                                 .popular-price
                                     span 53 000 ₽
-                                    button
+                                    label(for='add-cart').popular-price-label
                                         +img('shopping-cart(1).svg')
                         li.popular-cont
                             .popular-photo
@@ -307,7 +309,7 @@ block content
                                 h6.popular-name Baby Jogger #[br] "City Select Lux"
                                 .popular-price
                                     span 53 000 ₽
-                                    button
+                                    label(for='add-cart').popular-price-label
                                         +img('shopping-cart(1).svg')
         .youtube01
             div

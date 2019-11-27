@@ -312,7 +312,7 @@ header
   &-price
     font-family: $f_reg
     margin-top: 30px
-    button
+    &-label
       +wh(170px,40px)
       +dfc
       margin-top: 10px
@@ -1276,6 +1276,7 @@ header
       background-color: #fff
       position: relative
       z-index: 100
+      box-shadow: 0 0 15px rgba(0,0,0,0.5)
   &-close
     +wh(100%,100vh)
     background-color: #fff
@@ -1308,6 +1309,7 @@ header
     margin: auto
     position: relative
     z-index: 100
+    box-shadow: 0 0 15px rgba(0,0,0,0.5)
   p
     font-size: 12px
     line-height: 1.2em
@@ -1333,6 +1335,44 @@ header
     img
       +wh(44px)
       margin-right: 10px
+.head-form
+  form
+    padding: 50px
+    background-color: #fff
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    box-shadow: 0 0 15px rgba(0,0,0,0.5)
+    h2
+      text-transform: uppercase
+      font-family: $f_bold
+    input
+      +wh(200px,30px)
+      padding-left: 10px
+      display: block
+      margin-top: 20px
+    button
+      +wh(200px,30px)
+      margin-top: 20px
+
+.add-cart
+  &-cont
+    position: relative
+    padding: 70px 50px
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: #fff
+    box-shadow: 0 0 15px rgba(0,0,0,0.5)
+    h2
+      text-transform: uppercase
+      font-family: $f_bold
+    a
+      +wh(200px,50px)
+      margin-top: 20px
+      &:hover
+        text-decoration: inherit
 aside
   background-color: $light-pink
   position: absolute
@@ -1391,6 +1431,12 @@ footer
   display: block
 #youtube01:checked~.youtube01
   display: block
+#head-form
+  &:checked~.head-form
+    display: block
+#add-cart
+  &:checked~.add-cart
+    display: block
 #mob-nav-menu,#mob-nav-must,#mob-nav-about
   &:checked~.mob-nav-button
     display: none
