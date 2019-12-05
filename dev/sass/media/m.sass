@@ -61,6 +61,8 @@ main
     right: 0
     .head-logo
       display: none
+.slick-disabled
+  display: none !important
 header
   height: 119px
 .logo
@@ -832,11 +834,11 @@ header
     +wh(70px,50px)
     position: absolute
     top: 0
-    right: 0
+    right: 20px
     img:last-child
       display: none
   &-slider
-    position: relative
+    display: none
     &-main
       +wh(250px)
       margin: 15px auto
@@ -855,13 +857,18 @@ header
         display: none
   &-both
     margin-bottom: 15px
+    position: relative
   &-color
-    span
+    &>span
       font-size: 12px
-      &:last-child
-        text-transform: uppercase
-        font-family: $f_bold
-        margin-left: 10px
+      display: flex
+      align-items: flex-end
+      &>span:last-child
+        span
+          display: none
+          text-transform: uppercase
+          font-family: $f_bold
+          margin-left: 10px
     &-slider
       +w(220px)
       margin: 15px auto
@@ -876,7 +883,7 @@ header
       border: 1px solid #dadada
       margin: 0 5px
       &-act
-        border: 2px solid #dadada
+        border: 3px solid #dadada
     &-line
       +wh(300px,1px)
       margin: 0 auto 15px
@@ -1425,6 +1432,8 @@ footer
       +wh(44px)
       padding: 7px
       display: block
+.displayBlock
+  display: block!important
 .youtube01,.del-form
   display: none
 #del-form:checked~.del-form

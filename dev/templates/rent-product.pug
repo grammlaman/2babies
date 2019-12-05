@@ -20,7 +20,91 @@ block content
                 .product-title
                     h1 Baby Jogger "City Select Lux"
                 .product-both
-                    .product-slider
+                    .product-slider#main-slider1
+                        .product-slider-main
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-main-slide-out.act
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                                - else
+                                    .product-slider-main-slide-out
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                        .product-slider-slave
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-slave-slide-out.act
+                                        .product-slider-slave-slide
+                                            +img('slide' + 1 + '.jpg')
+                                - else
+                                    .product-slider-slave-slide-out
+                                        .product-slider-slave-slide
+                                            +img('slide' + 1 + '.jpg')
+                    .product-slider#main-slider2
+                        .product-slider-main
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-main-slide-out.act
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                                - else
+                                    .product-slider-main-slide-out
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                        .product-slider-slave
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-slave-slide-out.act
+                                        .product-slider-slave-slide
+                                            +img('slide' + 2 + '.jpg')
+                                - else
+                                    .product-slider-slave-slide-out
+                                        .product-slider-slave-slide
+                                            +img('slide' + 2 + '.jpg')
+                    .product-slider#main-slider3
+                        .product-slider-main
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-main-slide-out.act
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                                - else
+                                    .product-slider-main-slide-out
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                        .product-slider-slave
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-slave-slide-out.act
+                                        .product-slider-slave-slide
+                                            +img('slide' + 3 + '.jpg')
+                                - else
+                                    .product-slider-slave-slide-out
+                                        .product-slider-slave-slide
+                                            +img('slide' + 3 + '.jpg')
+                    .product-slider#main-slider4
+                        .product-slider-main
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-main-slide-out.act
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                                - else
+                                    .product-slider-main-slide-out
+                                        .product-slider-main-slide
+                                            +img('black.jpg')
+                        .product-slider-slave
+                            - for(let i=1;i<6;i++)
+                                - if(i == 1)
+                                    .product-slider-slave-slide-out.act
+                                        .product-slider-slave-slide
+                                            +img('slide' + 2 + '.jpg')
+                                - else
+                                    .product-slider-slave-slide-out
+                                        .product-slider-slave-slide
+                                            +img('slide' + i + '.jpg')
+                    .product-slider#main-slider5
                         .product-slider-main
                             - for(let i=1;i<6;i++)
                                 - if(i == 1)
@@ -41,29 +125,37 @@ block content
                                     .product-slider-slave-slide-out
                                         .product-slider-slave-slide
                                             +img('slide' + i + '.jpg')
-                        .product-youtube
-                            label(for='youtube01')
-                                +img('youtube-logo.svg')
-                                +img('youtube-black.svg')
+                    .product-youtube
+                        label(for='youtube01')
+                            +img('youtube-logo.svg')
+                            +img('youtube-black.svg')
                     .product-cont
                         .product-color
                             span
                                 span Цвет:
-                                span Черный
+                                span
+                                    span#span-1 Черный
+                                    span#span-2 Красный
+                                    span#span-3 Зеленый
+                                    span#span-4 Белый
+                                    span#span-5 Синий
                             .product-color-slider
                                 .product-color-s
-                                    .product-color-slide.product-color-slide-act
-                                        +img('black.jpg')
                                     .product-color-slide
-                                        +img('black.jpg')
+                                        button#color-slide1(data-slider='#main-slider1' data-span='#span-1')
+                                            +img('black.jpg')
                                     .product-color-slide
-                                        +img('black.jpg')
+                                        button#color-slide2(data-slider='#main-slider2' data-span='#span-2')
+                                            +img('black.jpg')
                                     .product-color-slide
-                                        +img('black.jpg')
+                                        button#color-slide3(data-slider='#main-slider3' data-span='#span-3')
+                                            +img('black.jpg')
                                     .product-color-slide
-                                        +img('black.jpg')
+                                        button#color-slide4(data-slider='#main-slider4' data-span='#span-4')
+                                            +img('black.jpg')
                                     .product-color-slide
-                                        +img('black.jpg')
+                                        button#color-slide5(data-slider='#main-slider5' data-span='#span-5')
+                                            +img('black.jpg')
                             .product-color-line
                         .product-delievery
                             div
