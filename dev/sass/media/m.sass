@@ -861,8 +861,6 @@ header
   &-color
     &>span
       font-size: 12px
-      display: flex
-      align-items: flex-end
       &>span:last-child
         span
           display: none
@@ -1065,7 +1063,7 @@ header
         span
           font-size: 12px
           letter-spacing: 1px
-        button
+        label
           +wh(44px,40px)
           +dfc
           background-color: $light-pink
@@ -1433,7 +1431,7 @@ footer
       padding: 7px
       display: block
 .displayBlock
-  display: block!important
+  display: inline-block!important
 .youtube01,.del-form
   display: none
 #del-form:checked~.del-form
